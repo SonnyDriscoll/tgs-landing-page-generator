@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=aspentech.com&sz=128" alt="Aspen Technology" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/aspentech.com" alt="Aspen Technology" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://aspentech.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Aspen Technology</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Aimee Rhone · Aspen Technology</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>industrial asset optimization</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who control the budgets, mandates, and transformation roadmaps that Aspen Technology's operational productivity software is built for. This is the room where conversations about unlocking ROI through tech-enabled ops are already happening — Aspen Technology belongs at the centre of them. No cold outreach, no gatekeepers — just two days of direct access in Denver.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who define how industrial and technology-driven enterprises invest in productivity software — and Aspen Technology's solutions speak directly to their most pressing mandate. With a room built around tech-enabled operations and unlocking ROI through productivity, your team has two days of warm, facilitated access to the buyers who move budgets for exactly what AspenTech delivers. No cold emails, no gatekeepers — just the right conversations at the right altitude.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Peter's decades leading industrial operations at scale — including global manufacturing and supply chain transformation at 3M — mirror exactly the environments where Aspen Technology's asset optimization software delivers measurable ROI. His keynote will set the stage for conversations about operational productivity in complex industrial settings, giving Aspen Technology a natural entry point with every COO in the room who manages physical assets and production infrastructure.</div>
+                        <div class="speaker__relevance">Peter Gibbons brings deep credibility in industrial operations and large-scale operational transformation — the exact environment where AspenTech's asset optimization software delivers its strongest ROI. His experience at 3M leading complex manufacturing and industrial portfolios gives COO attendees a shared reference point, making AspenTech's pitch land in a context of proven industrial productivity gains.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
@@ -233,7 +233,7 @@
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Tracy's focus on AI in enterprise operations and digital transformation speaks directly to the technology-enabled productivity narrative that underpins Aspen Technology's positioning. Her presence elevates the conversation around how software platforms drive operational efficiency at enterprise scale, creating fertile ground for Aspen Technology to position its solutions as the industrial-specific layer that makes that transformation real and measurable.</div>
+                        <div class="speaker__relevance">Tracy Galloway's focus on AI in enterprise operations and digital transformation positions AspenTech as a natural next step in the technology stack COOs are already building. Her presence validates the summit's tech-enabled ops theme and creates an opening for AspenTech to align its operational productivity software with the AI-driven efficiency narrative that resonates across every vertical in the room.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Amir's expertise in mission-critical operations and high-stakes infrastructure management resonates strongly with Aspen Technology's core buyer profile in energy, chemicals, and advanced manufacturing — industries where operational failure is not an option. His perspective on optimising complex assets under pressure gives Aspen Technology a compelling contextual backdrop to demonstrate how its software supports operational resilience and productivity in the most demanding environments.</div>
+                        <div class="speaker__relevance">Amir Deylami represents the mission-critical end of the operational excellence spectrum — high-consequence environments where asset reliability and process optimization are non-negotiable, mirroring the industrial sectors AspenTech serves. His perspective on infrastructure and operational excellence reinforces why rigorous asset optimization software is not a luxury but a strategic imperative for COOs managing complex, asset-intensive operations.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">Inductive Automation</div>
                             </div>
                         </div>
-                        <p class="connection__why">Inductive Automation sits at the intersection of industrial automation and SCADA systems — environments where asset performance and operational productivity directly determine business outcomes. As COO, Kat is making decisions about the software infrastructure that underpins plant-level operations, making her an ideal evaluator of Aspen Technology's optimization capabilities. Her company's industrial automation focus means she understands the language of asset uptime, throughput efficiency, and process control that Aspen Technology speaks fluently. A conversation here could open a direct channel into a decision-maker who influences both internal operations and customer-facing technology recommendations.</p>
+                        <p class="connection__why">Inductive Automation sits at the intersection of industrial automation, SCADA systems, and manufacturing operations — a sector where AspenTech's asset optimization and operational productivity software is a direct fit. As COO, Kat Jeschke is responsible for the operational infrastructure that underpins their platform delivery, making her a high-value buyer or strategic partner conversation. Companies in industrial automation consistently face pressure to demonstrate measurable ROI on their own operational stack, which is precisely the value AspenTech quantifies. This is a warm, peer-level conversation with someone who speaks the same operational language.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Kat, given how deeply Inductive Automation is embedded in industrial operations environments — are you seeing your customers push harder on asset optimization as a lever for productivity, or is uptime still the dominant conversation?"
+                            "With industrial automation customers demanding more from their ops stack every year, I'm curious how Inductive Automation is thinking about optimizing its own internal asset performance — is that a priority on your roadmap for 2026?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,10 +275,10 @@
                                 <div class="connection__company">American Clean Power</div>
                             </div>
                         </div>
-                        <p class="connection__why">American Clean Power operates at the centre of the energy transition, where optimising the performance of large-scale industrial energy assets is both an operational and strategic imperative. Kelly, as COO, is responsible for making those assets perform efficiently and cost-effectively — precisely the problem Aspen Technology's software is designed to solve. The clean energy sector is increasingly adopting asset performance management and operational productivity tools as fleets of wind, solar, and storage assets scale rapidly. This is a timely conversation for Aspen Technology as energy operators seek software that can handle the complexity of next-generation asset portfolios.</p>
+                        <p class="connection__why">The clean energy sector is one of the fastest-growing verticals for industrial asset optimization, with wind, solar, and storage infrastructure requiring sophisticated software to maximize uptime and productivity. As COO of American Clean Power — a major industry association representing hundreds of asset-owning members — Kelly Darnell holds influence that extends well beyond her own organization's operations. AspenTech's ability to improve asset performance in capital-intensive energy environments maps directly to the operational challenges her members face. A relationship here could open doors to association-level endorsement or introductions across the clean power ecosystem.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Kelly, as clean power asset fleets scale up in complexity and volume, how are you thinking about the software layer needed to keep operational productivity from becoming the bottleneck to growth?"
+                            "Given the scale of capital assets your member companies are deploying right now, I'd love to hear how you're seeing the industry approach operational productivity — are optimization tools keeping pace with the buildout?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
@@ -290,10 +290,10 @@
                                 <div class="connection__company">H.H. Angus & Associates</div>
                             </div>
                         </div>
-                        <p class="connection__why">H.H. Angus is a leading engineering firm specialising in complex industrial and infrastructure design — a sector where asset lifecycle management and operational efficiency are core client deliverables. Kevin's operational leadership role means he is evaluating tools and platforms that improve project and asset productivity across large-scale industrial engagements. Engineering firms of this type are influential buyers and recommenders of operational software, often specifying or endorsing platforms like Aspen Technology's across multiple client projects simultaneously. Winning Kevin's attention could open doors not just to H.H. Angus's own operations but to a broader network of industrial clients they serve.</p>
+                        <p class="connection__why">H.H. Angus is a leading engineering and industrial design firm whose projects span complex infrastructure — exactly the environment where AspenTech's operational productivity software creates measurable value during both design and operational phases. Kevin O'Neill's remit over operations means he influences both internal productivity tooling and the recommendations his firm makes to industrial clients. AspenTech has an opportunity here to position itself both as a solution for H.H. Angus's own operations and as a tool their engineering teams could recommend or integrate into client project delivery. The industrial and infrastructure focus makes this one of the most directly relevant buyer profiles in the room.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Kevin, in complex infrastructure and industrial projects, where do you see the biggest gap between how assets are designed to perform and how they actually perform once operations begin — and is software closing that gap fast enough?"
+                            "Engineering firms are increasingly being asked to deliver not just the asset design but the operational performance case — how is H.H. Angus thinking about embedding productivity benchmarks into the projects you're delivering for industrial clients?"
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
