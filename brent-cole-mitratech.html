@@ -8,7 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold:#9B834F; --gold-light:#aa9669; --gold-dim:rgba(155,131,79,0.12); --gold-dim-mid:rgba(155,131,79,0.25); --navy:#202632; --navy-deep:#171C27; --base:#131720; --surface:#1B2030; --surface-raised:#202535; --surface-over:#262C3E; --border:rgba(155,131,79,0.15); --border-hover:rgba(155,131,79,0.35); --border-subtle:rgba(255,255,255,0.06); --text-primary:#F0EDE8; --text-secondary:#8C8FA0; --text-tertiary:#4E5268; }
+        :root {
+            --gold:          #9B834F;
+            --gold-light:    #aa9669;
+            --gold-dim:      rgba(155,131,79,0.12);
+            --gold-dim-mid:  rgba(155,131,79,0.25);
+            --navy:          #202632;
+            --navy-deep:     #171C27;
+            --base:          #131720;
+            --surface:       #1B2030;
+            --surface-raised:#202535;
+            --surface-over:  #262C3E;
+            --border:        rgba(155,131,79,0.15);
+            --border-hover:  rgba(155,131,79,0.35);
+            --border-subtle: rgba(255,255,255,0.06);
+            --text-primary:  #F0EDE8;
+            --text-secondary:#8C8FA0;
+            --text-tertiary: #4E5268;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--base); color:var(--text-primary); min-height:100vh; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
@@ -118,10 +135,27 @@
         .footer__brand { font-size:12px; font-weight:700; color:var(--gold); letter-spacing:0.3px; }
         .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s cubic-bezier(0.19,1,0.22,1),transform 0.65s cubic-bezier(0.19,1,0.22,1); }
         .reveal.is-visible { opacity:1; transform:translateY(0); }
-        .reveal-d1 { transition-delay:0.10s; } .reveal-d2 { transition-delay:0.20s; } .reveal-d3 { transition-delay:0.30s; } .reveal-d4 { transition-delay:0.40s; }
-        @media(max-width:900px){ .container{padding:0 24px;} .hero{padding:80px 0 60px;} .hero .container{grid-template-columns:1fr;gap:48px;} .pains,.speakers,.connections{grid-template-columns:1fr;} .benefits{grid-template-columns:1fr;} .section{padding:72px 0;} .header__cta{display:none;} .proof__logos{gap:18px 32px;} .footer .container{flex-direction:column;gap:10px;text-align:center;} }
-        @media(max-width:480px){ .hero__title{font-size:28px;} .event-details{grid-template-columns:1fr;} .hero__actions{flex-direction:column;align-items:flex-start;} }
-    </style>
+        .reveal-d1 { transition-delay:0.10s; }
+        .reveal-d2 { transition-delay:0.20s; }
+        .reveal-d3 { transition-delay:0.30s; }
+        .reveal-d4 { transition-delay:0.40s; }
+        @media(max-width:900px){
+            .container{padding:0 24px;}
+            .hero{padding:80px 0 60px;}
+            .hero .container{grid-template-columns:1fr;gap:48px;}
+            .pains,.speakers,.connections{grid-template-columns:1fr;}
+            .benefits{grid-template-columns:1fr;}
+            .section{padding:72px 0;}
+            .header__cta{display:none;}
+            .proof__logos{gap:18px 32px;}
+            .footer .container{flex-direction:column;gap:10px;text-align:center;}
+        }
+        @media(max-width:480px){
+            .hero__title{font-size:28px;}
+            .event-details{grid-template-columns:1fr;}
+            .hero__actions{flex-direction:column;align-items:flex-start;}
+        }
+</style>
 </head>
 <body>
     <div class="dot-grid" aria-hidden="true"></div>
@@ -143,13 +177,12 @@
                 <a href="#book" class="header__cta">Book a Call →</a>
             </div>
         </header>
-
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Brent Cole · Mitratech</p>
-                    <h1 class="hero__title reveal reveal-d1">30+ COOs navigating <em>compliance, risk and operational governance</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">Compliance and risk are no longer just legal and HR concerns — COOs own the operational outcomes when governance fails. The COO Leaders' Summit brings together 30+ senior operations leaders who are actively investing in how AI and automation can reduce compliance overhead without slowing down the business. Mitratech needs to own that conversation.</p>
+                    <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>legal risk and HR automation</em> — in one room, for two days</h1>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together 30+ senior operations leaders who are actively rethinking how AI and automation can reduce legal risk, streamline compliance, and unlock productivity across their organizations. For Mitratech, this is a rare chance to engage the exact decision-makers and influencers driving enterprise-wide automation investments — not through cold outreach, but through curated, high-trust conversations over two days in Denver. No cold email required.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -168,7 +201,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section section--alt" id="why-sponsor">
             <div class="container">
                 <p class="section__label reveal">The challenge</p>
@@ -180,43 +212,40 @@
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container">
                 <p class="section__label reveal">On stage in Denver</p>
-                <h2 class="section__heading reveal reveal-d1">Keynotes that put compliance and governance on every COO's priority list</h2>
+                <h2 class="section__heading reveal reveal-d1">Keynotes that make <em>Mitratech</em> relevant to every COO in the room</h2>
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Janet-Moylan-200x300.jpg" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">JM</div>
-                        </div>
-                        <div class="speaker__name">Janet Moylan</div>
-                        <div class="speaker__role">SVP &amp; COO, Allied World Assurance</div>
-                        <div class="speaker__relevance">Allied World is in the business of quantifying operational risk. Moylan's keynote on risk, compliance, and operational resilience is the ideal setup for Mitratech's GRC platform conversation — COOs who just heard the risk story from an insurance COO are primed to ask "so how do we manage this operationally?"</div>
-                    </div>
-                    <div class="speaker reveal reveal-d2">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Timo-Koster-300x200.jpg" alt="Timo Koster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">TK</div>
-                        </div>
-                        <div class="speaker__name">Timo Koster</div>
-                        <div class="speaker__role">Strategic Advisor &amp; Board Member, NATO</div>
-                        <div class="speaker__relevance">Koster's perspective on governance, regulatory compliance, and the intersection of cybersecurity and operational risk is directly aligned with Mitratech's GRC positioning. When a former NATO Cyber Ambassador validates the operational compliance imperative, the room listens.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Tracy-Galloway--300x300.jpg" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">TG</div>
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
-                        <div class="speaker__role">CVP &amp; COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">AI-powered compliance automation is Mitratech's differentiator. Galloway's session on AI in enterprise operations is the entry point — COOs who hear about AI transforming Microsoft's operations want to know how to apply it to their own compliance and governance burden.</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Tracy's sessions on AI in enterprise operations set the tone for how COOs are thinking about intelligent automation across legal, compliance, and HR functions — precisely the transformation Mitratech enables. Her Microsoft lens gives Mitratech's pitch immediate credibility and context: when she frames AI as a productivity multiplier, your solution becomes the obvious next conversation.</div>
                     </div>
-                </div>
+                    <div class="speaker reveal reveal-d2">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">JM</div>
+                        </div>
+                        <div class="speaker__name">Janet Moylan</div>
+                        <div class="speaker__role">SVP & COO, Allied World Assurance</div>
+                        <div class="speaker__relevance">Janet speaks directly to the operational pressures of risk management and compliance in financial services — the exact pain points Mitratech's GRC platform is built to solve. Her perspective on operational resilience gives Mitratech a natural bridge to demonstrate how automating legal and compliance workflows reduces exposure and drives ROI at scale.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Timo Koster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">TK</div>
+                        </div>
+                        <div class="speaker__name">Timo Koster</div>
+                        <div class="speaker__role">Strategic Advisor & Board Member, NATO</div>
+                        <div class="speaker__relevance">Timo's focus on cybersecurity, governance, and operational risk resonates strongly with COOs who face mounting regulatory and compliance complexity — the core challenge Mitratech addresses. His board-level perspective on risk governance elevates the conversation beyond IT and positions Mitratech's AI-driven compliance automation as a strategic imperative, not just a software purchase.</div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--alt">
             <div class="container">
                 <p class="section__label reveal">Who you'll meet</p>
@@ -224,53 +253,51 @@
                 <div class="connections">
                     <div class="connection reveal reveal-d1">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru+Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Janet%20Moylan&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Janet Moylan">
                             <div class="connection__meta">
-                                <div class="connection__name">Taru Jain</div>
-                                <div class="connection__role">CoS &amp; COO, Global Head of Delivery for Issuer Services Technology</div>
-                                <div class="connection__company">Citibank</div>
+                                <div class="connection__name">Janet Moylan</div>
+                                <div class="connection__role">SVP & COO</div>
+                                <div class="connection__company">Allied World Assurance</div>
                             </div>
                         </div>
-                        <p class="connection__why">Financial services carries one of the heaviest compliance burdens in any industry. Jain manages operational delivery in Citi's technology division — an environment where legal, risk, and HR compliance automation directly reduces operational risk and regulatory exposure. This is a textbook Mitratech customer.</p>
+                        <p class="connection__why">Allied World operates across complex, heavily regulated insurance and reinsurance markets where legal risk, compliance tracking, and HR policy management are constant operational burdens. As SVP & COO, Janet sits at the intersection of risk, operations, and enterprise technology investment — making her a high-value prospect for Mitratech's GRC and HR automation suite. Insurance firms at Allied World's scale are under increasing pressure from regulators globally, creating a compelling ROI story for automated compliance workflows. This is exactly the buyer profile Mitratech's solution is built for.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How does Citi's issuer services technology team currently manage compliance obligations across your operational delivery function?"
+                            "Janet, given the regulatory pressure Allied World faces across multiple jurisdictions, I'm curious — how much of your ops team's time is still going into manual compliance tracking versus higher-value risk strategy work?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kelly+Darnell&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kelly Darnell">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru%20Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
+                            <div class="connection__meta">
+                                <div class="connection__name">Taru Jain</div>
+                                <div class="connection__role">CoS & COO, Global Head of Delivery for Issuer Services Technology</div>
+                                <div class="connection__company">Citibank</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">Taru oversees technology delivery operations at one of the world's most regulated financial institutions, where legal risk, compliance automation, and HR policy management operate at extraordinary scale and complexity. Citibank's ongoing regulatory scrutiny — including consent orders and compliance remediation programs — makes the ROI case for Mitratech's platform immediately tangible and urgent. Her dual CoS and COO remit means she has both the strategic vision and the operational authority to champion an enterprise automation investment. A conversation with Taru could open doors to one of the most compliance-intensive organizations in the world.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "Taru, with Citi's compliance transformation front and center right now, I'd love to understand how your team is thinking about automating the legal and policy workflows that tend to slow down remediation cycles."
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d3">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kelly%20Darnell&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kelly Darnell">
                             <div class="connection__meta">
                                 <div class="connection__name">Kelly Darnell</div>
                                 <div class="connection__role">COO</div>
                                 <div class="connection__company">American Clean Power</div>
                             </div>
                         </div>
-                        <p class="connection__why">The clean energy sector is navigating a rapidly evolving regulatory landscape — environmental compliance, labour regulations, and project governance are all live operational burdens. Darnell owns that compliance agenda as COO of one of North America's leading clean energy associations.</p>
+                        <p class="connection__why">American Clean Power operates in one of the most rapidly evolving regulatory environments in the US, where shifting federal and state energy policy creates continuous legal and compliance complexity for its member organizations. As COO, Kelly is responsible for ensuring operational resilience in an industry where regulatory non-compliance carries significant financial and reputational risk — a direct use case for Mitratech's legal and GRC automation platform. The clean energy sector is also scaling its workforce quickly, making HR automation an equally compelling value proposition. Mitratech could position itself as the operational backbone that helps ACP stay ahead of regulatory change without adding headcount.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How is American Clean Power helping your member organisations manage the compliance overhead of scaling renewable energy projects in a changing regulatory environment?"
+                            "Kelly, with energy policy shifting so rapidly at both the federal and state level, I'm curious how American Clean Power is managing the compliance tracking burden across your member base — is that still a largely manual process?"
                         </div>
-                    </div>
-                    <div class="connection reveal reveal-d3">
-                        <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi+Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
-                            <div class="connection__meta">
-                                <div class="connection__name">Heidi Winger</div>
-                                <div class="connection__role">Principal Consultant &amp; Head of Operations</div>
-                                <div class="connection__company">Allianz Technology of North America</div>
-                            </div>
-                        </div>
-                        <p class="connection__why">Insurance is one of the most compliance-intensive industries on earth. Winger manages operations for Allianz's North American technology function — responsible for IT governance, data protection compliance, and operational risk management. Mitratech's platform is built for exactly this environment.</p>
-                        <div class="connection__opener">
-                            <span class="connection__opener-label">Conversation opener</span>
-                            "Where does compliance and governance automation create the most friction or opportunity in Allianz Technology's operational model?"
-                        </div>
-                    </div>
-                </div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--navy">
             <div class="container">
                 <p class="section__label reveal">Sponsorship value</p>
@@ -283,22 +310,40 @@
                 </div>
             </div>
         </section>
-
         <div class="proof">
             <div class="container">
                 <p class="proof__label reveal">COOs in the room from companies including</p>
                 <div class="proof__logos reveal reveal-d1">
-                    <div class="proof__company"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Amazon</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Maersk</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>easyJet</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Kinetic</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Microsoft</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>NASA</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Allied World</span></div>
-                </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Maersk</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>easyJet</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Kinetic</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>NASA</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Allied World</span>
+                    </div></div>
             </div>
         </div>
-
         <section class="cta" id="book">
             <div class="container">
                 <div class="cta__inner reveal">
@@ -310,10 +355,9 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <div class="container">
-                <p class="footer__prepared">Prepared for <strong>Brent Cole</strong>, CEO, Mitratech GRC at Mitratech</p>
+                <p class="footer__prepared">Prepared for <strong>Brent Cole</strong>, CEO Mitratech GRC at Mitratech</p>
                 <span class="footer__brand">The Global Series</span>
             </div>
         </footer>
