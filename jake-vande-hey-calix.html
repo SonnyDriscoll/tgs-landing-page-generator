@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=calix.com&sz=128" alt="Calix" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/calix.com" alt="Calix" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://calix.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Calix</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Jake Vande Hey · Calix</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>enhanced broadband operations</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together 30+ senior operations executives who are actively rethinking how technology unlocks productivity and ROI across their organizations — exactly the conversation Calix's broadband delivery platform was built to lead. For Jake and the West team, this is a chance to position Calix inside the boardroom-level dialogue on tech-enabled ops, not just the procurement cycle. No cold emails, no gatekeepers — just two days of structured, high-trust access in Denver.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together 30+ senior operations executives who are actively rethinking how technology unlocks productivity and ROI across their organizations — exactly the conversation Calix's broadband delivery platform is built for. This is a curated environment where Calix can position its solution at the center of the tech-enabled ops agenda, not fight for attention in a crowded inbox. No cold outreach, no gatekeepers — just two days of direct access to the decision-makers who control operational budgets and transformation priorities.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Tracy's focus on AI-driven enterprise operations and digital transformation gives Calix a powerful narrative anchor — when she frames how platforms unlock operational ROI, it validates exactly what Calix's broadband delivery platform promises. Her session creates the ideal moment for Calix's team to follow up with delegates on how that same logic applies to broadband infrastructure and service delivery.</div>
+                        <div class="speaker__relevance">Tracy's focus on AI-driven enterprise operations and digital transformation directly mirrors the productivity and ROI narrative that Calix champions with its broadband delivery platform. Her keynote will prime the room to think about how technology infrastructure enables operational scale — creating a natural segue for Calix to demonstrate how enhanced broadband operations is the foundation layer every COO in the room depends on.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
@@ -233,7 +233,7 @@
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Amir's expertise in mission-critical operations and infrastructure resilience mirrors the reliability expectations that broadband operators face when delivering always-on connectivity at scale. His presence elevates the infrastructure conversation in the room, making Calix's pitch around operational excellence and platform-driven efficiency land with greater urgency and credibility.</div>
+                        <div class="speaker__relevance">Amir's expertise in mission-critical infrastructure and operational excellence speaks directly to the reliability and performance standards that Calix's broadband delivery platform is engineered to meet. COOs hearing about infrastructure resilience in high-stakes environments will immediately connect those standards to their own operational continuity needs, positioning Calix as the partner that brings that same discipline to broadband delivery.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Peter's track record of operational transformation at scale across complex, multi-site organizations speaks directly to the productivity gains Calix enables for broadband operators managing distributed networks. His framing of large-scale operational change gives Calix's team a shared vocabulary with COOs who are weighing platform investments against legacy operational models.</div>
+                        <div class="speaker__relevance">Peter's track record of operational transformation at scale across complex, distributed organizations resonates strongly with the COO audience Calix is targeting — enterprises managing multi-site connectivity and broadband-dependent workflows. His lens on unlocking ROI through operational efficiency reinforces Calix's core message that smarter broadband operations translate directly into measurable business productivity gains.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">Microsoft Americas</div>
                             </div>
                         </div>
-                        <p class="connection__why">Microsoft Americas operates one of the most expansive technology-distribution and partner-enablement infrastructures in the world, and Tracy is responsible for making that machine run with measurable efficiency. As cloud and AI services increasingly depend on high-performance broadband connectivity at the edge, her operations team has a direct stake in the quality and reliability of the underlying delivery platforms. Calix's broadband delivery platform is purpose-built for the kind of scalable, intelligent network operations that enterprise technology leaders like Tracy are demanding from their partners. A conversation here opens doors not just at Microsoft, but across the partner ecosystem she influences.</p>
+                        <p class="connection__why">Microsoft Americas operates one of the most complex, distributed enterprise environments in the world, with broadband reliability underpinning everything from cloud delivery to hybrid workforce productivity. Tracy sits at the intersection of technology investment and operational performance — precisely the buying profile Calix's broadband delivery platform is designed to serve. A relationship here opens doors not just to Microsoft's own operational procurement but to the broader ecosystem of enterprise clients Microsoft influences. Calix's positioning as a tech-enabled ops enabler maps directly onto the priorities Tracy is accountable for delivering.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Tracy, as you push AI and cloud services deeper into enterprise and regional markets, how are you thinking about the broadband infrastructure layer — is that a capability you're looking to influence, or one you're still dependent on whoever's last-mile provider happens to be?"
+                            "Tracy, given the scale of hybrid and cloud-dependent operations you're running across Microsoft Americas, I'd love to hear how you're thinking about broadband infrastructure as a lever for operational productivity — it's central to what we're seeing drive ROI for large distributed organizations right now."
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,10 +275,10 @@
                                 <div class="connection__company">American Clean Power</div>
                             </div>
                         </div>
-                        <p class="connection__why">American Clean Power represents the operational backbone of the renewable energy sector, and as clean energy infrastructure scales across rural and suburban markets, reliable broadband connectivity becomes a non-negotiable operational requirement for grid monitoring, remote asset management, and workforce coordination. Kelly is navigating the exact convergence of infrastructure build-out and tech-enabled ops that Calix is designed to support. Calix's platform can directly address the broadband delivery gaps that slow down clean energy operations in underserved geographies — a pain point Kelly's team almost certainly lives with daily. This is a high-relevance conversation with a buyer who has both budget authority and a pressing operational need.</p>
+                        <p class="connection__why">American Clean Power operates and manages infrastructure assets across geographically dispersed sites where reliable, high-performance broadband connectivity is mission-critical to monitoring, control, and compliance workflows. As the sector scales rapidly, operational efficiency and connectivity uptime are becoming direct cost and revenue drivers — exactly the problem Calix's enhanced broadband operations platform solves. Kelly is accountable for the operational backbone of a fast-growing industry that is actively investing in tech-enabled infrastructure. This is a high-value, forward-leaning buyer profile with budget urgency tied to regulatory and growth timelines.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Kelly, with clean energy assets increasingly distributed across rural corridors, how much of your operational headache right now comes down to inconsistent or unreliable broadband access at those sites — and is that something you've been able to systematically solve, or is it still a patchwork?"
+                            "Kelly, with clean power assets spread across so many locations, I imagine broadband reliability is one of those infrastructure variables that quietly makes or breaks your operational KPIs — is that something you're actively looking to optimize as you scale?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
@@ -290,10 +290,10 @@
                                 <div class="connection__company">H.H. Angus & Associates</div>
                             </div>
                         </div>
-                        <p class="connection__why">H.H. Angus is a leading engineering and infrastructure design firm that works on some of North America's most complex facility and technology infrastructure projects, meaning Kevin's team is regularly advising clients on the broadband and connectivity architecture embedded in new builds and retrofits. His influence extends well beyond his own organization — he shapes how clients specify and procure broadband delivery solutions at the design stage. Getting Calix in front of Kevin means getting Calix specified into projects before the procurement process even begins. For the West team, this is a classic channel-and-influence play with significant downstream revenue potential.</p>
+                        <p class="connection__why">H.H. Angus is a leading engineering firm delivering complex infrastructure projects where connectivity and broadband performance are increasingly embedded into facility design and operational handoff. Kevin's operational role puts him at the decision point for which technology platforms get specified and deployed across major infrastructure builds — making him a high-value channel and direct buyer opportunity for Calix. As built environments become smarter and more connected, the firm's clients are demanding broadband delivery solutions that are proven and scalable. Calix's platform is directly aligned with the operational outcomes H.H. Angus is contracted to deliver for its clients.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Kevin, when your team is designing the technology infrastructure layer for a major facility project, at what point does broadband delivery architecture enter the conversation — is that something clients come in with a spec for, or are you typically the ones recommending the platform approach?"
+                            "Kevin, as smart building and connected infrastructure specs become more demanding from your clients, I'm curious how you're thinking about broadband delivery as a core operational layer in the projects you're designing and handing over — it's an area we're seeing drive significant ROI conversations."
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
