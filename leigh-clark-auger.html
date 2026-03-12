@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=auger.com&sz=128" alt="Auger" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/auger.com" alt="Auger" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://auger.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Auger</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Leigh Clark · Auger</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>autonomous decision synchronization</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operators reshaping global supply chains through reshoring, visibility, and real-time intelligence — exactly the buyers Auger's supply chain OS is built for. With Blue Yonder already in the room as a sponsor, showing up means Auger controls its own narrative rather than letting a legacy incumbent define the category. No cold email, no SDR sequence — just two days of direct access to 30+ C-suite operators who are actively rethinking how decisions get made across their supply networks.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most operationally sophisticated executives at the exact moment reshoring complexity and supply chain visibility are forcing a rethink of how decisions get made at scale. For Auger, this is two days inside the buying conversation — with the precise decision-makers who feel the cost of fragmented, delayed supply chain decisions every quarter. No cold email required — just direct access to the COOs already wrestling with the problems Auger's real-time supply chain OS was built to solve.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,25 +224,25 @@
                         </div>
                         <div class="speaker__name">Harry Moser</div>
                         <div class="speaker__role">Founder & President, Reshoring Initiative</div>
-                        <div class="speaker__relevance">Moser's entire mandate is accelerating North American reshoring — the exact macro trend creating the complex, multi-node supply chains that Auger's real-time OS is designed to synchronize. His keynote will prime every COO in the room to think about supply chain visibility and domestic operational control, handing Auger a warm, pre-framed audience for conversations about autonomous decision-making at the network level.</div>
+                        <div class="speaker__relevance">Moser's keynote on reshoring and North American industrial growth will put supply chain fragmentation and visibility gaps front and center for every COO in attendance — the exact pain Auger's real-time supply chain OS addresses. His framing of reshoring as an operational imperative rather than a political talking point creates the perfect context for Auger to position autonomous decision synchronization as the infrastructure layer that makes reshoring operationally viable.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">PG</div>
-                        </div>
-                        <div class="speaker__name">Peter Gibbons</div>
-                        <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Gibbons oversaw supply chain and operational transformation at one of the world's most complex industrial manufacturers, giving him direct credibility with COOs wrestling with multi-tier supplier decisions and cross-functional latency. His presence signals that operational transformation at scale is a strategic board-level priority — elevating Auger's pitch from software vendor to essential infrastructure for any COO serious about decision velocity.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
                             <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">MM</div>
                         </div>
                         <div class="speaker__name">Michael McLellan</div>
                         <div class="speaker__role">COO, DHL</div>
-                        <div class="speaker__relevance">As COO of the world's largest logistics network, McLellan operates at the exact intersection of global supply chain complexity and real-time operational orchestration that Auger addresses. His keynote perspective on global logistics intelligence will make autonomous decision synchronization feel urgent and immediately applicable, creating a natural bridge for Auger to position its OS as the connective layer between visibility data and operational action.</div>
+                        <div class="speaker__relevance">McLellan operates one of the world's most complex global logistics networks and will speak directly to the visibility and coordination failures that compound across multi-node supply chains — precisely the environment where Auger's autonomous decision synchronization delivers measurable ROI. His perspective on warehouse operations and last-mile delivery will validate for the room why real-time OS-level decision-making is no longer a nice-to-have in global supply chains.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">PG</div>
+                        </div>
+                        <div class="speaker__name">Peter Gibbons</div>
+                        <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
+                        <div class="speaker__relevance">Gibbons brings decades of supply chain and operational transformation experience at industrial scale, giving Auger's pitch a credible anchor in the reality of large-enterprise supply chain execution rather than theoretical digital transformation. His focus on operational transformation at scale mirrors the exact conversation Auger needs COOs to be in — how do you synchronize decisions across a complex, multi-tier supply chain without losing speed or control?</div>
                     </div></div>
             </div>
         </section>
@@ -260,28 +260,13 @@
                                 <div class="connection__company">DHL</div>
                             </div>
                         </div>
-                        <p class="connection__why">DHL's global logistics network processes millions of routing, capacity, and fulfillment decisions daily across hundreds of markets — the exact environment where autonomous decision synchronization delivers the most measurable value. At this scale, latency in cross-functional decision-making isn't a process problem, it's a revenue problem, and McLellan owns it directly. DHL is also aggressively investing in supply chain tech to differentiate its enterprise logistics offering, making Auger a potential platform-layer partner rather than a point solution. A conversation here isn't just a sales opportunity — it's a potential lighthouse customer that validates Auger in global enterprise logistics.</p>
+                        <p class="connection__why">DHL operates one of the most complex, high-velocity global supply chain networks on earth — and every inefficiency in decision latency across that network compounds into material cost and service failure. McLellan is evaluating the exact category of infrastructure that Auger occupies: real-time, autonomous coordination across distributed operations. As a speaker and delegate, he will be in extended conversations throughout the summit, making this a rare opportunity for Auger to engage him outside of a formal procurement process. Critically, DHL's scale means a pilot with McLellan's backing could validate Auger's enterprise credibility in a single deal.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Given the volume of real-time routing and capacity decisions DHL coordinates globally, I'm curious — where does decision latency still create the most operational drag for your team, even with your current tech stack?"
+                            "Given the reshoring shifts we're seeing push more volume back into North American networks, I'm curious how DHL is thinking about decision latency when your coordination layer has to absorb that kind of structural change — is that something you're solving with existing tooling or are you evaluating new infrastructure?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
-                        <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Chris%20Spanjaard&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Chris Spanjaard">
-                            <div class="connection__meta">
-                                <div class="connection__name">Chris Spanjaard</div>
-                                <div class="connection__role">SVP & COO</div>
-                                <div class="connection__company">Purolator</div>
-                            </div>
-                        </div>
-                        <p class="connection__why">Purolator is Canada's dominant courier network and is actively expanding its cross-border North American footprint — a growth trajectory that introduces exactly the multi-node supply chain complexity that Auger's real-time OS is built to manage. As SVP & COO, Spanjaard is accountable for operational decisions across a network undergoing significant reshoring-era volume shifts and last-mile pressure. Purolator's parent structure under Canada Post also means technology buying decisions need to demonstrate enterprise-grade scalability, which plays directly to Auger's positioning. This is a high-fit prospect in a company actively investing in operational infrastructure to support North American logistics growth.</p>
-                        <div class="connection__opener">
-                            <span class="connection__opener-label">Conversation opener</span>
-                            "With Purolator scaling its cross-border North American operations, I'd love to hear how your team is handling the decision coordination across that expanded network — are you finding the existing systems keep up with the pace of change?"
-                        </div>
-                    </div>
-                    <div class="connection reveal reveal-d3">
                         <div class="connection__header">
                             <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kat%20Jeschke&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kat Jeschke">
                             <div class="connection__meta">
@@ -290,10 +275,25 @@
                                 <div class="connection__company">Inductive Automation</div>
                             </div>
                         </div>
-                        <p class="connection__why">Inductive Automation builds SCADA and industrial automation software that sits at the operational core of manufacturing and supply chain environments — making Jeschke one of the most technically fluent COOs in the room and a natural peer buyer for Auger's supply chain OS. Her company's customer base overlaps significantly with the industrial manufacturers driving reshoring investments, giving her both personal relevance and potential channel or partnership value for Auger. As a COO who understands the gap between real-time operational data and actionable decision-making, she will immediately grasp Auger's value proposition without needing category education. This conversation could open doors to co-selling opportunities as much as a direct deal.</p>
+                        <p class="connection__why">Inductive Automation sits at the intersection of industrial automation, SCADA systems, and manufacturing operations — making Jeschke one of the most technically fluent COOs in the room for a conversation about autonomous decision synchronization in production environments. Her organization understands the operational technology layer that Auger's supply chain OS must integrate with, and she is well positioned to be both a buyer and a channel into her customer base of industrial operators. A relationship with Inductive Automation could also open partnership conversations that extend Auger's distribution into the industrial automation ecosystem. Blue Yonder has little penetration in the SCADA-adjacent operational space, leaving this lane relatively open for Auger.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "You sit at a really interesting intersection — your platform captures real-time operational data for manufacturers, and we help synchronize the decisions that data should be driving. I'd be curious whether your customers ever talk to you about the gap between what their systems see and how fast their teams can actually act on it."
+                            "The gap between what SCADA systems capture in real time and what actually informs supply chain decisions upstream is something I keep hearing about — how does Inductive Automation think about closing that loop, and is that a problem your COO customers are actively asking you to solve?"
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d3">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Harry%20Moser&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Harry Moser">
+                            <div class="connection__meta">
+                                <div class="connection__name">Harry Moser</div>
+                                <div class="connection__role">Founder & President</div>
+                                <div class="connection__company">Reshoring Initiative</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">Moser's Reshoring Initiative works directly with manufacturers and policymakers accelerating the return of production to North America — and every company he advises is facing the same cold reality: reshored supply chains are more visible geographically but not more operationally synchronized without the right decision infrastructure. His network is effectively a curated pipeline of mid-market and enterprise manufacturers who are actively rebuilding supply chains and need exactly what Auger provides. A relationship with Moser could give Auger warm introductions into dozens of reshoring-driven supply chain transformation projects where autonomous decision synchronization is a foundational requirement. His endorsement or co-positioning would also meaningfully differentiate Auger from Blue Yonder in the reshoring narrative.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "As companies actually execute on reshoring rather than just planning for it, I'd imagine the operational coordination complexity spikes fast — is the Reshoring Initiative seeing gaps in the decision-making tooling available to manufacturers trying to run tighter North American supply chains?"
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
