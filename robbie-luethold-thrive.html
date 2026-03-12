@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=thrivenextgen.com&sz=128" alt="Thrive" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/thrivenextgen.com" alt="Thrive" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://thrivenextgen.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Thrive</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Robbie Luethold · Thrive</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>managed detection and response security</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who are increasingly accountable for cybersecurity resilience across their enterprises — exactly the buyers Thrive's managed detection and response platform is built for. With cybersecurity now an operations imperative, not just an IT concern, Robbie's team has a rare opportunity to engage 30+ senior COOs in direct, trust-based conversations about enterprise cybersecurity operations enforcement. No cold email required — just two days in Denver where Thrive is already part of the conversation.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who are increasingly accountable for enterprise cybersecurity outcomes — not just IT teams. For Thrive, this is a rare opportunity to position managed detection and response as a core operations imperative directly with the executives who own uptime, resilience, and risk. No cold email required — just two days in Denver with the buyers who need what you do.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,16 +224,16 @@
                         </div>
                         <div class="speaker__name">Timo Koster</div>
                         <div class="speaker__role">Strategic Advisor & Board Member, NATO</div>
-                        <div class="speaker__relevance">Koster's focus on cybersecurity as an operational risk and governance imperative maps directly onto Thrive's positioning of MDR as an enterprise operations enforcement capability. His NATO-level credibility will elevate the urgency around threat detection and response in the minds of every COO in the room, priming them for exactly the conversation Thrive's team wants to have.</div>
+                        <div class="speaker__relevance">Koster's work at NATO places cybersecurity squarely in the language of operational risk and national resilience — the exact framing Thrive uses to elevate MDR beyond an IT conversation. His keynote will prime every COO in the room to think about threat detection as an enterprise operations imperative, creating a direct opening for Thrive's pitch.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">TG</div>
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">JM</div>
                         </div>
-                        <div class="speaker__name">Tracy Galloway</div>
-                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Galloway's sessions on tech-enabled operations and AI in enterprise ops create a natural backdrop for Thrive's managed detection and response story — particularly around how AI-driven security operations are becoming a baseline expectation for digital enterprises. COOs hearing her frame technology as an operational driver will be receptive to Thrive's argument that MDR is no longer optional infrastructure.</div>
+                        <div class="speaker__name">Janet Moylan</div>
+                        <div class="speaker__role">SVP & COO, Allied World Assurance</div>
+                        <div class="speaker__relevance">Moylan's focus on operational resilience and compliance in financial services mirrors the high-stakes environments where Thrive's MDR solution delivers the most immediate value. Her presence signals that the room understands regulated, risk-sensitive operations — and her framing of resilience will reinforce why continuous security enforcement is a COO-level responsibility.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Deylami's expertise in mission-critical operations and infrastructure resilience speaks directly to the high-stakes environments where Thrive's cybersecurity operations enforcement delivers the most value. His presence reinforces the summit's theme that operational continuity depends on proactive security posture — giving Thrive a compelling proof-point context when speaking with COOs who manage complex, always-on infrastructure.</div>
+                        <div class="speaker__relevance">Deylami's experience running mission-critical infrastructure operations where failure is not an option translates directly to the always-on security posture Thrive provides. His perspective on infrastructure integrity and operational excellence gives Thrive a powerful proof-point analogy — if NASA-grade operations require continuous enforcement, so does your enterprise.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">NATO</div>
                             </div>
                         </div>
-                        <p class="connection__why">Koster operates at the intersection of cybersecurity, operational risk, and governance — the precise trifecta that Thrive's MDR offering addresses at the enterprise level. Organizations and leaders who engage with NATO's cyber posture are actively shaping the frameworks that enterprise COOs will be asked to adopt, making him a high-value relationship for Thrive's thought leadership and pipeline development. A conversation with Koster could open doors to defence-adjacent and government-aligned enterprise accounts that have acute, well-funded MDR requirements. His credibility in the room also makes him a potential reference voice for Thrive's operational security narrative.</p>
+                        <p class="connection__why">Koster operates at the intersection of cybersecurity strategy, governance, and operational risk — exactly where Thrive's enterprise MDR offering needs to land with COO-level buyers. His advisory influence extends across both public and private sector organizations that are actively modernizing their security operations posture. A relationship here could open doors to high-value enterprise accounts in defence-adjacent and critical infrastructure verticals where Thrive has significant expansion potential. He's the kind of connector who validates a vendor's credibility across an entire buyer ecosystem.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Given how much the threat landscape has shifted operationally in the last 18 months, we're curious how you're seeing COOs think about their accountability for cyber resilience versus their CISO — is that line getting clearer or more blurred?"
+                            "Given your work advising on operational risk at NATO, I'm curious — when you speak with enterprise COOs, how often are they treating threat detection as an operations function versus still deferring it entirely to their CISOs?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,10 +275,10 @@
                                 <div class="connection__company">Allianz Technology of North America</div>
                             </div>
                         </div>
-                        <p class="connection__why">Allianz Technology sits at the convergence of financial services, insurance, and IT operations — an environment with stringent regulatory requirements and an expanding attack surface that makes managed detection and response a board-level priority. Winger's dual mandate across operations and technology makes her exactly the profile of buyer who champions MDR investments as an operational necessity rather than a discretionary security spend. Financial services firms of Allianz's scale are frequent targets of sophisticated threat actors, and Thrive's enterprise cybersecurity operations enforcement directly addresses their need for continuous, expert-led threat management. Engaging her at this summit positions Thrive ahead of any formal procurement cycle.</p>
+                        <p class="connection__why">Winger sits at the crossroads of IT operations and financial services compliance — a profile that maps almost perfectly to Thrive's core MDR buyer persona. Allianz Technology manages the operational technology backbone for one of the world's largest insurers, meaning the stakes around detection, response, and uptime are extremely high. Her dual remit across operations and technology makes her a champion-level contact who can influence both the buy decision and internal advocacy. This is exactly the conversation Thrive needs to be having with someone who can translate MDR value into boardroom-ready risk language.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "With Allianz operating across so many regulated markets in North America, how are you currently thinking about the operational overhead of maintaining consistent security enforcement across all those environments — is that something that sits with your team or your CISO's?"
+                            "Running operations for Allianz Technology, you're essentially managing security risk at infrastructure scale — I'd love to hear how you're thinking about the gap between detection capability and actual operational enforcement in your environment."
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
@@ -290,10 +290,10 @@
                                 <div class="connection__company">Citibank</div>
                             </div>
                         </div>
-                        <p class="connection__why">Citibank's issuer services technology division represents one of the most complex, high-value cybersecurity targets in global financial services, and Jain's combined CoS and COO role means she has both strategic influence and operational accountability for how security capabilities are embedded into day-to-day technology delivery. Thrive's MDR platform — built for enterprise-scale, always-on threat detection — aligns precisely with the demands of a global banking technology operation running critical issuer infrastructure. Her cross-functional visibility across technology and operations makes her a champion profile who can bridge the conversation between the CISO's mandate and the COO's operational resilience agenda. A relationship built at this summit could position Thrive for a meaningful enterprise conversation within a marquee financial services account.</p>
+                        <p class="connection__why">Jain oversees technology delivery operations for one of the most complex and highly regulated financial institutions in the world, making her a high-value prospect for enterprise-grade MDR services. Citibank's issuer services technology function operates under intense regulatory scrutiny and faces sophisticated, persistent threat actors — the exact use case where Thrive's continuous security operations enforcement creates undeniable ROI. Her COO and Chief of Staff dual role means she influences both strategic vendor decisions and operational execution priorities. Winning a relationship here could anchor Thrive's positioning in tier-one financial services accounts.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "In a technology operation as large and globally distributed as Citibank's issuer services, how do you currently think about the gap between what your security tools detect and what actually gets actioned at the operational level — is that a tension you're solving for right now?"
+                            "With the regulatory pressure Citibank operates under and the complexity of your global technology delivery footprint, I'm curious — how are you currently thinking about the gap between your detection capabilities and your ability to enforce a consistent security posture across that entire environment?"
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
