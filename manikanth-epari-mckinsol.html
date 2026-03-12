@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=mckinsol.com&sz=128" alt="McKinsol" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/mckinsol.com" alt="McKinsol" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://mckinsol.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">McKinsol</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Manikanth Epari · McKinsol</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>supply chain optimization and visibility</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most operationally influential executives at a moment when reshoring pressures and supply chain fragility are forcing real technology decisions. For McKinsol, this is a direct line into the decision-makers responsible for signing off on supply chain visibility and optimization investments — no cold email required, just two days of structured conversation in Denver.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most senior operations decision-makers at a moment when reshoring pressures and supply chain fragility are forcing real technology investment. For McKinsol, this is a rare chance to position your supply chain and logistics solutions directly in front of the buyers who control the budgets and feel the pain every quarter. No cold email required — just two days of structured conversations with the right people in Denver.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -219,21 +219,21 @@
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">MM</div>
-                        </div>
-                        <div class="speaker__name">Michael McLellan</div>
-                        <div class="speaker__role">COO, DHL</div>
-                        <div class="speaker__relevance">As COO of one of the world's largest logistics networks, McLellan's session on global supply chain operations will set the agenda for what best-in-class visibility and optimization looks like at scale. His keynote creates a natural context for McKinsol to position its platform as the technology layer that operationalizes exactly the kind of end-to-end supply chain intelligence he will be describing.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d2">
-                        <div class="speaker__photo-wrap">
                             <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Harry Moser" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">HM</div>
                         </div>
                         <div class="speaker__name">Harry Moser</div>
                         <div class="speaker__role">Founder & President, Reshoring Initiative</div>
-                        <div class="speaker__relevance">Moser's focus on reshoring and North American supply chain resilience maps directly to the event theme McKinsol is entering — and every COO in the room will be processing his arguments through the lens of their own operational exposure. McKinsol can use Moser's session as a springboard to show how supply chain visibility technology is the essential enabler of any successful reshoring or nearshoring strategy.</div>
+                        <div class="speaker__relevance">Harry Moser is the defining voice on reshoring and North American supply chain resilience — the exact strategic backdrop that makes McKinsol's visibility and optimization solutions urgent rather than optional. When he makes the case for restructuring supply chains closer to home, every COO in the room will be thinking about the technology infrastructure needed to manage that complexity, which is precisely where McKinsol plays.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d2">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">MM</div>
+                        </div>
+                        <div class="speaker__name">Michael McLellan</div>
+                        <div class="speaker__role">COO, DHL</div>
+                        <div class="speaker__relevance">As COO of the world's largest logistics network, McLellan's perspective on global supply chain operations, warehouse efficiency, and last-mile delivery carries enormous weight with an audience of operations leaders. His presence validates the strategic importance of supply chain technology investment and creates a natural opening for McKinsol to align its solutions with the operational challenges he will surface from the main stage.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Gibbons brings deep credibility in industrial-scale supply chain transformation, having led one of the world's most complex manufacturing and distribution operations at 3M. His perspective on operational transformation at scale gives McKinsol a high-profile reference point for conversations about modernising legacy supply chain infrastructure with real-time optimization and visibility tools.</div>
+                        <div class="speaker__relevance">Gibbons brings decades of hands-on supply chain and operational transformation experience from one of the world's most complex industrial manufacturers, giving McKinsol's pitch credibility by association with the scale of problems he has solved. His focus on operational transformation at scale mirrors the journey McKinsol helps enterprises navigate, making every conversation he sparks a warm lead for McKinsol's team.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">DHL</div>
                             </div>
                         </div>
-                        <p class="connection__why">DHL operates one of the most expansive and complexity-dense logistics networks in the world, making supply chain visibility and optimization not a nice-to-have but an operational imperative at every tier of their business. McLellan is the executive accountable for technology-enabled efficiency across warehousing, last-mile delivery, and global freight — precisely the operational surface area where McKinsol's solution delivers measurable impact. A relationship here could open doors not just to a direct enterprise deal but to a reference customer with the scale and brand credibility to accelerate McKinsol's wider market position. This is one of the highest-leverage conversations McKinsol could have in Denver.</p>
+                        <p class="connection__why">DHL operates one of the most complex global logistics and supply chain networks on the planet, making McLellan one of the highest-value conversations McKinsol could have at this event. At a time when DHL is navigating reshoring trends, e-commerce volatility, and last-mile complexity, the appetite for supply chain optimization and real-time visibility tools is acute at the COO level. McLellan has both the authority and the operational mandate to evaluate and champion solutions that drive network efficiency. A direct relationship initiated here could open doors across DHL's global and regional operations divisions.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "With DHL managing such a vast multi-modal network, I'm curious — where does real-time supply chain visibility still break down for your team, and is that a data problem, an integration problem, or something else entirely?"
+                            "Given the scale of what DHL is managing across North American corridors right now, I'd love to understand where visibility gaps are still creating the most friction for your team — are you finding the biggest challenges at the network planning layer or closer to execution?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,25 +275,25 @@
                                 <div class="connection__company">Purolator</div>
                             </div>
                         </div>
-                        <p class="connection__why">Purolator is Canada's leading courier and logistics provider with significant cross-border North American operations, putting supply chain visibility and last-mile optimization squarely at the center of their competitive strategy. As SVP & COO, Spanjaard is driving operational decisions that require exactly the kind of end-to-end supply chain transparency McKinsol provides, particularly as reshoring trends increase domestic shipment complexity. Purolator's scale and focus on service reliability mean they are actively evaluating technology partners that can reduce uncertainty and improve delivery predictability across their network. McKinsol's ability to surface real-time disruption signals would resonate strongly with the pressures Spanjaard is managing.</p>
+                        <p class="connection__why">Purolator is Canada's largest courier and a critical player in cross-border North American logistics, and Spanjaard as COO is directly accountable for the operational performance that supply chain visibility technology is designed to improve. As reshoring accelerates and North American trade corridors become more complex, Purolator will need sharper optimization tools to maintain service levels and manage cost. McKinsol's solution is directly aligned to the operational pressures a logistics COO at Purolator faces daily. This is a prospect who will immediately understand the value proposition without needing heavy education.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "As cross-border volumes between Canada and the US continue to shift with reshoring activity, how is Purolator thinking about giving operations teams better real-time visibility into where those shipments are at risk?"
+                            "With cross-border volumes shifting as reshoring picks up pace, I'm curious how Purolator is thinking about the visibility and optimization layer — are you building more in-house or looking at platform partnerships to handle that complexity?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kat%20Jeschke&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kat Jeschke">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Harry%20Moser&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Harry Moser">
                             <div class="connection__meta">
-                                <div class="connection__name">Kat Jeschke</div>
-                                <div class="connection__role">COO</div>
-                                <div class="connection__company">Inductive Automation</div>
+                                <div class="connection__name">Harry Moser</div>
+                                <div class="connection__role">Founder & President</div>
+                                <div class="connection__company">Reshoring Initiative</div>
                             </div>
                         </div>
-                        <p class="connection__why">Inductive Automation builds industrial automation and SCADA software used on factory and warehouse floors across North America, making their operations deeply intertwined with the same supply chain infrastructure McKinsol helps optimize. As COO, Jeschke is managing a business that sits at the intersection of industrial technology and operational efficiency — and is likely evaluating how better supply chain visibility can reduce component lead-time risk and support their manufacturing clients. There is also a compelling potential partnership angle here, as McKinsol's visibility layer could complement Inductive Automation's plant-floor data capabilities to offer customers a more complete operational picture. This conversation has both direct sales potential and a broader strategic dimension worth exploring.</p>
+                        <p class="connection__why">Moser's Reshoring Initiative works directly with manufacturers and policymakers to bring supply chains back to North America, giving him an unparalleled network of industrial companies that are actively restructuring their supply chains and therefore in immediate need of optimization and visibility technology. A relationship with Moser is not just a single conversation — it is a potential referral channel into dozens of reshoring manufacturers who are building new supply chain infrastructure from the ground up. McKinsol's solutions are precisely what those companies need as they stand up new domestic operations without legacy visibility tools. Positioning McKinsol as the technology partner of choice for reshoring manufacturers, with Moser's implicit endorsement, would be a significant market development opportunity.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Given how much of your customers' uptime depends on reliable component supply, I'm interested in how Inductive Automation is thinking about connecting plant-floor visibility with upstream supply chain signals — is that a gap your team is actively trying to close?"
+                            "The companies you're helping reshore are essentially rebuilding their supply chain infrastructure from scratch — I'd love to get your perspective on where you see the biggest technology gaps they're running into as they stand up new domestic operations."
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
