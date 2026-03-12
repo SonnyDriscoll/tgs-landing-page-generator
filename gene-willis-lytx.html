@@ -8,7 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold:#9B834F; --gold-light:#aa9669; --gold-dim:rgba(155,131,79,0.12); --gold-dim-mid:rgba(155,131,79,0.25); --navy:#202632; --navy-deep:#171C27; --base:#131720; --surface:#1B2030; --surface-raised:#202535; --surface-over:#262C3E; --border:rgba(155,131,79,0.15); --border-hover:rgba(155,131,79,0.35); --border-subtle:rgba(255,255,255,0.06); --text-primary:#F0EDE8; --text-secondary:#8C8FA0; --text-tertiary:#4E5268; }
+        :root {
+            --gold:          #9B834F;
+            --gold-light:    #aa9669;
+            --gold-dim:      rgba(155,131,79,0.12);
+            --gold-dim-mid:  rgba(155,131,79,0.25);
+            --navy:          #202632;
+            --navy-deep:     #171C27;
+            --base:          #131720;
+            --surface:       #1B2030;
+            --surface-raised:#202535;
+            --surface-over:  #262C3E;
+            --border:        rgba(155,131,79,0.15);
+            --border-hover:  rgba(155,131,79,0.35);
+            --border-subtle: rgba(255,255,255,0.06);
+            --text-primary:  #F0EDE8;
+            --text-secondary:#8C8FA0;
+            --text-tertiary: #4E5268;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--base); color:var(--text-primary); min-height:100vh; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
@@ -118,10 +135,27 @@
         .footer__brand { font-size:12px; font-weight:700; color:var(--gold); letter-spacing:0.3px; }
         .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s cubic-bezier(0.19,1,0.22,1),transform 0.65s cubic-bezier(0.19,1,0.22,1); }
         .reveal.is-visible { opacity:1; transform:translateY(0); }
-        .reveal-d1 { transition-delay:0.10s; } .reveal-d2 { transition-delay:0.20s; } .reveal-d3 { transition-delay:0.30s; } .reveal-d4 { transition-delay:0.40s; }
-        @media(max-width:900px){ .container{padding:0 24px;} .hero{padding:80px 0 60px;} .hero .container{grid-template-columns:1fr;gap:48px;} .pains,.speakers,.connections{grid-template-columns:1fr;} .benefits{grid-template-columns:1fr;} .section{padding:72px 0;} .header__cta{display:none;} .proof__logos{gap:18px 32px;} .footer .container{flex-direction:column;gap:10px;text-align:center;} }
-        @media(max-width:480px){ .hero__title{font-size:28px;} .event-details{grid-template-columns:1fr;} .hero__actions{flex-direction:column;align-items:flex-start;} }
-    </style>
+        .reveal-d1 { transition-delay:0.10s; }
+        .reveal-d2 { transition-delay:0.20s; }
+        .reveal-d3 { transition-delay:0.30s; }
+        .reveal-d4 { transition-delay:0.40s; }
+        @media(max-width:900px){
+            .container{padding:0 24px;}
+            .hero{padding:80px 0 60px;}
+            .hero .container{grid-template-columns:1fr;gap:48px;}
+            .pains,.speakers,.connections{grid-template-columns:1fr;}
+            .benefits{grid-template-columns:1fr;}
+            .section{padding:72px 0;}
+            .header__cta{display:none;}
+            .proof__logos{gap:18px 32px;}
+            .footer .container{flex-direction:column;gap:10px;text-align:center;}
+        }
+        @media(max-width:480px){
+            .hero__title{font-size:28px;}
+            .event-details{grid-template-columns:1fr;}
+            .hero__actions{flex-direction:column;align-items:flex-start;}
+        }
+</style>
 </head>
 <body>
     <div class="dot-grid" aria-hidden="true"></div>
@@ -143,13 +177,12 @@
                 <a href="#book" class="header__cta">Book a Call →</a>
             </div>
         </header>
-
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Gene Willis · Lytx</p>
-                    <h1 class="hero__title reveal reveal-d1">30+ COOs responsible for <em>fleet safety and operational assets</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">Fleet safety isn't just an insurance line — it's a COO problem. The COO Leaders' Summit brings together 30+ senior operations leaders from logistics, distribution, and facilities companies whose teams are on the road every day. For Lytx, this is the room where your best pipeline conversations start.</p>
+                    <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>fleet safety and asset protection</em> — in one room, for two days</h1>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who own fleet risk, asset visibility, and tech-enabled productivity across logistics, courier, and infrastructure-heavy enterprises — exactly the buyers Lytx needs in front of its telematics and video safety story. In a room where the agenda centers on unlocking ROI through smarter operations, Lytx's solution isn't a hard sell — it's the answer to the conversation already happening. No cold emails, no gatekeepers — just two days of direct access to the people signing off on operational technology budgets in 2026.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -168,7 +201,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section section--alt" id="why-sponsor">
             <div class="container">
                 <p class="section__label reveal">The challenge</p>
@@ -180,43 +212,40 @@
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container">
                 <p class="section__label reveal">On stage in Denver</p>
-                <h2 class="section__heading reveal reveal-d1">Keynotes that put fleet safety on every COO's operational agenda</h2>
+                <h2 class="section__heading reveal reveal-d1">Keynotes that make <em>Lytx</em> relevant to every COO in the room</h2>
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Peter-Gibbons-1-199x300.jpg" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">PG</div>
-                        </div>
-                        <div class="speaker__name">Peter Gibbons</div>
-                        <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Gibbons brings decades of operational leadership from 3M — a company with a large, geographically dispersed field workforce and significant fleet operations. His session on operational transformation at scale is the context in which Lytx's telematics and video safety story lands best.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d2">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Harry-Moser-200x300.jpg" alt="Harry Moser" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">HM</div>
-                        </div>
-                        <div class="speaker__name">Harry Moser</div>
-                        <div class="speaker__role">Founder &amp; President, Reshoring Initiative</div>
-                        <div class="speaker__relevance">Reshoring is driving a surge in domestic manufacturing and logistics operations across North America — which means more commercial vehicles on the road, more fleet risk, and more demand for the kind of driver safety and asset protection Lytx delivers.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Michael-McLellan-300x300.jpg" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">MM</div>
                         </div>
                         <div class="speaker__name">Michael McLellan</div>
                         <div class="speaker__role">COO, DHL</div>
-                        <div class="speaker__relevance">DHL operates one of the world's largest commercial fleets. McLellan is driving operational excellence and risk reduction across DHL's entire transportation network — fleet safety technology is central to that agenda, and Lytx is the category leader.</div>
+                        <div class="speaker__relevance">As COO of one of the world's largest logistics and last-mile delivery operations, McLellan speaks directly to the fleet scale and asset protection challenges that Lytx solves every day. His keynote on global supply chain and warehouse operations sets the stage for Lytx to position video safety telematics as a non-negotiable layer of operational infrastructure for any fleet-dependent enterprise.</div>
                     </div>
-                </div>
+                    <div class="speaker reveal reveal-d2">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">TG</div>
+                        </div>
+                        <div class="speaker__name">Tracy Galloway</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Galloway's focus on AI-driven enterprise operations and tech-enabled productivity aligns perfectly with Lytx's positioning as an intelligent, data-driven fleet safety platform rather than a simple camera vendor. Her keynote gives Lytx a natural entry point to conversations about how AI and telematics together drive measurable ROI — exactly the language COOs respond to in 2026 budget cycles.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">PG</div>
+                        </div>
+                        <div class="speaker__name">Peter Gibbons</div>
+                        <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
+                        <div class="speaker__relevance">Gibbons brings decades of experience scaling operational transformation across industrial and supply chain environments where mobile assets, driver behavior, and liability exposure are constant concerns. His perspective on operational transformation at scale gives Lytx credibility to engage COOs from manufacturing and industrial sectors who are actively looking to modernize fleet risk management with proven telematics solutions.</div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--alt">
             <div class="container">
                 <p class="section__label reveal">Who you'll meet</p>
@@ -224,53 +253,51 @@
                 <div class="connections">
                     <div class="connection reveal reveal-d1">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Michael+McLellan&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Michael McLellan">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Michael%20McLellan&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Michael McLellan">
                             <div class="connection__meta">
                                 <div class="connection__name">Michael McLellan</div>
                                 <div class="connection__role">COO</div>
                                 <div class="connection__company">DHL</div>
                             </div>
                         </div>
-                        <p class="connection__why">DHL runs one of the largest commercial delivery fleets on the planet. Reducing driver incidents, protecting vehicles, and improving delivery efficiency through telematics are all live priorities for McLellan's operational transformation programme. A conversation here is a direct enterprise opportunity.</p>
+                        <p class="connection__why">DHL operates one of the largest commercial vehicle fleets on the planet, with last-mile delivery pressure mounting and driver safety liability at an all-time high. McLellan is responsible for the operational decisions that determine which safety and telematics platforms get enterprise-wide mandates — the exact level of influence Lytx needs to reach. A partnership or deployment conversation with DHL would represent a landmark reference account in the logistics vertical, where Lytx's video safety capabilities address real, daily risk exposure. Samsara is already in this space, making it critical for Lytx to get in front of McLellan before competitive relationships deepen.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How is DHL currently approaching driver safety and fleet risk reduction as you scale your last-mile delivery network?"
+                            "DHL's last-mile density is unlike almost any other fleet operation — how are you thinking about using driver behavior data to balance speed-of-delivery pressure with safety accountability at that scale?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Chris+Spanjaard&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Chris Spanjaard">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Chris%20Spanjaard&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Chris Spanjaard">
                             <div class="connection__meta">
                                 <div class="connection__name">Chris Spanjaard</div>
-                                <div class="connection__role">SVP &amp; COO</div>
+                                <div class="connection__role">SVP & COO</div>
                                 <div class="connection__company">Purolator</div>
                             </div>
                         </div>
-                        <p class="connection__why">Purolator's courier operations depend on a large field fleet executing thousands of daily pickups and deliveries. Fleet safety, driver behaviour, and vehicle utilisation directly affect their operational costs and liability exposure. Spanjaard owns that P&L.</p>
+                        <p class="connection__why">Purolator is Canada's leading courier network with a growing North American footprint, operating a high-volume last-mile fleet where driver incidents, vehicle asset loss, and liability claims directly impact margins. Spanjaard owns the operational budget and vendor relationships that govern fleet technology decisions, making him a high-priority contact for Lytx's video safety and telematics pitch. Courier operations face intense pressure on driver retention and safety culture simultaneously — two areas where Lytx's coaching and event-triggered video platform delivers measurable ROI. Engaging Spanjaard at the Summit positions Lytx ahead of any competitive evaluation Purolator may conduct in 2026.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "What's the biggest fleet safety or driver risk challenge Purolator is trying to solve as you modernise your delivery operations?"
+                            "Courier fleets are dealing with a tough combination right now — driver shortages and rising incident rates at the same time. How is Purolator approaching safety culture without adding friction that hurts retention?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Luis+Ronca&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Luis Ronca">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kelly%20Darnell&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kelly Darnell">
                             <div class="connection__meta">
-                                <div class="connection__name">Luis Ronca</div>
-                                <div class="connection__role">COO Latin America</div>
-                                <div class="connection__company">JLL</div>
+                                <div class="connection__name">Kelly Darnell</div>
+                                <div class="connection__role">COO</div>
+                                <div class="connection__company">American Clean Power</div>
                             </div>
                         </div>
-                        <p class="connection__why">JLL manages large-scale commercial real estate operations across the Americas, including facilities management teams with significant vehicle and equipment fleets. Ronca's operational scope includes asset protection and field workforce safety — a natural fit for Lytx's platform.</p>
+                        <p class="connection__why">American Clean Power represents a fast-growing sector deploying increasingly large fleets of service vehicles, heavy equipment, and mobile assets across remote infrastructure projects where visibility and asset protection are operationally critical. Darnell, as COO, is navigating rapid fleet expansion in environments where real-time telematics and video safety provide both risk mitigation and regulatory compliance value. The clean energy industry's accelerating build-out means fleet management solutions like Lytx's are becoming essential infrastructure, not optional add-ons. This is an emerging vertical with low competitive saturation, giving Lytx a first-mover opportunity if the conversation starts in Denver.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How does JLL currently manage fleet and asset safety across your facilities management operations in Latin America?"
+                            "With the pace of infrastructure buildout in clean energy, how are you managing fleet safety and asset visibility across job sites that are often in pretty remote or high-risk locations?"
                         </div>
-                    </div>
-                </div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--navy">
             <div class="container">
                 <p class="section__label reveal">Sponsorship value</p>
@@ -283,22 +310,40 @@
                 </div>
             </div>
         </section>
-
         <div class="proof">
             <div class="container">
                 <p class="proof__label reveal">COOs in the room from companies including</p>
                 <div class="proof__logos reveal reveal-d1">
-                    <div class="proof__company"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Amazon</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Maersk</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>easyJet</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Kinetic</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Microsoft</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>NASA</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Allied World</span></div>
-                </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Maersk</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>easyJet</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Kinetic</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>NASA</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Allied World</span>
+                    </div></div>
             </div>
         </div>
-
         <section class="cta" id="book">
             <div class="container">
                 <div class="cta__inner reveal">
@@ -310,7 +355,6 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <div class="container">
                 <p class="footer__prepared">Prepared for <strong>Gene Willis</strong>, Chief Marketing Officer at Lytx</p>
