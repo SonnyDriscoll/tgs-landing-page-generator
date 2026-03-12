@@ -8,7 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold:#9B834F; --gold-light:#aa9669; --gold-dim:rgba(155,131,79,0.12); --gold-dim-mid:rgba(155,131,79,0.25); --navy:#202632; --navy-deep:#171C27; --base:#131720; --surface:#1B2030; --surface-raised:#202535; --surface-over:#262C3E; --border:rgba(155,131,79,0.15); --border-hover:rgba(155,131,79,0.35); --border-subtle:rgba(255,255,255,0.06); --text-primary:#F0EDE8; --text-secondary:#8C8FA0; --text-tertiary:#4E5268; }
+        :root {
+            --gold:          #9B834F;
+            --gold-light:    #aa9669;
+            --gold-dim:      rgba(155,131,79,0.12);
+            --gold-dim-mid:  rgba(155,131,79,0.25);
+            --navy:          #202632;
+            --navy-deep:     #171C27;
+            --base:          #131720;
+            --surface:       #1B2030;
+            --surface-raised:#202535;
+            --surface-over:  #262C3E;
+            --border:        rgba(155,131,79,0.15);
+            --border-hover:  rgba(155,131,79,0.35);
+            --border-subtle: rgba(255,255,255,0.06);
+            --text-primary:  #F0EDE8;
+            --text-secondary:#8C8FA0;
+            --text-tertiary: #4E5268;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--base); color:var(--text-primary); min-height:100vh; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
@@ -118,10 +135,27 @@
         .footer__brand { font-size:12px; font-weight:700; color:var(--gold); letter-spacing:0.3px; }
         .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s cubic-bezier(0.19,1,0.22,1),transform 0.65s cubic-bezier(0.19,1,0.22,1); }
         .reveal.is-visible { opacity:1; transform:translateY(0); }
-        .reveal-d1 { transition-delay:0.10s; } .reveal-d2 { transition-delay:0.20s; } .reveal-d3 { transition-delay:0.30s; } .reveal-d4 { transition-delay:0.40s; }
-        @media(max-width:900px){ .container{padding:0 24px;} .hero{padding:80px 0 60px;} .hero .container{grid-template-columns:1fr;gap:48px;} .pains,.speakers,.connections{grid-template-columns:1fr;} .benefits{grid-template-columns:1fr;} .section{padding:72px 0;} .header__cta{display:none;} .proof__logos{gap:18px 32px;} .footer .container{flex-direction:column;gap:10px;text-align:center;} }
-        @media(max-width:480px){ .hero__title{font-size:28px;} .event-details{grid-template-columns:1fr;} .hero__actions{flex-direction:column;align-items:flex-start;} }
-    </style>
+        .reveal-d1 { transition-delay:0.10s; }
+        .reveal-d2 { transition-delay:0.20s; }
+        .reveal-d3 { transition-delay:0.30s; }
+        .reveal-d4 { transition-delay:0.40s; }
+        @media(max-width:900px){
+            .container{padding:0 24px;}
+            .hero{padding:80px 0 60px;}
+            .hero .container{grid-template-columns:1fr;gap:48px;}
+            .pains,.speakers,.connections{grid-template-columns:1fr;}
+            .benefits{grid-template-columns:1fr;}
+            .section{padding:72px 0;}
+            .header__cta{display:none;}
+            .proof__logos{gap:18px 32px;}
+            .footer .container{flex-direction:column;gap:10px;text-align:center;}
+        }
+        @media(max-width:480px){
+            .hero__title{font-size:28px;}
+            .event-details{grid-template-columns:1fr;}
+            .hero__actions{flex-direction:column;align-items:flex-start;}
+        }
+</style>
 </head>
 <body>
     <div class="dot-grid" aria-hidden="true"></div>
@@ -143,13 +177,12 @@
                 <a href="#book" class="header__cta">Book a Call →</a>
             </div>
         </header>
-
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Deepak Gulati · Mobileum</p>
-                    <h1 class="hero__title reveal reveal-d1">30+ COOs managing <em>real-time operational analytics</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together 30+ senior operations leaders who are actively evaluating how real-time data and network intelligence drive faster, safer decisions. For Mobileum, this is a room full of the exact buyers and influencers who determine where analytics investment goes next.</p>
+                    <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>real-time network intelligence analytics</em> — in one room, for two days</h1>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most operationally influential executives at exactly the moment when telecom-powered analytics is reshaping how enterprises measure and unlock productivity. For Mobileum, this is a direct line to the budget holders and transformation owners who decide which real-time analytics platforms make it onto the enterprise roadmap. No cold outreach, no gatekeepers — just two days of structured access in Denver.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -168,7 +201,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section section--alt" id="why-sponsor">
             <div class="container">
                 <p class="section__label reveal">The challenge</p>
@@ -180,43 +212,40 @@
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container">
                 <p class="section__label reveal">On stage in Denver</p>
-                <h2 class="section__heading reveal reveal-d1">Keynotes that position Mobileum at the heart of the analytics conversation</h2>
+                <h2 class="section__heading reveal reveal-d1">Keynotes that make <em>Mobileum</em> relevant to every COO in the room</h2>
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Tracy-Galloway--300x300.jpg" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">TG</div>
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
-                        <div class="speaker__role">CVP &amp; COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Galloway's focus on tech-enabled operations and the role of real-time data in driving execution speed is the exact framing Mobileum needs — COOs walking out of her session are already thinking about the analytics layer.</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Tracy's focus on AI-driven enterprise operations and digital transformation sets the exact strategic backdrop that positions Mobileum's real-time analytics as a critical enabler rather than a point tool. Her sessions will have every COO in the room asking how they operationalise intelligence at scale — a conversation Mobileum is built to answer.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Timo-Koster-300x200.jpg" alt="Timo Koster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">TK</div>
-                        </div>
-                        <div class="speaker__name">Timo Koster</div>
-                        <div class="speaker__role">Strategic Advisor &amp; Board Member, NATO</div>
-                        <div class="speaker__relevance">Koster brings the network security and operational intelligence perspective from one of the world's most complex organisations. The intersection of network analytics, real-time threat intelligence, and operational decision-making is Mobileum's home territory.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/10/amir-214x300.jpg" alt="Amir Deylami" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Amir Deylami" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">AD</div>
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">NASA operates at the frontier of mission-critical data and real-time operational monitoring. Deylami's perspective on how analytics enables operational excellence under extreme conditions validates exactly what Mobileum sells.</div>
+                        <div class="speaker__relevance">Amir's mission-critical operations context elevates the conversation around infrastructure reliability and real-time decision-making — precisely the environment where Mobileum's network intelligence analytics delivers its highest ROI. His presence signals to delegates that operational analytics is no longer a nice-to-have but a prerequisite for resilient, high-stakes operations.</div>
                     </div>
-                </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Timo Koster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">TK</div>
+                        </div>
+                        <div class="speaker__name">Timo Koster</div>
+                        <div class="speaker__role">Strategic Advisor & Board Member, NATO</div>
+                        <div class="speaker__relevance">Timo's expertise in cybersecurity, operational risk, and network governance creates a natural entry point for Mobileum's intelligence layer — particularly as COOs grapple with securing and optimising complex network environments. His keynote will anchor risk-aware operations firmly in the agenda, making Mobileum's real-time visibility capabilities immediately tangible to the room.</div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--alt">
             <div class="container">
                 <p class="section__label reveal">Who you'll meet</p>
@@ -224,53 +253,51 @@
                 <div class="connections">
                     <div class="connection reveal reveal-d1">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru+Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Tracy%20Galloway&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Tracy Galloway">
                             <div class="connection__meta">
-                                <div class="connection__name">Taru Jain</div>
-                                <div class="connection__role">CoS &amp; COO, Global Head of Delivery for Issuer Services Technology</div>
-                                <div class="connection__company">Citibank</div>
+                                <div class="connection__name">Tracy Galloway</div>
+                                <div class="connection__role">CVP & COO</div>
+                                <div class="connection__company">Microsoft Americas</div>
                             </div>
                         </div>
-                        <p class="connection__why">Citibank's issuer services technology division processes billions of transactions and relies on real-time network intelligence to detect anomalies, prevent fraud, and maintain regulatory compliance. Jain sits at the intersection of operations and technology — exactly the buyer profile Mobileum targets in financial services.</p>
+                        <p class="connection__why">Microsoft Americas operates one of the most complex enterprise technology environments in the world, with enormous internal demand for real-time operational telemetry and network performance intelligence. Tracy sits at the intersection of cloud infrastructure scale and operational transformation — precisely where Mobileum's analytics platform delivers measurable ROI. As Microsoft deepens its Azure and Teams infrastructure across enterprise clients, network intelligence is a board-level conversation, not an IT afterthought. A relationship here could open doors to both a direct enterprise opportunity and a potential strategic partnership channel.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How does Citi's operations team currently monitor and act on anomalies across your transaction network in real time?"
+                            "Tracy, with the scale of Microsoft Americas' infrastructure and the AI transformation agenda you're driving — how are you thinking about the role of real-time network analytics in keeping operational productivity measurable as complexity grows?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi+Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru%20Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
                             <div class="connection__meta">
-                                <div class="connection__name">Heidi Winger</div>
-                                <div class="connection__role">Principal Consultant &amp; Head of Operations</div>
-                                <div class="connection__company">Allianz Technology of North America</div>
+                                <div class="connection__name">Taru Jain</div>
+                                <div class="connection__role">CoS & COO, Global Head of Delivery for Issuer Services Technology</div>
+                                <div class="connection__company">Citibank</div>
                             </div>
                         </div>
-                        <p class="connection__why">Allianz Technology manages IT operations and network infrastructure for one of the world's largest insurance groups. Real-time analytics and network visibility are critical to their risk management posture. Winger leads the operational function that would evaluate and deploy a platform like Mobileum's.</p>
+                        <p class="connection__why">Citibank's global technology operations demand always-on network reliability and real-time visibility across a highly distributed, regulation-sensitive infrastructure — a textbook use case for Mobileum's telecom analytics capabilities. Taru holds a rare dual mandate spanning COO responsibilities and global technology delivery, meaning she owns both the operational pain and the budget to address it. Financial services firms face compounding pressure from regulators and competitors to demonstrate operational resilience, and real-time analytics is increasingly the mechanism they're investing in. Mobileum's ability to surface network intelligence that directly ties to productivity and risk outcomes maps directly onto what Citi's leadership team is accountable for.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "What does Allianz's current approach to real-time network monitoring look like, and where are the gaps?"
+                            "Taru, given that you're managing technology delivery at a truly global scale within Citibank — how much visibility do you currently have into network performance as a real-time driver of operational risk, versus something you're analysing after the fact?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Michael+McLellan&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Michael McLellan">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi%20Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
                             <div class="connection__meta">
-                                <div class="connection__name">Michael McLellan</div>
-                                <div class="connection__role">COO</div>
-                                <div class="connection__company">DHL</div>
+                                <div class="connection__name">Heidi Winger</div>
+                                <div class="connection__role">Principal Consultant & Head of Operations</div>
+                                <div class="connection__company">Allianz Technology of North America</div>
                             </div>
                         </div>
-                        <p class="connection__why">DHL's global logistics network generates enormous volumes of real-time operational data. McLellan is driving the digital transformation of DHL's operations — and network intelligence that improves routing, security, and performance visibility is directly in scope for their investment agenda.</p>
+                        <p class="connection__why">Allianz Technology is the internal IT powerhouse behind one of the world's largest insurers, and Heidi's operational remit puts her squarely in charge of ensuring the technology infrastructure performs to the standard that Allianz's business lines depend on. For a firm of this size, even marginal improvements in network intelligence translate into significant cost savings and risk reduction across a sprawling enterprise. Mobileum's real-time analytics platform speaks directly to the productivity and operational resilience KPIs that a technology operations head at Allianz is measured against. With Syniverse already active in this space, a conversation with Heidi is also a chance to understand where incumbents are falling short and position Mobileum's differentiated approach.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How is DHL thinking about real-time network analytics as you scale your operational intelligence capabilities globally?"
+                            "Heidi, running operations for Allianz Technology means network reliability is non-negotiable — are you finding that your current analytics capabilities give you real-time intelligence when something starts degrading, or are you still largely reactive when issues surface?"
                         </div>
-                    </div>
-                </div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--navy">
             <div class="container">
                 <p class="section__label reveal">Sponsorship value</p>
@@ -283,22 +310,40 @@
                 </div>
             </div>
         </section>
-
         <div class="proof">
             <div class="container">
                 <p class="proof__label reveal">COOs in the room from companies including</p>
                 <div class="proof__logos reveal reveal-d1">
-                    <div class="proof__company"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Amazon</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Maersk</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>easyJet</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Kinetic</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Microsoft</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>NASA</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Allied World</span></div>
-                </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Maersk</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>easyJet</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Kinetic</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>NASA</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Allied World</span>
+                    </div></div>
             </div>
         </div>
-
         <section class="cta" id="book">
             <div class="container">
                 <div class="cta__inner reveal">
@@ -310,10 +355,9 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <div class="container">
-                <p class="footer__prepared">Prepared for <strong>Deepak Gulati</strong>, Vice President of Sales at Mobileum</p>
+                <p class="footer__prepared">Prepared for <strong>Deepak Gulati</strong>, Vice President Sales at Mobileum</p>
                 <span class="footer__brand">The Global Series</span>
             </div>
         </footer>
