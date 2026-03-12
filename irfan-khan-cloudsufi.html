@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=cloudsufi.com&sz=128" alt="CLOUDSUFI" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/cloudsufi.com" alt="CLOUDSUFI" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://cloudsufi.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">CLOUDSUFI</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Irfan Khan · CLOUDSUFI</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>AI-driven cloud operations and data intelligence</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the exact operational decision-makers who are actively modernising their data infrastructure and AI capabilities — the precise buyers CLOUDSUFI's platform is built for. From enterprise tech to logistics to financial services, these leaders are wrestling with the same automation and intelligence challenges CLOUDSUFI solves. No cold outreach, no gatekeepers — just two days of structured access in Denver.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the exact operational decision-makers who are actively rearchitecting how their enterprises run — and CLOUDSUFI's AI-driven cloud and data automation capabilities speak directly to that mandate. From legacy modernisation to intelligent process automation, the conversations happening in Denver on May 5–6 are the ones CLOUDSUFI was built for. No cold outreach, no gatekeepers — just direct access to 30+ COOs ready to talk about what's next.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Galloway's focus on AI in enterprise operations and digital transformation sets the tone for exactly the conversation CLOUDSUFI wants to be part of — how AI becomes operationally embedded rather than experimental. Her presence validates the AI-driven cloud operations narrative and gives CLOUDSUFI a powerful context to position its platform as the execution layer behind the strategies she'll advocate from stage.</div>
+                        <div class="speaker__relevance">Tracy's focus on AI in enterprise operations and digital transformation creates a natural context for CLOUDSUFI's cloud AI automation stack, positioning it as the infrastructure layer behind the kind of intelligent ops Microsoft itself champions. Her presence signals to every COO in the room that AI-enabled operations is not a future state — it's the current standard, opening the door for CLOUDSUFI to show how they accelerate exactly that journey.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
@@ -233,7 +233,7 @@
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Deylami's expertise in mission-critical operations and infrastructure resilience speaks directly to the high-stakes environments where CLOUDSUFI's data intelligence and automation capabilities deliver the most measurable value. His sessions will surface the operational complexity and reliability demands that CLOUDSUFI's AI-driven cloud platform is purpose-built to address, giving the team a natural bridge into conversations about operational certainty at scale.</div>
+                        <div class="speaker__relevance">Amir's work on mission-critical operations and infrastructure excellence mirrors the high-stakes, zero-tolerance-for-downtime environments where CLOUDSUFI's data intelligence and cloud automation deliver the most measurable value. His keynote will prime COO attendees to think seriously about operational reliability at scale, giving CLOUDSUFI a compelling hook to demonstrate how AI-driven automation reduces risk and increases resilience in complex environments.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Gibbons brings deep credibility in large-scale operational transformation across industrial and manufacturing environments — sectors where data fragmentation and manual processes are chronic pain points that CLOUDSUFI's automation platform directly resolves. His perspective on transforming operations at scale will resonate with the delegate audience CLOUDSUFI is targeting, and positions AI-driven automation as a boardroom priority rather than an IT initiative.</div>
+                        <div class="speaker__relevance">Peter's experience driving operational transformation at scale across global industrial enterprises reflects exactly the complexity that CLOUDSUFI's data automation and cloud intelligence solutions are designed to untangle. His perspective on what it takes to modernise operations across large, distributed organisations gives CLOUDSUFI a credible backdrop to position their platform as the connective intelligence layer for COOs managing that same scale of change.</div>
                     </div></div>
             </div>
         </section>
@@ -260,28 +260,13 @@
                                 <div class="connection__company">Microsoft Americas</div>
                             </div>
                         </div>
-                        <p class="connection__why">Microsoft Americas is one of the most influential technology ecosystems in the world, and Galloway sits at the intersection of AI strategy and operational execution — precisely where CLOUDSUFI operates. As Microsoft deepens its Azure AI and Copilot stack, there is significant opportunity for CLOUDSUFI to position itself as a complementary data intelligence and automation layer within Microsoft-aligned enterprise environments. A relationship here could open both commercial and partner-channel conversations. She is also a high-influence voice in the room whose endorsement or interest would carry weight with other delegates.</p>
+                        <p class="connection__why">Microsoft Americas operates one of the most complex cloud and enterprise delivery footprints in the world, and Tracy is the operational executive accountable for making it run with efficiency and intelligence. As a fellow cloud-native ecosystem player, CLOUDSUFI has a natural conversation around how AI and data automation extend the value of Microsoft's own platforms — Azure, Fabric, Copilot — at the operational layer. This is a relationship with potential for both a customer and a strategic partner conversation. Tracy's team is likely evaluating third-party AI automation layers that complement rather than compete with internal tooling.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Tracy, we work with a lot of enterprises running AI initiatives on Azure who hit a wall when it comes to operationalising their data pipelines — curious whether you're seeing that same friction point on the Microsoft side as your customers scale up."
+                            "We work with a number of Microsoft-stack enterprises to close the gap between what Azure promises and what ops teams actually experience day-to-day — would love to hear how you're thinking about that at the Americas scale."
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
-                        <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru%20Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
-                            <div class="connection__meta">
-                                <div class="connection__name">Taru Jain</div>
-                                <div class="connection__role">CoS & COO, Global Head of Delivery for Issuer Services Technology</div>
-                                <div class="connection__company">Citibank</div>
-                            </div>
-                        </div>
-                        <p class="connection__why">Citibank's technology operations at a global scale represent one of the most data-intensive operational environments in financial services, with enormous pressure to automate, comply, and deliver intelligence faster. CLOUDSUFI's AI-driven cloud operations platform maps directly onto the delivery and operations modernisation challenges Jain oversees across issuer services technology. Financial services is a prime vertical for CLOUDSUFI, and a COO-level contact inside Citi's technology operations is a rare and high-value entry point. The combination of her CoS and COO remit means she has both strategic influence and operational authority.</p>
-                        <div class="connection__opener">
-                            <span class="connection__opener-label">Conversation opener</span>
-                            "Taru, managing global delivery for issuer services technology at the scale of Citi must mean data orchestration and automation are constant priorities — we've been doing some interesting work helping financial services ops teams reduce manual intervention across cloud data workflows, would love to hear where the biggest friction points are for your team right now."
-                        </div>
-                    </div>
-                    <div class="connection reveal reveal-d3">
                         <div class="connection__header">
                             <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kat%20Jeschke&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kat Jeschke">
                             <div class="connection__meta">
@@ -290,10 +275,25 @@
                                 <div class="connection__company">Inductive Automation</div>
                             </div>
                         </div>
-                        <p class="connection__why">Inductive Automation is a leader in industrial automation and SCADA, making Jeschke a high-relevance prospect for CLOUDSUFI's data intelligence capabilities — particularly as industrial companies look to bridge operational technology and cloud-based AI. The convergence of SCADA data with cloud AI is one of the most active investment areas in industrial operations, and CLOUDSUFI's platform is well-positioned to accelerate that integration. As COO of a company that both uses and enables automation, Jeschke brings a dual perspective that could translate into both a direct commercial relationship and a potential channel or integration partnership.</p>
+                        <p class="connection__why">Inductive Automation sits at the intersection of industrial automation and software — a segment where CLOUDSUFI's cloud AI and data intelligence capabilities can directly enhance SCADA-connected operational workflows and plant-floor data pipelines. As COO, Kat is accountable for the efficiency and scalability of operations in a company whose customers demand real-time data reliability. CLOUDSUFI's ability to layer AI-driven intelligence onto operational data streams is a precise fit for the problems Inductive Automation's own customers face — making this both a direct sales opportunity and a potential channel or integration conversation.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Kat, with Inductive Automation sitting right at the intersection of industrial operations and automation technology, I imagine the question of how to get more intelligence out of operational data in real time is something your team thinks about constantly — that's exactly the problem space we live in at CLOUDSUFI, would love to compare notes."
+                            "Given how much operational data your customers generate through Ignition, I'm curious whether you're exploring how AI can turn that data into autonomous decision-making at the ops level — that's exactly the problem we're solving right now."
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d3">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru%20Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
+                            <div class="connection__meta">
+                                <div class="connection__name">Taru Jain</div>
+                                <div class="connection__role">CoS & COO, Global Head of Delivery for Issuer Services Technology</div>
+                                <div class="connection__company">Citibank</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">Taru leads technology operations delivery at one of the world's largest financial institutions, where data accuracy, automation, and cloud scalability are not aspirational — they are regulatory and competitive imperatives. CLOUDSUFI's AI-driven data intelligence platform maps directly to the kind of intelligent operations modernisation that large financial services technology functions are investing in right now, particularly around issuer services and back-office automation. With both a COO and a technology delivery remit, Taru represents a rare buyer profile who can evaluate CLOUDSUFI on both operational outcomes and technical merit. This is a high-value enterprise sales conversation waiting to happen.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "Running issuer services technology delivery at Citi's scale means data integrity and automation aren't nice-to-haves — we've been working with a few global banks on exactly that challenge and I'd love to compare notes on where the hardest bottlenecks are."
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
