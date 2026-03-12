@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=pallet.com&sz=128" alt="Pallet" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/pallet.com" alt="Pallet" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://pallet.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Pallet</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Sushanth Raman · Pallet</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>AI-powered freight and logistics automation</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most influential operations executives at exactly the moment AI automation is reshaping how freight and logistics companies run. For Pallet, this is a room full of decision-makers actively wrestling with the inefficiencies your platform solves — no cold email required, no gatekeepers to navigate. Two days in Denver means real conversations with the people who sign off on automation investments.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who are actively reshaping how freight, supply chain, and logistics businesses run — and AI automation is at the top of their agenda. For Pallet, this is a rare chance to have genuine conversations with the buyers and influencers who control the budgets and mandates that make AI freight automation a priority in 2026. No cold email required — every interaction is warm, curated, and built around shared operational challenges.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -219,30 +219,30 @@
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Michael+McLellan&background=0f172a&color=ffffff&size=120" alt="Michael McLellan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">MM</div>
                         </div>
                         <div class="speaker__name">Michael McLellan</div>
                         <div class="speaker__role">COO, DHL</div>
-                        <div class="speaker__relevance">As COO of one of the world's largest logistics networks, McLellan will speak directly to the operational pressures — cost, speed, and scale — that make AI freight automation a boardroom priority. His keynote sets the stage for Pallet to position itself as the infrastructure layer that modern logistics operations can't afford to ignore.</div>
+                        <div class="speaker__relevance">As COO of the world's largest logistics network, McLellan's keynote on global supply chain and warehouse operations will set the tone for exactly the operational complexity Pallet's AI automation is built to solve. His presence signals to every delegate in the room that freight and logistics automation is a mainstream COO-level priority — not a niche technology bet.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">TG</div>
-                        </div>
-                        <div class="speaker__name">Tracy Galloway</div>
-                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Galloway's focus on AI in enterprise operations gives Pallet immediate credibility by association — she'll articulate exactly the kind of intelligent automation narrative that Pallet's platform delivers in the freight context. COOs in the room will be primed to ask 'who does this for logistics specifically?' — and that's Pallet's moment.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Peter+Gibbons&background=0f172a&color=ffffff&size=120" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">PG</div>
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Gibbons brings credibility on operational transformation at industrial scale, giving freight and supply chain leaders a framework for evaluating where automation delivers the biggest ROI. His perspective on supply chain resilience and transformation directly contextualises the problem Pallet's AI automation platform is built to solve.</div>
+                        <div class="speaker__relevance">Gibbons brings deep credibility in supply chain transformation at scale, having overseen global operations and logistics networks at 3M spanning dozens of countries. His sessions on operational transformation will create a natural opening for Pallet to position AI-powered freight automation as the next logical step in the supply chain modernisation journey COOs are already committed to.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Tracy+Galloway&background=0f172a&color=ffffff&size=120" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">TG</div>
+                        </div>
+                        <div class="speaker__name">Tracy Galloway</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Galloway's focus on AI in enterprise operations and digital transformation gives Pallet the perfect surrounding context — when a Microsoft COO is on stage validating AI-driven operational change, it lowers the barriers for every freight and logistics delegate to have a serious conversation about adopting AI automation. Her keynote frames Pallet's solution as part of a broader, inevitable operational shift rather than an experimental technology.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">DHL</div>
                             </div>
                         </div>
-                        <p class="connection__why">DHL's global freight operations are under constant pressure to reduce manual touchpoints, improve shipment visibility, and cut operational costs at scale — precisely the use case Pallet's AI automation platform is built for. As COO, McLellan owns the technology and process decisions that determine which automation vendors get evaluated and deployed across DHL's network. A relationship here isn't just a single deal opportunity; it's a potential global reference customer that transforms Pallet's go-to-market. Getting face time with McLellan in Denver is the kind of access that would take months of cold outreach to replicate.</p>
+                        <p class="connection__why">DHL operates one of the most complex freight and last-mile logistics networks in the world, managing millions of shipments across hundreds of markets — exactly the environment where AI-powered freight operations automation delivers measurable ROI. McLellan is not just a keynote speaker but an active COO evaluating technology that can reduce operational friction at scale. A conversation here isn't a cold pitch; it's a peer dialogue between two people who understand the hard realities of freight operations. If Pallet can demonstrate even incremental efficiency gains across DHL's volume, the commercial case writes itself.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Your team is managing freight complexity at a scale most companies never reach — I'd love to hear where manual processes are still creating the most friction in your operations right now."
+                            "With the volume DHL moves globally, where are you seeing the biggest manual bottlenecks that AI still hasn't cracked — is it at the carrier communication layer or further upstream in load planning?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,25 +275,25 @@
                                 <div class="connection__company">Purolator</div>
                             </div>
                         </div>
-                        <p class="connection__why">Purolator is one of Canada's dominant courier and last-mile delivery networks, and as SVP & COO, Spanjaard is directly accountable for the operational efficiency and technology investments that determine whether freight moves profitably. Last-mile delivery is one of the most process-intensive and error-prone areas in logistics — and it's where AI automation from Pallet can generate measurable ROI fastest. Purolator's expansion ambitions and cross-border freight complexity make them a strong fit for a platform that streamlines freight operations end-to-end. A conversation in Denver could fast-track Pallet into Purolator's vendor evaluation cycle for 2026.</p>
+                        <p class="connection__why">Purolator is Canada's largest courier and logistics provider, handling significant cross-border freight between Canada and the US — a corridor where manual freight operations processes create real cost and delay. As SVP & COO, Spanjaard has both the operational visibility and the authority to champion AI automation initiatives that impact throughput and carrier relationships. Pallet's solution maps directly to the kind of freight coordination challenges Purolator faces as it scales its North American network. This is a high-probability enterprise conversation with a decision-maker who sits at exactly the right intersection of freight volume and operational transformation budget.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Last-mile operations are where a lot of the manual overhead lives — I'm curious how your team is thinking about automating the dispatch and exception-handling side of that right now."
+                            "The Canada-US freight corridor seems like one of the highest-friction lanes in North America right now — how is Purolator thinking about using automation to absorb that complexity without adding headcount?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Harry%20Moser&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Harry Moser">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kat%20Jeschke&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kat Jeschke">
                             <div class="connection__meta">
-                                <div class="connection__name">Harry Moser</div>
-                                <div class="connection__role">Founder & President</div>
-                                <div class="connection__company">Reshoring Initiative</div>
+                                <div class="connection__name">Kat Jeschke</div>
+                                <div class="connection__role">COO</div>
+                                <div class="connection__company">Inductive Automation</div>
                             </div>
                         </div>
-                        <p class="connection__why">Moser sits at the centre of North America's reshoring movement, advising manufacturers and logistics operators who are rebuilding domestic supply chains and facing a surge in freight complexity they weren't operationally designed to handle. His network of industrial and manufacturing COOs represents a rich pipeline of companies that are actively investing in logistics infrastructure — and looking for automation tools to manage the volume. A relationship with Moser gives Pallet a channel into a community of buyers who are mid-transformation and highly receptive to freight automation solutions. He's not a direct buyer, but he is a trusted referral engine for exactly the companies Pallet needs to reach.</p>
+                        <p class="connection__why">Inductive Automation builds the industrial automation software that powers manufacturing and logistics facilities across North America, meaning Jeschke sits at the intersection of operational technology and AI-driven process automation — directly adjacent to Pallet's world. As COO of a company whose customers are the same freight and industrial operations buyers Pallet targets, she represents both a potential partner channel and a direct enterprise prospect for AI freight automation tools. Her perspective on where industrial automation still has gaps gives Pallet a rare inside view into buyer readiness in their core market. A relationship here could open doors well beyond a single enterprise deal.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "With so many manufacturers reshoring operations right now, I imagine freight management is becoming a serious bottleneck — are you seeing automation come up as a priority in those conversations?"
+                            "From your vantage point selling automation into industrial and logistics facilities, what's the one operations problem your customers keep asking about that you're not yet solving — is freight coordination on that list?"
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
