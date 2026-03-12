@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=successkpi.com&sz=128" alt="SuccessKPI" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/successkpi.com" alt="SuccessKPI" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://successkpi.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">SuccessKPI</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Elliott Smith · SuccessKPI</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>AI-powered customer experience transformation</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together 30+ senior operations leaders who are actively wrestling with how AI and intelligent automation can drive better customer outcomes at scale — exactly the conversation SuccessKPI is built for. For a solution that turns contact center data into actionable intelligence, there is no warmer room than one full of COOs who own the P&L of operational performance. No cold outreach, no gatekeepers — just two days of structured access in Denver.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who control the budgets and mandates behind contact center modernisation. For SuccessKPI, this is a direct line to the executives reshaping how enterprise organisations use AI to drive customer experience outcomes — no cold email, no SDR sequences, just two days of structured face time in Denver.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">As the operational leader overseeing Microsoft's Americas business, Tracy sits at the intersection of enterprise AI deployment and large-scale digital transformation — the exact context in which SuccessKPI's cloud AI platform thrives. Her keynote will frame AI as an operational imperative for COOs, giving SuccessKPI a natural entry point to show how its contact center intelligence layer turns that AI ambition into measurable CX outcomes.</div>
+                        <div class="speaker__relevance">As the operational leader overseeing Microsoft's Americas business, Galloway speaks directly to how AI is being embedded into enterprise operations at scale — the exact narrative SuccessKPI needs COOs to internalise before evaluating cloud AI for contact centres. Her presence validates AI-driven operational transformation as a boardroom priority, giving SuccessKPI's team a warm strategic frame to walk into every conversation with.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
@@ -233,7 +233,7 @@
                         </div>
                         <div class="speaker__name">Janet Moylan</div>
                         <div class="speaker__role">SVP & COO, Allied World Assurance</div>
-                        <div class="speaker__relevance">Financial services and insurance COOs run some of the most complex, compliance-sensitive contact center environments in existence, and Janet's focus on operational resilience and risk management maps directly to SuccessKPI's ability to surface real-time insights that reduce compliance exposure. Her presence signals that financial services ops leaders are in the room — a high-value vertical where SuccessKPI's AI-driven quality monitoring and agent analytics deliver immediate, quantifiable ROI.</div>
+                        <div class="speaker__relevance">Financial services and insurance operations run some of the highest-volume, compliance-sensitive contact centres in any industry, making Moylan's keynote on operational resilience and risk management a natural bridge to SuccessKPI's AI-powered insights platform. Her themes around maintaining service quality under regulatory pressure are precisely the pain points SuccessKPI addresses, positioning the brand as a solution rather than a vendor in post-session conversations.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
@@ -242,7 +242,7 @@
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Mission-critical operations demand zero tolerance for insight gaps, and Amir's work at NASA Ames — where operational data must translate into immediate, accurate decisions — mirrors the reliability standard SuccessKPI sets for contact center analytics. His keynote on operational excellence and infrastructure will elevate the conversation around AI-powered decision support, positioning SuccessKPI as the intelligence layer that brings that same precision to customer experience operations.</div>
+                        <div class="speaker__relevance">Deylami's focus on mission-critical operations and infrastructure excellence reinforces the message that AI-driven intelligence isn't a nice-to-have — it's an operational imperative in high-stakes environments. SuccessKPI can leverage his narrative to position their platform as the kind of always-on, insight-rich tooling that serious operations leaders demand, especially when speaking to COOs who manage complex, multi-site service delivery.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">Microsoft Americas</div>
                             </div>
                         </div>
-                        <p class="connection__why">Microsoft Americas operates at an enormous scale with customer-facing operations spanning thousands of touchpoints across the continent, making contact center intelligence a board-level priority rather than a line-item conversation. Tracy is actively championing AI adoption inside one of the world's most influential enterprise technology organisations, which means she both understands SuccessKPI's value proposition instantly and has the authority and influence to accelerate procurement conversations. A relationship here could also open doors to co-positioning SuccessKPI within Microsoft's partner and customer ecosystem. For SuccessKPI, this is one of the highest-leverage conversations possible at any event in 2026.</p>
+                        <p class="connection__why">Microsoft's Americas operation spans thousands of internal and customer-facing service touchpoints, and as a major cloud and AI ecosystem player, Galloway sits at the intersection of enterprise AI adoption and operational performance — a direct buying context for SuccessKPI. Microsoft-aligned organisations are actively seeking AI tools that integrate with Azure and cloud-native stacks, and SuccessKPI's platform is built precisely for that environment. Galloway also influences downstream enterprise decisions: a relationship here can unlock referrals and co-sell conversations across Microsoft's partner and customer base. This is a strategic account conversation, not just a transactional one.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Tracy, with Microsoft Americas pushing AI into every layer of operations — how are you thinking about the last mile of that transformation, specifically in customer-facing teams where the data is richest but the insights are often slowest to surface?"
+                            "With Microsoft doubling down on Copilot and AI across enterprise operations, I'd love to hear how your team is thinking about AI-generated insights for customer-facing teams — are you seeing COOs pull that into their operational KPIs yet?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,10 +275,10 @@
                                 <div class="connection__company">Citibank</div>
                             </div>
                         </div>
-                        <p class="connection__why">Citibank's Issuer Services Technology operation is a high-volume, high-stakes environment where agent performance, compliance adherence, and customer experience quality directly impact revenue and regulatory standing — a perfect fit for SuccessKPI's AI-powered analytics and workforce intelligence platform. Taru sits at the crossroads of technology delivery and operations leadership, meaning she evaluates solutions through both a strategic and an implementation lens, which aligns well with SuccessKPI's cloud-native, rapid-deployment model. Financial services is also one of the fastest-moving verticals for AI in CX, and Citi has the scale to make a meaningful deployment case study. Getting in front of Taru before Genesys Cloud CX deepens that relationship at the event is a direct competitive priority.</p>
+                        <p class="connection__why">Citibank operates one of the most complex, high-volume customer service and operations environments in global financial services, with thousands of agents handling regulated, time-sensitive interactions across multiple regions. Jain's dual remit across operations and technology delivery means she sits precisely at the budget intersection where contact centre AI decisions get made — combining operational accountability with technology ownership. SuccessKPI's cloud AI platform is built to surface the kind of real-time and historical insights that organisations like Citi need to manage agent performance, compliance adherence, and customer experience quality at scale. This is a high-fit prospect with both the mandate and the infrastructure complexity to justify an enterprise deployment.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Taru, in a technology operations environment as complex as Issuer Services at Citi, how much of your visibility into customer experience quality comes from real-time data versus after-the-fact reporting — and where do you feel the biggest blind spots still sit?"
+                            "Running issuer services technology and operations simultaneously at Citi must mean you're constantly balancing service quality with compliance oversight — how are you currently getting visibility into what's actually happening at the agent level across that volume?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
@@ -290,10 +290,10 @@
                                 <div class="connection__company">Allianz Technology of North America</div>
                             </div>
                         </div>
-                        <p class="connection__why">Allianz Technology serves as the internal IT and operations engine for one of the world's largest insurance groups, meaning Heidi's decisions about AI and operational tooling ripple across an enormous customer service and contact center infrastructure across North America. Her dual focus on insurance operations and IT operations means she evaluates solutions like SuccessKPI on both business outcome and technical integration merit — and cloud AI for CX checks both boxes. Insurance contact centers are under growing pressure to demonstrate compliance, reduce handle times, and improve first-contact resolution, all areas where SuccessKPI delivers measurable lift. With Genesys already in the room as a sponsor, reaching Heidi directly through a peer-led summit conversation gives SuccessKPI a significant advantage over a vendor booth interaction.</p>
+                        <p class="connection__why">Allianz Technology is the internal IT and operations engine for one of the world's largest insurance groups, managing technology-driven operations that directly support customer service and claims processing across North America. Winger's role at the intersection of insurance operations and IT makes her a highly credible internal champion for a platform like SuccessKPI, which bridges contact centre performance data with AI-driven operational intelligence. Insurance contact centres face intense pressure around handle times, compliance recording, and customer satisfaction metrics — all areas where SuccessKPI delivers measurable value. Winning Allianz Technology as a reference customer would also open doors across the broader Allianz global network.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Heidi, as someone who sits across both the insurance operations and IT sides at Allianz, when you're evaluating AI tooling for contact center performance, where does the conversation usually break down between what the operations team needs and what IT is willing to deploy?"
+                            "Insurance operations at a technology-led unit like Allianz must mean you're under pressure to prove ROI on every operational tool — are AI-powered contact centre analytics on your radar as a way to tie agent performance directly to customer outcomes?"
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
