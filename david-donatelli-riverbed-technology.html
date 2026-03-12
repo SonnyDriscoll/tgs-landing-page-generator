@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=riverbed.com&sz=128" alt="Riverbed Technology" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/riverbed.com" alt="Riverbed Technology" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://riverbed.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Riverbed Technology</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for David Donatelli · Riverbed Technology</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>unified observability and IT performance optimization</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most operationally influential executives at the exact moment enterprises are rethinking how technology delivers measurable ROI. For Riverbed Technology, this is a room of buyers who feel the pain of fragmented visibility and degraded performance firsthand — and have the authority to act. No cold outreach, no gatekeepers — just two days of high-trust conversations with the people who own the operational outcomes your solutions are built to improve.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who greenlight the exact investments Riverbed Technology enables — from network acceleration to end-to-end visibility across hybrid environments. These are leaders under pressure to unlock ROI from their technology stacks, and they're actively looking for solutions that prove performance impact. No cold outreach, no gated intros — just two days of direct access in Denver.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Tracy's focus on AI-driven enterprise operations and digital transformation directly mirrors the conversation Riverbed Technology wants to own — how unified observability accelerates productivity at scale. Her keynote will prime the room to think about the performance and visibility gaps that sit between technology investment and realized ROI, creating a natural entry point for Riverbed's pitch.</div>
+                        <div class="speaker__relevance">Galloway's focus on AI-driven enterprise operations and digital transformation mirrors exactly the conversation Riverbed Technology needs to be part of — how IT performance underpins operational productivity at scale. Her session will prime every COO in the room to think about the infrastructure layer behind their transformation investments, creating a natural entry point for Riverbed's unified observability story.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
@@ -233,16 +233,16 @@
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Amir's work in mission-critical infrastructure and operational excellence speaks directly to the environments where Riverbed Technology's acceleration and observability solutions prove their value under pressure. His keynote reinforces the stakes of performance degradation in complex, high-demand IT environments — the precise context in which Riverbed's differentiation is most compelling.</div>
+                        <div class="speaker__relevance">Deylami's work in mission-critical infrastructure and operational excellence speaks directly to the performance and reliability expectations Riverbed Technology's platform is built to meet. His perspective on zero-tolerance downtime environments reinforces why unified observability isn't a nice-to-have but a foundational requirement — positioning Riverbed's acceleration and monitoring capabilities as essential rather than optional.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">JM</div>
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">PG</div>
                         </div>
-                        <div class="speaker__name">Janet Moylan</div>
-                        <div class="speaker__role">SVP & COO, Allied World Assurance</div>
-                        <div class="speaker__relevance">Janet's perspective on operational resilience and compliance in financial services highlights the enterprise-wide cost of visibility gaps and IT underperformance — a core problem Riverbed Technology solves. Her presence signals that COOs across regulated, data-intensive industries are actively seeking solutions that tie IT performance directly to business continuity and productivity outcomes.</div>
+                        <div class="speaker__name">Peter Gibbons</div>
+                        <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
+                        <div class="speaker__relevance">Gibbons brings a C-suite lens on operational transformation at scale across complex, distributed organizations — precisely the environments where Riverbed Technology's network acceleration and observability solutions deliver measurable ROI. His framing of technology-enabled ops will resonate with the COOs most likely to champion Riverbed as a strategic productivity lever rather than a point solution.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">Microsoft Americas</div>
                             </div>
                         </div>
-                        <p class="connection__why">Microsoft Americas operates one of the most complex hybrid IT environments in the world, managing performance and experience across an enormous distributed workforce and partner ecosystem. Tracy's remit over operational technology and digital transformation means she is directly accountable for the productivity outcomes that Riverbed's unified observability platform is engineered to deliver. A conversation here could open doors to both a direct enterprise relationship and potential co-sell or integration discussions given Microsoft's ecosystem influence. She is precisely the profile who understands the ROI language Riverbed Technology speaks.</p>
+                        <p class="connection__why">Microsoft Americas operates one of the most complex hybrid IT environments in the world, managing performance and experience across distributed enterprise teams and cloud infrastructure at massive scale. Galloway is responsible for operational efficiency across the Americas region, making her a high-value conversation for Riverbed's unified observability and WAN acceleration capabilities. Microsoft's own enterprise customers are also potential downstream beneficiaries, making this a potential channel and strategic alignment conversation. A relationship here could open doors beyond a single deal.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Tracy, given the scale of hybrid operations across Microsoft Americas, how are you currently getting end-to-end visibility into where performance bottlenecks are actually costing your teams productivity?"
+                            "With the scale of hybrid operations across Microsoft Americas, I'd love to hear how your team is thinking about visibility into application performance when your workforce is distributed across so many environments — it's a challenge we help COOs solve every day."
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,10 +275,10 @@
                                 <div class="connection__company">Allianz Technology of North America</div>
                             </div>
                         </div>
-                        <p class="connection__why">Allianz Technology is the internal IT backbone for one of the world's largest insurers, making performance, observability, and operational efficiency existential priorities rather than nice-to-haves. Heidi sits at the intersection of IT operations and business outcomes — the exact decision-making layer where Riverbed's value proposition lands hardest. Her role managing technology operations across a highly regulated, geographically distributed environment maps directly to the use cases where Riverbed's acceleration and observability tools demonstrate fastest time-to-value. This is a warm prospect profile with both the technical fluency and budget authority to move quickly.</p>
+                        <p class="connection__why">Allianz Technology is the IT backbone for one of the world's largest insurance groups, managing a highly distributed, compliance-driven infrastructure across North America — exactly the environment where Riverbed's observability and acceleration solutions prove their value. Winger sits at the intersection of IT operations and business performance, making her acutely aware of the cost of network latency and blind spots in application delivery. Financial services and insurance IT environments demand both performance and audit-ready visibility, two core strengths of Riverbed's platform. She's likely already evaluating vendors in this space and a conversation at the Summit could accelerate a qualified opportunity.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Heidi, managing IT operations across a distributed financial services environment comes with enormous pressure to prove performance ROI — what does your current observability stack look like, and where are the blind spots?"
+                            "Running IT operations for a regulated financial services environment at Allianz's scale must mean application performance and visibility are constant pressure points — how are you currently getting ahead of incidents before they impact the business?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
@@ -290,10 +290,10 @@
                                 <div class="connection__company">Citibank</div>
                             </div>
                         </div>
-                        <p class="connection__why">Taru leads technology delivery operations at one of the world's most systemically important financial institutions, where application performance and network acceleration directly impact transaction integrity, regulatory compliance, and client experience. Citibank's global footprint and reliance on high-performance, low-latency IT infrastructure make them an ideal candidate for Riverbed's full solution portfolio. Her dual role spanning COO responsibilities and global technology delivery means she holds the strategic and operational authority to evaluate and champion a platform like Riverbed's at enterprise scale. This is a high-value conversation that bridges both the business outcome and the technical buying center.</p>
+                        <p class="connection__why">Jain oversees technology delivery operations for Citibank's issuer services globally, meaning network performance, application reliability, and end-to-end observability are mission-critical to her mandate. Large global banks like Citi operate across hybrid on-premise and cloud environments where latency, packet loss, and lack of visibility directly translate to revenue risk and regulatory exposure. Riverbed's unified observability platform addresses exactly the monitoring and acceleration gaps that enterprise banking technology teams struggle with at this scale. A conversation with Jain at the Summit could open a significant enterprise financial services account.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Taru, with global technology delivery running across so many markets and infrastructure layers at Citi, how are you currently measuring whether your IT performance is actually translating into productivity and client experience outcomes?"
+                            "With global technology delivery responsibilities across Citi's issuer services, you're managing application performance across environments that span continents — I'm curious whether your current observability tooling gives you the full picture when something goes wrong across that hybrid stack."
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
