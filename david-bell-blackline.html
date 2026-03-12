@@ -8,7 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold:#9B834F; --gold-light:#aa9669; --gold-dim:rgba(155,131,79,0.12); --gold-dim-mid:rgba(155,131,79,0.25); --navy:#202632; --navy-deep:#171C27; --base:#131720; --surface:#1B2030; --surface-raised:#202535; --surface-over:#262C3E; --border:rgba(155,131,79,0.15); --border-hover:rgba(155,131,79,0.35); --border-subtle:rgba(255,255,255,0.06); --text-primary:#F0EDE8; --text-secondary:#8C8FA0; --text-tertiary:#4E5268; }
+        :root {
+            --gold:          #9B834F;
+            --gold-light:    #aa9669;
+            --gold-dim:      rgba(155,131,79,0.12);
+            --gold-dim-mid:  rgba(155,131,79,0.25);
+            --navy:          #202632;
+            --navy-deep:     #171C27;
+            --base:          #131720;
+            --surface:       #1B2030;
+            --surface-raised:#202535;
+            --surface-over:  #262C3E;
+            --border:        rgba(155,131,79,0.15);
+            --border-hover:  rgba(155,131,79,0.35);
+            --border-subtle: rgba(255,255,255,0.06);
+            --text-primary:  #F0EDE8;
+            --text-secondary:#8C8FA0;
+            --text-tertiary: #4E5268;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--base); color:var(--text-primary); min-height:100vh; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
@@ -118,10 +135,27 @@
         .footer__brand { font-size:12px; font-weight:700; color:var(--gold); letter-spacing:0.3px; }
         .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s cubic-bezier(0.19,1,0.22,1),transform 0.65s cubic-bezier(0.19,1,0.22,1); }
         .reveal.is-visible { opacity:1; transform:translateY(0); }
-        .reveal-d1 { transition-delay:0.10s; } .reveal-d2 { transition-delay:0.20s; } .reveal-d3 { transition-delay:0.30s; } .reveal-d4 { transition-delay:0.40s; }
-        @media(max-width:900px){ .container{padding:0 24px;} .hero{padding:80px 0 60px;} .hero .container{grid-template-columns:1fr;gap:48px;} .pains,.speakers,.connections{grid-template-columns:1fr;} .benefits{grid-template-columns:1fr;} .section{padding:72px 0;} .header__cta{display:none;} .proof__logos{gap:18px 32px;} .footer .container{flex-direction:column;gap:10px;text-align:center;} }
-        @media(max-width:480px){ .hero__title{font-size:28px;} .event-details{grid-template-columns:1fr;} .hero__actions{flex-direction:column;align-items:flex-start;} }
-    </style>
+        .reveal-d1 { transition-delay:0.10s; }
+        .reveal-d2 { transition-delay:0.20s; }
+        .reveal-d3 { transition-delay:0.30s; }
+        .reveal-d4 { transition-delay:0.40s; }
+        @media(max-width:900px){
+            .container{padding:0 24px;}
+            .hero{padding:80px 0 60px;}
+            .hero .container{grid-template-columns:1fr;gap:48px;}
+            .pains,.speakers,.connections{grid-template-columns:1fr;}
+            .benefits{grid-template-columns:1fr;}
+            .section{padding:72px 0;}
+            .header__cta{display:none;}
+            .proof__logos{gap:18px 32px;}
+            .footer .container{flex-direction:column;gap:10px;text-align:center;}
+        }
+        @media(max-width:480px){
+            .hero__title{font-size:28px;}
+            .event-details{grid-template-columns:1fr;}
+            .hero__actions{flex-direction:column;align-items:flex-start;}
+        }
+</style>
 </head>
 <body>
     <div class="dot-grid" aria-hidden="true"></div>
@@ -143,13 +177,12 @@
                 <a href="#book" class="header__cta">Book a Call →</a>
             </div>
         </header>
-
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for David Bell · BlackLine</p>
-                    <h1 class="hero__title reveal reveal-d1">30+ COOs driving <em>financial operational excellence</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">Financial close and accounting automation might sound like a CFO conversation — but COOs own the operational processes that feed it. The COO Leaders' Summit brings together 30+ senior operations leaders who are actively evaluating how AI can eliminate the manual burden across their finance and operations teams. BlackLine's conversation starts here.</p>
+                    <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>AI-powered financial operations automation</em> — in one room, for two days</h1>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who sign off on — or block — platforms like BlackLine. These are the executives demanding faster financial close cycles, real-time visibility, and AI-driven automation across their finance functions. No cold outreach, no gatekeeper — just two days of genuine conversation with the buyers who matter most.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -168,7 +201,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section section--alt" id="why-sponsor">
             <div class="container">
                 <p class="section__label reveal">The challenge</p>
@@ -180,43 +212,40 @@
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container">
                 <p class="section__label reveal">On stage in Denver</p>
-                <h2 class="section__heading reveal reveal-d1">Keynotes that open the door for BlackLine's AI automation message</h2>
+                <h2 class="section__heading reveal reveal-d1">Keynotes that make <em>BlackLine</em> relevant to every COO in the room</h2>
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Tracy-Galloway--300x300.jpg" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">TG</div>
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
-                        <div class="speaker__role">CVP &amp; COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Galloway's session on AI and intelligent automation in enterprise operations is the perfect primer for BlackLine's message. COOs who've heard how Microsoft Americas is deploying AI to transform operational processes are ready to ask "how do we do this for our finance operations?"</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Galloway's focus on AI in enterprise operations gives BlackLine the perfect contextual runway — when a Microsoft COO validates intelligent automation as the new standard, the case for automating CFO finance processes writes itself. Her presence signals to every delegate that AI-led transformation is a strategic imperative, not a future consideration, making BlackLine's pitch land in the most receptive environment possible.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Peter-Gibbons-1-199x300.jpg" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">JM</div>
+                        </div>
+                        <div class="speaker__name">Janet Moylan</div>
+                        <div class="speaker__role">SVP & COO, Allied World Assurance</div>
+                        <div class="speaker__relevance">Moylan's expertise in financial services operations, compliance, and risk management directly mirrors the pain points BlackLine solves — manual reconciliation risk, audit exposure, and regulatory pressure on financial close. Her keynote will prime the room on operational resilience in regulated industries, creating a natural segue for BlackLine's conversations about how automated financial controls reduce compliance risk at scale.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">PG</div>
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">At 3M, Gibbons oversaw operational and financial transformation across a globally distributed enterprise. His lens on where operational inefficiency hides in finance processes — and how technology eliminates it — is exactly the case study that validates BlackLine's ROI story.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Janet-Moylan-200x300.jpg" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">JM</div>
-                        </div>
-                        <div class="speaker__name">Janet Moylan</div>
-                        <div class="speaker__role">SVP &amp; COO, Allied World Assurance</div>
-                        <div class="speaker__relevance">Financial services and insurance companies are among BlackLine's strongest verticals. Moylan brings the COO perspective from a complex, compliance-heavy financial organisation — her operational priorities around accuracy, audit readiness, and process efficiency mirror BlackLine's core value proposition.</div>
-                    </div>
-                </div>
+                        <div class="speaker__relevance">Gibbons brings the perspective of large-scale operational transformation across complex, multi-entity enterprises — exactly the environment where BlackLine's financial consolidation and automation capabilities deliver the most value. COOs in the room who manage sprawling operational footprints will hear Gibbons validate the cost of operational inertia, opening the door for BlackLine to position its platform as the finance layer that keeps pace with enterprise scale.</div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--alt">
             <div class="container">
                 <p class="section__label reveal">Who you'll meet</p>
@@ -224,53 +253,51 @@
                 <div class="connections">
                     <div class="connection reveal reveal-d1">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru+Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Taru%20Jain&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Taru Jain">
                             <div class="connection__meta">
                                 <div class="connection__name">Taru Jain</div>
-                                <div class="connection__role">CoS &amp; COO, Global Head of Delivery for Issuer Services Technology</div>
+                                <div class="connection__role">CoS & COO, Global Head of Delivery for Issuer Services Technology</div>
                                 <div class="connection__company">Citibank</div>
                             </div>
                         </div>
-                        <p class="connection__why">Citibank's issuer services technology division operates at a scale where even small inefficiencies in financial close and reconciliation processes compound into significant operational risk. Jain's role spans operational delivery and technology — she's the COO who feels the pain BlackLine eliminates.</p>
+                        <p class="connection__why">Citibank operates one of the most complex financial operations infrastructures in the world, with massive reconciliation volumes, multi-entity close processes, and intense regulatory scrutiny — precisely the environment where BlackLine drives the most transformative ROI. Taru sits at the intersection of technology delivery and COO-level operations, meaning she understands both the business case and the implementation reality of platforms like BlackLine. With FloQast already circling the financial close automation space, getting in front of Taru before a competitor does is a genuine urgency. BlackLine's ability to scale across Citi's issuer services operations would be a flagship case study in the making.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How does Citi's issuer services team currently manage the operational overhead of financial close and reconciliation across your technology delivery function?"
+                            "Given the volume and complexity of reconciliations across Citi's issuer services — how are you thinking about where AI can meaningfully reduce close cycle time without introducing new control risks?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Gisele+Tavares&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Gisele Tavares">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Tonya%20Brandon&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Tonya Brandon">
                             <div class="connection__meta">
-                                <div class="connection__name">Gisele Tavares</div>
-                                <div class="connection__role">VP &amp; Head of R&amp;D Business Operations</div>
-                                <div class="connection__company">Takeda Pharmaceuticals</div>
+                                <div class="connection__name">Tonya Brandon</div>
+                                <div class="connection__role">COO Global Real Estate</div>
+                                <div class="connection__company">TIAA</div>
                             </div>
                         </div>
-                        <p class="connection__why">Pharmaceutical R&D operations generate complex financial operations — project accounting, grant management, cross-border compliance, and close processes that span multiple entities. Tavares manages business operations for Takeda's R&D function at the intersection of operational efficiency and financial accuracy.</p>
+                        <p class="connection__why">TIAA manages hundreds of billions in assets across real estate and investment portfolios, with financial operations that span multiple entities, currencies, and reporting requirements — a classic BlackLine use case. As COO of the global real estate division, Tonya owns the operational layer that feeds financial reporting, making her a natural champion for solutions that reduce manual close effort and improve auditability. TIAA's fiduciary obligations mean financial accuracy isn't a preference — it's a legal requirement — which makes the risk reduction angle of BlackLine highly compelling. This is a high-trust financial institution where a proven automation platform with strong controls would face a receptive audience.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How does Takeda's R&D business operations team currently handle the financial close and reporting burden across your research portfolio?"
+                            "With the reporting complexity across TIAA's real estate portfolio globally, how much of your team's bandwidth is still absorbed by manual reconciliation work versus higher-value analysis?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi+Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi%20Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
                             <div class="connection__meta">
                                 <div class="connection__name">Heidi Winger</div>
-                                <div class="connection__role">Principal Consultant &amp; Head of Operations</div>
+                                <div class="connection__role">Principal Consultant & Head of Operations</div>
                                 <div class="connection__company">Allianz Technology of North America</div>
                             </div>
                         </div>
-                        <p class="connection__why">Allianz Technology manages IT operations for a global insurance group with significant financial reporting and compliance requirements. Winger's operational mandate includes process efficiency and governance — areas where BlackLine's automation creates direct, measurable value.</p>
+                        <p class="connection__why">Allianz Technology is the operational and IT backbone for one of the world's largest insurance groups, giving Heidi Winger influence over technology decisions that cascade across a highly regulated, financially complex enterprise. Insurance back-office operations are notorious for high-volume, error-prone reconciliation processes that BlackLine was built to modernise. Her dual focus on IT operations and financial services makes her unusually well-positioned to evaluate and internally advocate for a platform like BlackLine. Allianz's scale and compliance requirements mean the value case for automated financial close is immediate and quantifiable.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Where does financial process automation create the most leverage in Allianz Technology's operational and reporting function?"
+                            "Across Allianz Technology's operations footprint, how are you balancing the push toward automation in finance processes with the governance standards the group requires?"
                         </div>
-                    </div>
-                </div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--navy">
             <div class="container">
                 <p class="section__label reveal">Sponsorship value</p>
@@ -283,22 +310,40 @@
                 </div>
             </div>
         </section>
-
         <div class="proof">
             <div class="container">
                 <p class="proof__label reveal">COOs in the room from companies including</p>
                 <div class="proof__logos reveal reveal-d1">
-                    <div class="proof__company"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Amazon</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Maersk</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>easyJet</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Kinetic</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Microsoft</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>NASA</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Allied World</span></div>
-                </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Maersk</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>easyJet</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Kinetic</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>NASA</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Allied World</span>
+                    </div></div>
             </div>
         </div>
-
         <section class="cta" id="book">
             <div class="container">
                 <div class="cta__inner reveal">
@@ -310,10 +355,9 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <div class="container">
-                <p class="footer__prepared">Prepared for <strong>David Bell</strong>, Vice President of Demand Generation at BlackLine</p>
+                <p class="footer__prepared">Prepared for <strong>David Bell</strong>, Vice President Demand Generation at BlackLine</p>
                 <span class="footer__brand">The Global Series</span>
             </div>
         </footer>
