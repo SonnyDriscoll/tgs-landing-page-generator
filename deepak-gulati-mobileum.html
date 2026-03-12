@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=mobileum.com&sz=128" alt="Mobileum" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/mobileum.com" alt="Mobileum" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://mobileum.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">Mobileum</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Deepak Gulati · Mobileum</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>real-time network intelligence analytics</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the operational decision-makers who define technology investment priorities across North America's largest enterprises — exactly the buyers Mobileum needs at the table when telecom real-time analytics moves from nice-to-have to mission-critical. With the event theme centred on tech-enabled ops and unlocking ROI through productivity, every conversation is primed for the value Mobileum delivers. No cold outreach, no chasing gatekeepers — just two days of structured access in Denver.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together 30+ senior operations executives who are actively investing in tech-enabled solutions to drive measurable ROI — exactly the buyers Mobileum's telecom real-time analytics platform is built for. With the shift toward intelligent, data-driven operations accelerating across every sector, your solution sits at the intersection of every conversation happening in Denver. No cold outreach, no gatekeepers — just two days of direct access to the decision-makers who control the budgets.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -224,25 +224,25 @@
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">As the COO overseeing Microsoft's Americas operations, Tracy sits at the intersection of AI-driven enterprise ops and digital transformation at scale — the exact narrative Mobileum uses to position real-time telecom analytics as an operational backbone, not a back-office tool. Her keynote will set the tone for AI and data intelligence as core operational infrastructure, giving Mobileum a natural bridge into conversations about network intelligence as a productivity multiplier.</div>
+                        <div class="speaker__relevance">Tracy's focus on AI-driven enterprise operations and digital transformation maps directly onto the value proposition Mobileum brings to COOs modernising their operational stacks. Her keynote will prime the room to think about real-time data intelligence as a core operational capability — creating a natural opening for Mobileum's analytics story.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Timo Koster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">TK</div>
-                        </div>
-                        <div class="speaker__name">Timo Koster</div>
-                        <div class="speaker__role">Strategic Advisor & Board Member, NATO</div>
-                        <div class="speaker__relevance">Timo's focus on cybersecurity, operational risk, and governance resonates directly with the network intelligence layer Mobileum provides — particularly as telecom operators and enterprise clients face growing pressure to monitor, analyse, and respond to network threats in real time. His presence elevates the security and resilience dimension of the analytics conversation, opening the door for Mobileum to speak to COOs about risk-aware, intelligence-led network operations.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
                             <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Amir Deylami" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">AD</div>
                         </div>
                         <div class="speaker__name">Amir Deylami</div>
                         <div class="speaker__role">COO, NASA Ames Research Center</div>
-                        <div class="speaker__relevance">Amir's expertise in mission-critical operations and infrastructure resonates with Mobileum's core proposition that network intelligence analytics cannot afford latency — decisions must be made on live data, not historical reports. His keynote framing around operational excellence in high-stakes environments gives Mobileum a powerful contextual hook to demonstrate how real-time analytics transforms network operations from reactive to proactive.</div>
+                        <div class="speaker__relevance">Amir's expertise in mission-critical operations and infrastructure resilience speaks directly to the high-stakes, zero-latency environments where Mobileum's real-time analytics deliver the most value. His sessions will elevate conversations around operational intelligence and network reliability, giving Mobileum a credible backdrop for discussing how their platform supports critical decision-making at speed.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Timo Koster" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">TK</div>
+                        </div>
+                        <div class="speaker__name">Timo Koster</div>
+                        <div class="speaker__role">Strategic Advisor & Board Member, NATO</div>
+                        <div class="speaker__relevance">Timo's perspective on cybersecurity, operational risk, and governance resonates strongly with the network security and fraud intelligence dimensions of Mobileum's analytics offering. His presence in the agenda signals that COOs in the room are thinking seriously about network-level risk — a conversation Mobileum is uniquely positioned to extend with real-time detection and response capabilities.</div>
                     </div></div>
             </div>
         </section>
@@ -260,10 +260,10 @@
                                 <div class="connection__company">Microsoft Americas</div>
                             </div>
                         </div>
-                        <p class="connection__why">Microsoft Americas is one of the largest enterprise technology consumers and cloud infrastructure operators in the world, running complex network ecosystems that generate enormous volumes of operational data in real time. Tracy's remit over operations means she directly influences decisions around analytics tooling, network intelligence layers, and productivity-enabling platforms. As Microsoft continues to scale its AI and cloud operations across the Americas, the appetite for real-time network analytics to support uptime, performance, and security is significant. Mobileum's solution is a natural fit for a conversation about how telecom intelligence feeds enterprise operational resilience.</p>
+                        <p class="connection__why">Microsoft Americas operates one of the most complex global network infrastructures in enterprise technology, with an ongoing mandate to drive operational efficiency through intelligent, real-time data. Tracy is directly accountable for translating AI and analytics investments into measurable operational ROI across the Americas — precisely the outcome Mobileum's platform is designed to deliver. A relationship here could open doors to enterprise deals and co-selling conversations given Microsoft's deep ecosystem of telecom and enterprise clients. The Denver summit gives Mobileum rare peer-level access to a decision-maker of this calibre without an intermediary in the room.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "With Microsoft scaling AI infrastructure across the Americas so aggressively, I'm curious — how are you thinking about real-time network intelligence as the connective tissue between your operational performance data and the decisions your teams need to make in the moment?"
+                            "Tracy, given the scale of Microsoft's operations across the Americas, I'm curious — when you're evaluating real-time analytics tools, what's the gap you're still trying to close between data availability and operational decision speed?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
@@ -275,10 +275,10 @@
                                 <div class="connection__company">NATO</div>
                             </div>
                         </div>
-                        <p class="connection__why">Timo's governance and cybersecurity focus maps directly onto the threat-detection and network monitoring capabilities at the heart of Mobileum's analytics platform, particularly relevant as defence and government-adjacent organisations increasingly rely on telecom networks for mission-critical communications. His advisory influence extends across sectors where real-time network visibility is not just a productivity tool but a security imperative. Engaging Timo opens a conversation about how network intelligence analytics underpins the kind of operational risk management COOs in high-stakes environments demand. This is also a compelling reference conversation given Syniverse's competing presence — Mobileum can differentiate on depth of real-time intelligence.</p>
+                        <p class="connection__why">Timo advises on some of the most operationally demanding network and communications environments in the world, where real-time intelligence and threat detection are non-negotiable. His influence spans defence, government, and critical infrastructure sectors — all high-value verticals for Mobileum's network analytics and fraud intelligence capabilities. Engaging Timo in Denver could unlock introductions into public sector and defence-adjacent organisations that are actively investing in network monitoring and cybersecurity analytics. His credibility in governance and risk circles also makes him a powerful advocate if he understands the Mobileum value proposition.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Given the operational risk environments you advise on at NATO, I'd love to get your perspective — when network anomalies happen at the infrastructure level, how much of the gap you see is really a real-time intelligence problem versus a response protocol problem?"
+                            "Timo, with the increasing sophistication of network-level threats in critical infrastructure, what's your view on where the biggest intelligence gap sits — is it in detection speed, data integration, or the ability to act on signals in real time?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
@@ -290,10 +290,10 @@
                                 <div class="connection__company">Allianz Technology of North America</div>
                             </div>
                         </div>
-                        <p class="connection__why">Allianz Technology sits at the intersection of financial services operations and enterprise IT, managing technology infrastructure for one of the world's largest insurance groups — an environment where network performance, data flow integrity, and real-time analytics directly impact regulatory compliance and customer service SLAs. Heidi's operational remit means she is accountable for the kind of network intelligence gaps that Mobileum's platform is designed to close. Financial services technology operations teams are under increasing pressure to demonstrate ROI from their infrastructure spend, making the productivity and cost-efficiency angle of Mobileum's solution immediately compelling. This is a warm entry point into a sector where Syniverse has less differentiated positioning.</p>
+                        <p class="connection__why">Allianz Technology is the IT and operations backbone for one of the world's largest insurers, managing complex network and data infrastructure across North America with a sharp focus on operational resilience and cost efficiency. Heidi sits at the intersection of IT operations and financial services compliance — an environment where real-time network analytics and anomaly detection directly reduce risk exposure and operational overhead. Mobileum's ability to surface actionable intelligence from network data in real time is a compelling fit for the scale and risk sensitivity of Allianz's operational environment. A conversation in Denver could position Mobileum as a strategic analytics partner for one of the most operationally mature enterprises in the region.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Running technology operations for Allianz across North America, you must be sitting on enormous volumes of network performance data — I'm interested in how much of that is being used in real time to drive operational decisions versus being reviewed after the fact?"
+                            "Heidi, running IT operations at the scale of Allianz, how are you currently handling the gap between network event data and the speed at which your ops teams can actually respond — is real-time analytics something you're actively exploring?"
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
