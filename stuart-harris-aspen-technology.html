@@ -8,7 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold:#9B834F; --gold-light:#aa9669; --gold-dim:rgba(155,131,79,0.12); --gold-dim-mid:rgba(155,131,79,0.25); --navy:#202632; --navy-deep:#171C27; --base:#131720; --surface:#1B2030; --surface-raised:#202535; --surface-over:#262C3E; --border:rgba(155,131,79,0.15); --border-hover:rgba(155,131,79,0.35); --border-subtle:rgba(255,255,255,0.06); --text-primary:#F0EDE8; --text-secondary:#8C8FA0; --text-tertiary:#4E5268; }
+        :root {
+            --gold:          #9B834F;
+            --gold-light:    #aa9669;
+            --gold-dim:      rgba(155,131,79,0.12);
+            --gold-dim-mid:  rgba(155,131,79,0.25);
+            --navy:          #202632;
+            --navy-deep:     #171C27;
+            --base:          #131720;
+            --surface:       #1B2030;
+            --surface-raised:#202535;
+            --surface-over:  #262C3E;
+            --border:        rgba(155,131,79,0.15);
+            --border-hover:  rgba(155,131,79,0.35);
+            --border-subtle: rgba(255,255,255,0.06);
+            --text-primary:  #F0EDE8;
+            --text-secondary:#8C8FA0;
+            --text-tertiary: #4E5268;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--base); color:var(--text-primary); min-height:100vh; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
@@ -118,10 +135,27 @@
         .footer__brand { font-size:12px; font-weight:700; color:var(--gold); letter-spacing:0.3px; }
         .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s cubic-bezier(0.19,1,0.22,1),transform 0.65s cubic-bezier(0.19,1,0.22,1); }
         .reveal.is-visible { opacity:1; transform:translateY(0); }
-        .reveal-d1 { transition-delay:0.10s; } .reveal-d2 { transition-delay:0.20s; } .reveal-d3 { transition-delay:0.30s; } .reveal-d4 { transition-delay:0.40s; }
-        @media(max-width:900px){ .container{padding:0 24px;} .hero{padding:80px 0 60px;} .hero .container{grid-template-columns:1fr;gap:48px;} .pains,.speakers,.connections{grid-template-columns:1fr;} .benefits{grid-template-columns:1fr;} .section{padding:72px 0;} .header__cta{display:none;} .proof__logos{gap:18px 32px;} .footer .container{flex-direction:column;gap:10px;text-align:center;} }
-        @media(max-width:480px){ .hero__title{font-size:28px;} .event-details{grid-template-columns:1fr;} .hero__actions{flex-direction:column;align-items:flex-start;} }
-    </style>
+        .reveal-d1 { transition-delay:0.10s; }
+        .reveal-d2 { transition-delay:0.20s; }
+        .reveal-d3 { transition-delay:0.30s; }
+        .reveal-d4 { transition-delay:0.40s; }
+        @media(max-width:900px){
+            .container{padding:0 24px;}
+            .hero{padding:80px 0 60px;}
+            .hero .container{grid-template-columns:1fr;gap:48px;}
+            .pains,.speakers,.connections{grid-template-columns:1fr;}
+            .benefits{grid-template-columns:1fr;}
+            .section{padding:72px 0;}
+            .header__cta{display:none;}
+            .proof__logos{gap:18px 32px;}
+            .footer .container{flex-direction:column;gap:10px;text-align:center;}
+        }
+        @media(max-width:480px){
+            .hero__title{font-size:28px;}
+            .event-details{grid-template-columns:1fr;}
+            .hero__actions{flex-direction:column;align-items:flex-start;}
+        }
+</style>
 </head>
 <body>
     <div class="dot-grid" aria-hidden="true"></div>
@@ -143,13 +177,12 @@
                 <a href="#book" class="header__cta">Book a Call →</a>
             </div>
         </header>
-
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for Stuart Harris · Aspen Technology</p>
-                    <h1 class="hero__title reveal reveal-d1">30+ COOs driving <em>industrial asset optimisation</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">Reaching COO-level buyers in industrial operations is one of the hardest motions in enterprise sales. The COO Leaders' Summit puts Aspen Technology in conversation with 30+ senior operations leaders from manufacturing, engineering, and energy — actively evaluating how to extract more performance from their assets.</p>
+                    <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>industrial asset optimization</em> — in one room, for two days</h1>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together the exact operational decision-makers who are under pressure to extract more value from industrial assets while managing costs and complexity at scale. For Aspen Technology, this is a rare chance to position operational productivity software as the infrastructure layer behind measurable ROI — in conversations that are already happening at the senior-most level. No cold outreach, no gatekeepers — just two days of structured access in Denver.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -168,7 +201,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section section--alt" id="why-sponsor">
             <div class="container">
                 <p class="section__label reveal">The challenge</p>
@@ -180,43 +212,40 @@
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container">
                 <p class="section__label reveal">On stage in Denver</p>
-                <h2 class="section__heading reveal reveal-d1">Keynotes that put Aspen Technology at the centre of the industrial ops conversation</h2>
+                <h2 class="section__heading reveal reveal-d1">Keynotes that make <em>Aspen Technology</em> relevant to every COO in the room</h2>
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Peter-Gibbons-1-199x300.jpg" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">PG</div>
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">3M's operational scale is exactly the environment where AspenTech thrives. Gibbons will address how industrial leaders are transforming asset performance and productivity at enterprise scale.</div>
+                        <div class="speaker__relevance">Peter Gibbons brings decades of industrial operations leadership at 3M — precisely the complex, asset-intensive environment where Aspen Technology's productivity software delivers measurable ROI. His keynote on operational transformation at scale creates a natural backdrop for Aspen's pitch around optimizing industrial assets without disrupting existing production ecosystems.</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Harry-Moser-200x300.jpg" alt="Harry Moser" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">HM</div>
-                        </div>
-                        <div class="speaker__name">Harry Moser</div>
-                        <div class="speaker__role">Founder &amp; President, Reshoring Initiative</div>
-                        <div class="speaker__relevance">Reshoring is driving a surge in new manufacturing and industrial facilities across North America. Every new plant needs the optimisation software to run efficiently from day one — that's AspenTech's opening.</div>
-                    </div>
-                    <div class="speaker reveal reveal-d3">
-                        <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/2025/09/Tracy-Galloway--300x300.jpg" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">TG</div>
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
-                        <div class="speaker__role">CVP &amp; COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Digital transformation in operations is the gateway conversation for AspenTech. Galloway sets the tone for how technology-enabled operations are becoming the new standard for industrial competitiveness.</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Tracy's focus on tech-enabled operations and AI in enterprise environments maps directly to the conversation Aspen Technology wants to own — how software drives tangible operational productivity gains. Her keynote will prime the room to think about technology as an operational multiplier, setting the stage for Aspen's value proposition around asset optimization software.</div>
                     </div>
-                </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Harry Moser" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">HM</div>
+                        </div>
+                        <div class="speaker__name">Harry Moser</div>
+                        <div class="speaker__role">Founder & President, Reshoring Initiative</div>
+                        <div class="speaker__relevance">Harry Moser's work on North American manufacturing resilience and reshoring puts industrial operational efficiency squarely on the agenda — the exact pressure point that drives demand for Aspen Technology's solutions. His session will surface the urgency around squeezing more output from domestic industrial assets, making Aspen's software a timely and credible answer to that challenge.</div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--alt">
             <div class="container">
                 <p class="section__label reveal">Who you'll meet</p>
@@ -224,53 +253,51 @@
                 <div class="connections">
                     <div class="connection reveal reveal-d1">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kevin+O%27Neill&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kevin O'Neill">
-                            <div class="connection__meta">
-                                <div class="connection__name">Kevin O'Neill</div>
-                                <div class="connection__role">SVP Operations</div>
-                                <div class="connection__company">H.H. Angus &amp; Associates</div>
-                            </div>
-                        </div>
-                        <p class="connection__why">H.H. Angus is a leading engineering firm specialising in complex industrial and commercial facility design. Their clients — industrial operators, manufacturers, and energy companies — are exactly who AspenTech serves. O'Neill shapes the technology recommendations that go into major industrial projects across North America.</p>
-                        <div class="connection__opener">
-                            <span class="connection__opener-label">Conversation opener</span>
-                            "How are your engineering clients approaching asset performance optimisation as they build or retrofit industrial facilities?"
-                        </div>
-                    </div>
-                    <div class="connection reveal reveal-d2">
-                        <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kat+Jeschke&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kat Jeschke">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kat%20Jeschke&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kat Jeschke">
                             <div class="connection__meta">
                                 <div class="connection__name">Kat Jeschke</div>
                                 <div class="connection__role">COO</div>
                                 <div class="connection__company">Inductive Automation</div>
                             </div>
                         </div>
-                        <p class="connection__why">Inductive Automation's SCADA and HMI platforms sit on top of the operational layer that AspenTech optimises. Jeschke understands the industrial stack deeply — a conversation about how asset optimisation software integrates with their platform is natural and productive.</p>
+                        <p class="connection__why">Inductive Automation is a core player in the industrial automation and SCADA space — a world that sits directly adjacent to Aspen Technology's operational productivity software. Kat oversees operations at a company whose customers are the same asset-intensive industrial facilities that Aspen serves, making her both a potential partner and a channel into a shared customer base. A conversation with Kat could open doors to co-sell or integration opportunities that accelerate Aspen's reach into manufacturing and process industries. She's also a credible peer reference point for COOs in the room who are evaluating industrial software stacks.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "How do your manufacturing clients measure and improve asset utilisation across the production line?"
+                            "Inductive Automation and Aspen are both solving for the same plant floor frustration from different angles — I'd love to compare notes on where you see the biggest gaps in how operators are using technology to drive asset performance today."
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d2">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kelly%20Darnell&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kelly Darnell">
+                            <div class="connection__meta">
+                                <div class="connection__name">Kelly Darnell</div>
+                                <div class="connection__role">COO</div>
+                                <div class="connection__company">American Clean Power</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">The clean energy sector is undergoing rapid asset expansion — wind, solar, and storage facilities that need sophisticated optimization software to maximize uptime and output. Kelly Darnell sits at the operational center of one of the fastest-growing industrial asset classes in North America, where productivity software like Aspen's can directly impact levelized cost of energy. American Clean Power's member companies are exactly the asset owners and operators who would benefit from Aspen's solutions, giving this conversation both direct and indirect sales potential. With energy transition pressures intensifying, the ROI narrative around asset optimization has never been more compelling for this audience.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "As clean power assets scale up across North America, the operational complexity compounds fast — I'm curious how your member companies are thinking about software infrastructure to keep asset performance ahead of that growth curve."
                         </div>
                     </div>
                     <div class="connection reveal reveal-d3">
                         <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Yohanna+Sullivan&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Yohanna Sullivan">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kevin%20O'Neill&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kevin O'Neill">
                             <div class="connection__meta">
-                                <div class="connection__name">Yohanna Sullivan</div>
-                                <div class="connection__role">Director of Operations</div>
-                                <div class="connection__company">Trimble</div>
+                                <div class="connection__name">Kevin O'Neill</div>
+                                <div class="connection__role">SVP Operations</div>
+                                <div class="connection__company">H.H. Angus & Associates</div>
                             </div>
                         </div>
-                        <p class="connection__why">Trimble provides technology for construction, agriculture, and industrial operations — sectors where AspenTech's asset optimisation capabilities create direct value. Sullivan manages Trimble's own operational efficiency, and Trimble's customer base overlaps significantly with AspenTech's ICP.</p>
+                        <p class="connection__why">H.H. Angus is a leading engineering and industrial design firm whose projects span complex infrastructure and industrial facilities — the same environments where Aspen Technology's asset optimization software creates its strongest value. Kevin's operational role means he's involved in decisions about how industrial assets are designed, commissioned, and run for performance over their lifecycle. This is a high-value relationship for Aspen because engineering firms like H.H. Angus influence software specification and adoption at the project level, long before an operator makes a purchasing decision. A relationship here could translate into Aspen being embedded in project specifications across multiple industrial clients.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Where do you see the biggest gap in how industrial operators are measuring and acting on asset performance data?"
+                            "Engineering firms are increasingly shaping the software stack that industrial facilities run on from day one — I'd be interested in your perspective on where asset optimization tools are getting pulled into projects early versus being retrofitted after commissioning."
                         </div>
-                    </div>
-                </div>
+                    </div></div>
             </div>
         </section>
-
         <section class="section section--navy">
             <div class="container">
                 <p class="section__label reveal">Sponsorship value</p>
@@ -283,22 +310,40 @@
                 </div>
             </div>
         </section>
-
         <div class="proof">
             <div class="container">
                 <p class="proof__label reveal">COOs in the room from companies including</p>
                 <div class="proof__logos reveal reveal-d1">
-                    <div class="proof__company"><img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Amazon</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Maersk</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>easyJet</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Kinetic</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Microsoft</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>NASA</span></div>
-                    <div class="proof__company"><img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span>Allied World</span></div>
-                </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Maersk</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>easyJet</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Kinetic</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>NASA</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Allied World</span>
+                    </div></div>
             </div>
         </div>
-
         <section class="cta" id="book">
             <div class="container">
                 <div class="cta__inner reveal">
@@ -310,10 +355,9 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <div class="container">
-                <p class="footer__prepared">Prepared for <strong>Stuart Harris</strong>, SVP &amp; Chief Marketing and Strategy Officer at Aspen Technology</p>
+                <p class="footer__prepared">Prepared for <strong>Stuart Harris</strong>, SVP Chief Marketing and Strategy Officer at Aspen Technology</p>
                 <span class="footer__brand">The Global Series</span>
             </div>
         </footer>
