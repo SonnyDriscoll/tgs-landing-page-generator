@@ -44,7 +44,7 @@
         .header__tgs img { height:28px; width:auto; object-fit:contain; }
         .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
         .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
-        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect img { height:32px; width:auto; max-width:140px; object-fit:contain; opacity:0.90; }
         .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
         .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
         .header__cta:hover { background:var(--gold-light); }
@@ -114,10 +114,10 @@
         .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
         .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
         .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
-        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:56px; flex-wrap:wrap; }
         .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
         .proof__company:hover { opacity:0.8; }
-        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; opacity:0.80; transition:opacity 0.3s; }
+        .proof__company img { height:44px; width:auto; max-width:160px; object-fit:contain; opacity:0.90; transition:opacity 0.3s; background:transparent; }
         .proof__company:hover img { opacity:1; }
         .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
         .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
@@ -166,11 +166,11 @@
             <div class="container">
                 <div class="header__brands">
                     <div class="header__tgs">
-                        <img src="https://www.google.com/s2/favicons?domain=theglobalseries.com&sz=128" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
                         <span id="tgs-text" class="header__tgs-text">The Global Series</span>
                     </div>
                     <div class="header__prospect">
-                        <img src="https://www.google.com/s2/favicons?domain=blackline.com&sz=128" alt="BlackLine" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <img src="https://logo.clearbit.com/blackline.com" alt="BlackLine" onerror="this.src='https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://blackline.com&size=256';this.onerror=function(){this.style.display='none';document.getElementById('prospect-text').style.display='inline';}">
                         <span id="prospect-text" class="header__prospect-text">BlackLine</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                 <div class="hero__content">
                     <p class="hero__eyebrow reveal">Prepared for David Bell · BlackLine</p>
                     <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>AI-powered financial operations automation</em> — in one room, for two days</h1>
-                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most influential operations executives at the exact moment AI-driven finance transformation is reshaping how CFOs and COOs collaborate. For BlackLine, this is a rare chance to position your automated financial operations platform in front of budget-influencing COOs who are actively modernising back-office workflows — no cold email, no SDR sequence, just real conversations with the right people.</p>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together more than 30 senior operations executives who are actively rethinking how finance and operations intersect in an AI-first enterprise. For BlackLine, this is a direct line to the budget holders and process owners who feel the pain of manual CFO workflows every quarter-close — no cold email required, no SDR sequence needed. FloQast is already in the room as a sponsor; Denver is where BlackLine can change that narrative face to face.</p>
                     <div class="hero__actions reveal reveal-d3">
                         <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                         <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
@@ -219,30 +219,30 @@
                 <div class="speakers">
                     <div class="speaker reveal reveal-d1">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Tracy+Galloway&background=0a2f5e&color=ffffff&size=128" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Tracy+Galloway&size=200&background=0a2540&color=ffffff&bold=true" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">TG</div>
                         </div>
                         <div class="speaker__name">Tracy Galloway</div>
                         <div class="speaker__role">CVP & COO, Microsoft Americas</div>
-                        <div class="speaker__relevance">Tracy's focus on AI in enterprise operations sets the intellectual stage for exactly the conversation BlackLine wants to own: how intelligent automation is eliminating manual financial processes at scale. Her Microsoft Americas platform gives her direct credibility with COOs who are already invested in enterprise tech stacks, making her session a natural lead-in for BlackLine's pitch on AI-powered close and reconciliation automation.</div>
+                        <div class="speaker__relevance">Galloway's session on AI in enterprise operations gives BlackLine the perfect ambient context — when she frames how AI is eliminating manual bottlenecks at Microsoft scale, every COO in the room will be mentally auditing their own finance processes. BlackLine's team can follow any hallway conversation about her talk with a direct question: 'Are your financial close cycles keeping pace with the AI transformation your operations team is driving?'</div>
                     </div>
                     <div class="speaker reveal reveal-d2">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Janet+Moylan&background=0a2f5e&color=ffffff&size=128" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Janet+Moylan&size=200&background=0a2540&color=ffffff&bold=true" alt="Janet Moylan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">JM</div>
                         </div>
                         <div class="speaker__name">Janet Moylan</div>
                         <div class="speaker__role">SVP & COO, Allied World Assurance</div>
-                        <div class="speaker__relevance">Janet operates at the intersection of financial services, compliance, and operational resilience — precisely the high-stakes environment where BlackLine's automated reconciliation and financial controls platform delivers its sharpest ROI. Her session on risk management and compliance will prime the room to think about where manual financial processes create operational and regulatory exposure, positioning BlackLine as the solution to that risk.</div>
+                        <div class="speaker__relevance">As a financial services COO, Moylan speaks directly to the compliance and operational resilience pressures that make automated financial close a necessity rather than a nice-to-have — exactly the pain BlackLine is built to solve. Her presence legitimises BlackLine's financial services vertical story and gives the sales team a credible reference point when speaking to other regulated-industry delegates about audit readiness and continuous accounting.</div>
                     </div>
                     <div class="speaker reveal reveal-d3">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Peter+Gibbons&background=0a2f5e&color=ffffff&size=128" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/https://ui-avatars.com/api/?name=Peter+Gibbons&size=200&background=0a2540&color=ffffff&bold=true" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="speaker__initials" style="display:none;">PG</div>
                         </div>
                         <div class="speaker__name">Peter Gibbons</div>
                         <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
-                        <div class="speaker__relevance">Peter's experience driving operational transformation at 3M — a $30B+ multi-entity, multi-currency global enterprise — mirrors the exact complexity that makes BlackLine's unified financial operations platform most compelling. His perspective on large-scale process modernisation will resonate with COOs managing complex consolidations, giving BlackLine a credible backdrop to demonstrate how automated financial close removes a critical bottleneck in enterprise transformation programmes.</div>
+                        <div class="speaker__relevance">Gibbons' experience driving operational transformation at 3M — a company with enormous multi-entity financial complexity — makes him a natural conversation bridge for BlackLine's intercompany and consolidation automation capabilities. When he speaks about operational transformation at scale, BlackLine can position itself as the finance-layer equivalent: eliminating the manual reconciliation drag that slows down every large enterprise's ability to act on real-time operational data.</div>
                     </div></div>
             </div>
         </section>
@@ -260,28 +260,13 @@
                                 <div class="connection__company">Citibank</div>
                             </div>
                         </div>
-                        <p class="connection__why">Taru sits at the convergence of financial services operations and technology delivery at one of the world's largest banks — a profile that maps directly onto BlackLine's core ICP. Citibank's Issuer Services division processes enormous transaction volumes requiring rigorous reconciliation, intercompany accounting, and audit-ready close processes, all of which BlackLine automates. As a COO with both operational authority and deep technology delivery experience, Taru is precisely the kind of buyer who can champion BlackLine internally across finance and operations. With FloQast already in the conversation at competitor accounts, getting BlackLine in front of Taru before the evaluation window opens is a material advantage.</p>
+                        <p class="connection__why">Citibank operates one of the most complex multi-entity, multi-currency financial environments in the world, making automated reconciliation and financial close a strategic imperative rather than an operational preference. Jain sits at the intersection of technology delivery and COO accountability, meaning she has both the technical credibility to evaluate BlackLine's platform and the operational authority to champion it internally. Large global banks like Citi typically carry significant manual reconciliation overhead across their issuer services divisions, and BlackLine's intercompany hub and journal entry automation directly address that friction. This is a high-value enterprise conversation with a decision-influencer who can open doors across Citi's finance transformation agenda.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Given the scale of transaction reconciliation in Issuer Services, I'd love to hear how Citi is thinking about AI automation in the financial close process — are you seeing pressure to compress cycle times further?"
+                            "With Issuer Services running across so many entities and currencies, I'd love to hear how your team is thinking about automating the reconciliation layer — are you finding that the volume of manual touchpoints is slowing down your close cycles?"
                         </div>
                     </div>
                     <div class="connection reveal reveal-d2">
-                        <div class="connection__header">
-                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi%20Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
-                            <div class="connection__meta">
-                                <div class="connection__name">Heidi Winger</div>
-                                <div class="connection__role">Principal Consultant & Head of Operations</div>
-                                <div class="connection__company">Allianz Technology of North America</div>
-                            </div>
-                        </div>
-                        <p class="connection__why">Heidi leads operations for Allianz's North American technology arm, sitting inside a global financial services group that runs complex multi-entity accounting across insurance, asset management, and banking subsidiaries — a textbook use case for BlackLine's intercompany hub and financial close automation. Allianz Technology's mandate to modernise shared services infrastructure makes this a live conversation about which platforms will underpin the next generation of finance operations. Her IT operations background means she speaks the language of both finance transformation and enterprise integration, making her a highly effective internal champion for a BlackLine deployment.</p>
-                        <div class="connection__opener">
-                            <span class="connection__opener-label">Conversation opener</span>
-                            "With Allianz running such a broad multi-entity structure across financial services lines, how is the technology organisation thinking about standardising financial close and reconciliation processes across those subsidiaries?"
-                        </div>
-                    </div>
-                    <div class="connection reveal reveal-d3">
                         <div class="connection__header">
                             <img class="connection__photo" src="https://ui-avatars.com/api/?name=Tonya%20Brandon&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Tonya Brandon">
                             <div class="connection__meta">
@@ -290,10 +275,25 @@
                                 <div class="connection__company">TIAA</div>
                             </div>
                         </div>
-                        <p class="connection__why">TIAA manages over $1.3 trillion in assets and Tonya oversees global real estate operations inside one of North America's most complex institutional investment managers — an environment defined by multi-entity consolidations, regulatory reporting deadlines, and audit intensity that BlackLine is purpose-built to address. Real estate COOs at institutions like TIAA are increasingly held accountable for the integrity of financial data flowing into investment performance reporting, making automated reconciliation and variance analysis directly relevant to Tonya's operational mandate. TIAA's scale and regulatory exposure also mean the cost of manual financial processes is measurable and significant, giving BlackLine a clear ROI narrative.</p>
+                        <p class="connection__why">TIAA manages hundreds of billions in assets across real estate, retirement, and investment portfolios, and its Global Real Estate division carries the kind of multi-entity accounting complexity — intercompany eliminations, property-level ledgers, fund consolidations — that BlackLine was purpose-built to automate. Brandon oversees operations for a division where the finance close is particularly layered and audit-sensitive, making her an ideal prospect for BlackLine's reconciliation and financial close management solutions. TIAA's scale and regulatory environment mean that any inefficiency in the financial close has real downstream consequences for reporting accuracy and compliance. A conversation with Brandon at this summit could open a significant enterprise deal in the financial services and real estate investment vertical.</p>
                         <div class="connection__opener">
                             <span class="connection__opener-label">Conversation opener</span>
-                            "Managing global real estate operations at TIAA's scale must create real pressure around consolidation and reporting timelines — are you finding that the finance close cycle is becoming a bottleneck as the portfolio grows?"
+                            "Managing real estate financials at TIAA's scale must mean a significant reconciliation burden at every close — are you finding that AI is changing how your finance and operations teams think about automating that layer?"
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d3">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Heidi%20Winger&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Heidi Winger">
+                            <div class="connection__meta">
+                                <div class="connection__name">Heidi Winger</div>
+                                <div class="connection__role">Principal Consultant & Head of Operations</div>
+                                <div class="connection__company">Allianz Technology of North America</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">Allianz Technology serves as the internal IT and operations backbone for one of the world's largest insurance groups, meaning Winger is directly involved in evaluating and deploying enterprise platforms that touch financial and operational workflows across Allianz's North American entities. Her dual role spanning consulting and operations makes her a credible influencer for both the business case and the vendor selection process — exactly the profile BlackLine needs to get in front of at the Allianz enterprise level. Insurance groups at Allianz's scale carry significant manual financial close overhead across subsidiaries, and BlackLine's continuous accounting model is a natural fit for their compliance-driven environment. Engaging Winger in Denver could accelerate a conversation that would otherwise take months to reach the right level through standard outbound channels.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "Supporting financial operations across Allianz's North American entities must mean a lot of reconciliation complexity at close — I'd be curious whether you're seeing demand from the finance side for more automated, AI-driven approaches to that process."
                         </div>
                     </div></div>
             </div>
@@ -323,7 +323,7 @@
                         <span>Maersk</span>
                     </div>
                     <div class="proof__company">
-                        <img src="https://cdn.worldvectorlogo.com/logos/easyjet-airline.svg" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <img src="https://simpleicons.org/icons/easyjet.svg" alt="easyJet" style="filter:invert(56%) sepia(98%) saturate(2200%) hue-rotate(1deg) brightness(99%)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                         <span>easyJet</span>
                     </div>
                     <div class="proof__company">
