@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COO Leaders' Summit × InEight | Melissa, your buyers are in this room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold:          #9B834F;
+            --gold-light:    #aa9669;
+            --gold-dim:      rgba(155,131,79,0.12);
+            --gold-dim-mid:  rgba(155,131,79,0.25);
+            --navy:          #202632;
+            --navy-deep:     #171C27;
+            --base:          #131720;
+            --surface:       #1B2030;
+            --surface-raised:#202535;
+            --surface-over:  #262C3E;
+            --border:        rgba(155,131,79,0.15);
+            --border-hover:  rgba(155,131,79,0.35);
+            --border-subtle: rgba(255,255,255,0.06);
+            --text-primary:  #F0EDE8;
+            --text-secondary:#8C8FA0;
+            --text-tertiary: #4E5268;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--base); color:var(--text-primary); min-height:100vh; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+        body::after { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E"); background-repeat:repeat; background-size:256px 256px; pointer-events:none; z-index:9999; }
+        .dot-grid { position:fixed; inset:0; background-image:radial-gradient(circle,rgba(155,131,79,0.07) 1px,transparent 1px); background-size:30px 30px; pointer-events:none; z-index:0; }
+        .ambient { position:fixed; border-radius:50%; filter:blur(150px); pointer-events:none; z-index:0; }
+        .ambient--gold { width:700px; height:700px; background:var(--gold); opacity:0.06; top:-300px; right:-200px; animation:drift 26s ease-in-out infinite alternate; }
+        .ambient--navy { width:600px; height:600px; background:#2a3a6e; opacity:0.10; bottom:5%; left:-220px; animation:drift 32s ease-in-out infinite alternate-reverse; }
+        @keyframes drift { 0%{transform:translate(0,0) scale(1)} 100%{transform:translate(35px,-25px) scale(1.07)} }
+        .page { position:relative; z-index:1; }
+        .container { max-width:1100px; margin:0 auto; padding:0 40px; }
+        .header { position:sticky; top:0; z-index:100; padding:0; background:rgba(32,38,50,0.92); backdrop-filter:blur(20px) saturate(1.5); border-bottom:1px solid var(--border); }
+        .header .container { display:flex; justify-content:space-between; align-items:stretch; height:64px; }
+        .header__brands { display:flex; align-items:center; gap:0; }
+        .header__tgs { display:flex; align-items:center; gap:10px; padding-right:20px; border-right:1px solid var(--border); }
+        .header__tgs img { height:28px; width:auto; object-fit:contain; }
+        .header__tgs-text { font-size:13px; font-weight:700; color:var(--text-primary); letter-spacing:0.2px; display:none; }
+        .header__prospect { display:flex; align-items:center; gap:10px; padding-left:20px; }
+        .header__prospect img { height:22px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:0.70; }
+        .header__prospect-text { font-size:15px; font-weight:600; color:var(--text-secondary); display:none; }
+        .header__cta { font-size:13px; font-weight:700; color:#000; background:var(--gold); padding:0 22px; text-decoration:none; display:flex; align-items:center; transition:background 0.2s; }
+        .header__cta:hover { background:var(--gold-light); }
+        .hero { padding:110px 0 100px; position:relative; }
+        .hero .container { display:grid; grid-template-columns:1.1fr 0.9fr; gap:80px; align-items:center; }
+        .hero__eyebrow { font-size:12px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+        .hero__eyebrow::before { content:''; display:block; width:20px; height:1px; background:var(--gold); }
+        .hero__title { font-size:clamp(32px,4vw,52px); font-weight:800; line-height:1.1; letter-spacing:-1px; margin-bottom:24px; color:var(--text-primary); }
+        .hero__title em { font-style:normal; color:var(--gold); }
+        .hero__desc { font-size:16px; color:var(--text-secondary); max-width:500px; margin-bottom:36px; line-height:1.8; }
+        .hero__actions { display:flex; align-items:center; gap:16px; }
+        .btn { display:inline-flex; align-items:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:700; text-decoration:none; padding:13px 28px; border-radius:9999px; transition:all 0.25s ease; cursor:pointer; border:none; }
+        .btn--primary { background:var(--gold); color:#000; }
+        .btn--primary:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 10px 30px rgba(155,131,79,0.30); }
+        .btn--ghost { background:transparent; color:var(--text-secondary); border:1px solid var(--border-hover); }
+        .btn--ghost:hover { color:var(--text-primary); border-color:var(--gold); background:var(--gold-dim); }
+        .btn__arrow { transition:transform 0.25s; }
+        .btn:hover .btn__arrow { transform:translateX(3px); }
+        .event-panel { position:relative; }
+        .event-panel__inner { background:var(--navy); border:1px solid var(--border); border-radius:4px; padding:6px; position:relative; }
+        .event-panel__glow { position:absolute; inset:-1px; border-radius:5px; background:linear-gradient(135deg,var(--gold),transparent); opacity:0.20; z-index:-1; }
+        .event-details { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+        .event-detail { background:var(--surface-raised); padding:28px 20px; text-align:center; transition:background 0.3s; }
+        .event-detail:hover { background:var(--surface-over); }
+        .event-detail__value { font-size:26px; font-weight:800; line-height:1; margin-bottom:8px; color:var(--gold); }
+        .event-detail__label { font-size:11px; color:var(--text-tertiary); line-height:1.5; }
+        .section { padding:100px 0; position:relative; }
+        .section--alt { background:var(--surface); }
+        .section--navy { background:var(--navy); }
+        .section__label { font-size:11px; font-weight:600; color:var(--gold); letter-spacing:3px; text-transform:uppercase; margin-bottom:14px; }
+        .section__heading { font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-0.5px; line-height:1.2; margin-bottom:52px; max-width:580px; }
+        .section__heading em { font-style:normal; color:var(--gold); }
+        .pains { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border-subtle); border-radius:4px; overflow:hidden; }
+        .pain { background:var(--base); padding:38px 28px; transition:background 0.3s; border-top:3px solid var(--gold); }
+        .pain:hover { background:var(--surface); }
+        .pain__index { font-size:11px; font-weight:700; letter-spacing:2px; margin-bottom:16px; display:block; color:var(--gold); }
+        .pain__title { font-size:17px; font-weight:700; margin-bottom:12px; line-height:1.3; }
+        .pain__quote { font-size:13px; color:var(--text-tertiary); line-height:1.8; font-style:italic; padding-left:12px; border-left:2px solid var(--border-hover); }
+        .speakers { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+        .speaker { background:var(--surface-raised); border:1px solid var(--border); border-radius:4px; padding:28px 24px; transition:border-color 0.3s,transform 0.3s; position:relative; overflow:hidden; }
+        .speaker:hover { border-color:var(--gold); transform:translateY(-3px); }
+        .speaker::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); }
+        .speaker__photo-wrap { margin-bottom:16px; }
+        .speaker__photo { width:56px; height:56px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); }
+        .speaker__initials { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; color:#000; background:var(--gold); }
+        .speaker__name { font-size:15px; font-weight:700; margin-bottom:4px; }
+        .speaker__role { font-size:12px; color:var(--text-tertiary); line-height:1.5; margin-bottom:14px; }
+        .speaker__relevance { font-size:12px; color:var(--text-secondary); line-height:1.65; padding:10px 12px; background:var(--gold-dim); border-radius:4px; border-left:2px solid var(--gold); }
+        .connections { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+        .connection { background:var(--surface-raised); border:1px solid var(--border); border-radius:4px; padding:28px 24px; transition:border-color 0.3s,transform 0.3s; position:relative; overflow:hidden; }
+        .connection:hover { border-color:var(--gold); transform:translateY(-3px); }
+        .connection::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); }
+        .connection__header { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+        .connection__photo { width:54px; height:54px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid var(--gold); }
+        .connection__meta { min-width:0; }
+        .connection__name { font-size:15px; font-weight:700; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .connection__role { font-size:11px; color:var(--text-tertiary); line-height:1.4; }
+        .connection__company { font-size:11px; font-weight:600; color:var(--gold); }
+        .connection__why { font-size:13px; color:var(--text-secondary); line-height:1.75; margin-bottom:14px; }
+        .connection__opener { font-size:12px; color:var(--text-primary); line-height:1.6; padding:10px 12px; background:var(--gold-dim); border-radius:4px; border-left:2px solid var(--gold); font-style:italic; }
+        .connection__opener-label { font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:4px; font-style:normal; }
+        .benefits { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+        .benefit { background:var(--surface-raised); border:1px solid var(--border); border-radius:4px; padding:32px 28px; transition:border-color 0.3s,transform 0.3s; }
+        .benefit:hover { border-color:var(--gold); transform:translateY(-2px); }
+        .benefit__badge { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 12px; border-radius:9999px; display:inline-block; margin-bottom:14px; background:var(--gold-dim); color:var(--gold); border:1px solid var(--border-hover); }
+        .benefit__title { font-size:18px; font-weight:700; margin-bottom:10px; letter-spacing:-0.2px; }
+        .benefit__desc { font-size:13px; color:var(--text-secondary); line-height:1.8; }
+        .proof { padding:64px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+        .proof__label { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:3px; text-transform:uppercase; text-align:center; margin-bottom:40px; }
+        .proof__logos { display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; }
+        .proof__company { display:flex; flex-direction:column; align-items:center; gap:8px; cursor:default; transition:opacity 0.3s; }
+        .proof__company:hover { opacity:0.8; }
+        .proof__company img { height:28px; width:auto; max-width:100px; object-fit:contain; filter:brightness(0) invert(1); opacity:0.45; transition:opacity 0.3s; }
+        .proof__company:hover img { opacity:0.70; }
+        .proof__company span { font-size:11px; font-weight:600; color:var(--text-tertiary); letter-spacing:0.5px; display:none; }
+        .cta { padding:120px 0; text-align:center; background:var(--navy); border-top:1px solid var(--border); }
+        .cta__inner { max-width:600px; margin:0 auto; }
+        .cta__badge { font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:block; }
+        .cta__heading { font-size:clamp(28px,3.5vw,44px); font-weight:800; letter-spacing:-1px; line-height:1.12; margin-bottom:18px; }
+        .cta__heading em { font-style:normal; color:var(--gold); }
+        .cta__desc { font-size:16px; color:var(--text-secondary); margin-bottom:36px; line-height:1.75; max-width:440px; margin-left:auto; margin-right:auto; }
+        .cta .btn--primary { font-size:15px; padding:16px 40px; }
+        .cta__note { font-size:11px; color:var(--text-tertiary); margin-top:14px; }
+        .footer { padding:28px 0; background:var(--navy-deep); border-top:1px solid var(--border); }
+        .footer .container { display:flex; justify-content:space-between; align-items:center; }
+        .footer__prepared { font-size:12px; color:var(--text-tertiary); }
+        .footer__prepared strong { color:var(--text-secondary); font-weight:600; }
+        .footer__brand { font-size:12px; font-weight:700; color:var(--gold); letter-spacing:0.3px; }
+        .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s cubic-bezier(0.19,1,0.22,1),transform 0.65s cubic-bezier(0.19,1,0.22,1); }
+        .reveal.is-visible { opacity:1; transform:translateY(0); }
+        .reveal-d1 { transition-delay:0.10s; }
+        .reveal-d2 { transition-delay:0.20s; }
+        .reveal-d3 { transition-delay:0.30s; }
+        .reveal-d4 { transition-delay:0.40s; }
+        @media(max-width:900px){
+            .container{padding:0 24px;}
+            .hero{padding:80px 0 60px;}
+            .hero .container{grid-template-columns:1fr;gap:48px;}
+            .pains,.speakers,.connections{grid-template-columns:1fr;}
+            .benefits{grid-template-columns:1fr;}
+            .section{padding:72px 0;}
+            .header__cta{display:none;}
+            .proof__logos{gap:18px 32px;}
+            .footer .container{flex-direction:column;gap:10px;text-align:center;}
+        }
+        @media(max-width:480px){
+            .hero__title{font-size:28px;}
+            .event-details{grid-template-columns:1fr;}
+            .hero__actions{flex-direction:column;align-items:flex-start;}
+        }
+</style>
+</head>
+<body>
+    <div class="dot-grid" aria-hidden="true"></div>
+    <div class="ambient ambient--gold" aria-hidden="true"></div>
+    <div class="ambient ambient--navy" aria-hidden="true"></div>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header__brands">
+                    <div class="header__tgs">
+                        <img src="https://logo.clearbit.com/theglobalseries.com" alt="The Global Series" onerror="this.style.display='none';document.getElementById('tgs-text').style.display='inline';">
+                        <span id="tgs-text" class="header__tgs-text">The Global Series</span>
+                    </div>
+                    <div class="header__prospect">
+                        <img src="https://logo.clearbit.com/ineight.com" alt="InEight" onerror="this.style.display='none';document.getElementById('prospect-text').style.display='inline';">
+                        <span id="prospect-text" class="header__prospect-text">InEight</span>
+                    </div>
+                </div>
+                <a href="#book" class="header__cta">Book a Call →</a>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <p class="hero__eyebrow reveal">Prepared for Melissa Esbenshade · InEight</p>
+                    <h1 class="hero__title reveal reveal-d1">30+ COOs evaluating <em>construction project risk and cost control</em> — in one room, for two days</h1>
+                    <p class="hero__desc reveal reveal-d2">The COO Leaders' Summit brings together North America's most operationally influential executives — the exact decision-makers and influencers who feel the pain of project overruns, schedule slippage, and disconnected data across capital programs. For InEight, this is a rare chance to put your integrated project management platform in front of operators who are actively rethinking how they manage complexity at scale. No cold outreach, no chasing gatekeepers — just two days of structured, peer-level conversation in Denver.</p>
+                    <div class="hero__actions reveal reveal-d3">
+                        <a href="#book" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                        <a href="#why-sponsor" class="btn btn--ghost">See why it works</a>
+                    </div>
+                </div>
+                <div class="event-panel reveal reveal-d2">
+                    <div class="event-panel__inner">
+                        <div class="event-panel__glow"></div>
+                        <div class="event-details">
+                            <div class="event-detail"><div class="event-detail__value">30+</div><div class="event-detail__label">COOs &amp; senior ops leaders</div></div>
+                            <div class="event-detail"><div class="event-detail__value">May 5–6</div><div class="event-detail__label">2026 · Denver, Colorado</div></div>
+                            <div class="event-detail"><div class="event-detail__value">2 Days</div><div class="event-detail__label">Intimate, peer-led format</div></div>
+                            <div class="event-detail"><div class="event-detail__value">5+</div><div class="event-detail__label">Fortune 500 COO keynotes</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--alt" id="why-sponsor">
+            <div class="container">
+                <p class="section__label reveal">The challenge</p>
+                <h2 class="section__heading reveal reveal-d1">Sound familiar, Melissa?</h2>
+                <div class="pains">
+                    <div class="pain reveal reveal-d1"><span class="pain__index">01</span><h3 class="pain__title">COOs Don't Take Cold Calls</h3><p class="pain__quote">"We know COOs are our best buyers — but getting a response from outreach is near-impossible. The inbox noise is too high."</p></div>
+                    <div class="pain reveal reveal-d2"><span class="pain__index">02</span><h3 class="pain__title">Brand Credibility Takes Time</h3><p class="pain__quote">"Enterprise ops leaders buy from vendors they trust. Breaking in at the C-suite level means years of relationship-building — or one great event."</p></div>
+                    <div class="pain reveal reveal-d3"><span class="pain__index">03</span><h3 class="pain__title">Competitors Show Up First</h3><p class="pain__quote">"We're losing deals to competitors already in the room with our buyers. Visibility at the right moments determines who gets shortlisted."</p></div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <p class="section__label reveal">On stage in Denver</p>
+                <h2 class="section__heading reveal reveal-d1">Keynotes that make <em>InEight</em> relevant to every COO in the room</h2>
+                <div class="speakers">
+                    <div class="speaker reveal reveal-d1">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Amir Deylami" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">AD</div>
+                        </div>
+                        <div class="speaker__name">Amir Deylami</div>
+                        <div class="speaker__role">COO, NASA Ames Research Center</div>
+                        <div class="speaker__relevance">Deylami's focus on mission-critical infrastructure and operational excellence mirrors the high-stakes, zero-margin-for-error environment that InEight's platform is built for. His session creates a natural entry point for conversations about how construction and capital project teams can apply the same discipline and real-time visibility that governs the most demanding operations in the world.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d2">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Tracy Galloway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">TG</div>
+                        </div>
+                        <div class="speaker__name">Tracy Galloway</div>
+                        <div class="speaker__role">CVP & COO, Microsoft Americas</div>
+                        <div class="speaker__relevance">Galloway's deep expertise in AI-enabled enterprise operations and digital transformation speaks directly to the modernisation agenda InEight champions for construction project management. Her keynote will prime the room to think about data-driven decision-making — positioning InEight's real-time insights and integrated lifecycle tools as the operational infrastructure the industry has been waiting for.</div>
+                    </div>
+                    <div class="speaker reveal reveal-d3">
+                        <div class="speaker__photo-wrap">
+                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/" alt="Peter Gibbons" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="speaker__initials" style="display:none;">PG</div>
+                        </div>
+                        <div class="speaker__name">Peter Gibbons</div>
+                        <div class="speaker__role">Board Director, Solstice Advanced Materials / Former 3M Group President</div>
+                        <div class="speaker__relevance">Gibbons brings hard-won experience leading operational transformation at industrial scale, a challenge that resonates strongly with the owners, contractors, and capital project sponsors that InEight serves. His perspective on breaking down silos and driving efficiency across complex, multi-site operations gives InEight's team the perfect conversational hook for discussing pre-planning through turnover visibility.</div>
+                    </div></div>
+            </div>
+        </section>
+        <section class="section section--alt">
+            <div class="container">
+                <p class="section__label reveal">Who you'll meet</p>
+                <h2 class="section__heading reveal reveal-d1">Three delegates worth the trip to Denver for InEight</h2>
+                <div class="connections">
+                    <div class="connection reveal reveal-d1">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kevin%20O'Neill&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kevin O'Neill">
+                            <div class="connection__meta">
+                                <div class="connection__name">Kevin O'Neill</div>
+                                <div class="connection__role">SVP Operations</div>
+                                <div class="connection__company">H.H. Angus & Associates</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">H.H. Angus is a leading engineering and industrial design firm with a strong project delivery mandate across complex infrastructure and facilities work — precisely the environment where InEight's integrated project controls, cost management, and schedule tools deliver the most measurable value. As SVP Operations, O'Neill is accountable for the execution efficiency and risk management that InEight directly addresses. Engineering firms of this profile are increasingly under pressure to demonstrate real-time project performance to clients, making InEight's platform a compelling operational differentiator. This is a warm target for an enterprise conversation, not a vendor pitch.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "Kevin, with the complexity of multi-discipline projects H.H. Angus manages — how are you currently giving your ops leadership a single view of cost and schedule risk before it becomes a client conversation?"
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d2">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Yohanna%20Sullivan&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Yohanna Sullivan">
+                            <div class="connection__meta">
+                                <div class="connection__name">Yohanna Sullivan</div>
+                                <div class="connection__role">Director of Operations</div>
+                                <div class="connection__company">Trimble</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">Trimble operates at the intersection of construction technology and field operations, making Sullivan an exceptionally strategic connection for InEight — both as a potential customer and as someone who understands the competitive and partnership landscape intimately. As Director of Operations at a company deeply embedded in construction workflows, Sullivan has firsthand knowledge of where data gaps, integration challenges, and project visibility limitations create real operational pain. Understanding her perspective could sharpen InEight's positioning and reveal partnership or integration opportunities that accelerate enterprise sales. This conversation has both direct sales value and strategic intelligence value.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "Yohanna, from your vantage point inside Trimble, where do you see the biggest gap between what construction ops teams need in terms of real-time project data and what most platforms actually deliver today?"
+                        </div>
+                    </div>
+                    <div class="connection reveal reveal-d3">
+                        <div class="connection__header">
+                            <img class="connection__photo" src="https://ui-avatars.com/api/?name=Kelly%20Darnell&background=9B834F&color=000&size=128&bold=true&font-size=0.38" alt="Kelly Darnell">
+                            <div class="connection__meta">
+                                <div class="connection__name">Kelly Darnell</div>
+                                <div class="connection__role">COO</div>
+                                <div class="connection__company">American Clean Power</div>
+                            </div>
+                        </div>
+                        <p class="connection__why">The clean energy sector is one of the fastest-growing capital project environments in North America, with massive infrastructure buildouts — wind, solar, battery storage, grid modernisation — that are plagued by schedule risk, cost overruns, and supply chain complexity. As COO of American Clean Power, Darnell oversees operational strategy for an industry that is constructing at a pace and scale that demands exactly the kind of integrated project lifecycle management InEight provides. Her organisation also has regulatory compliance pressures and stakeholder visibility requirements that InEight's reporting and risk management tools are well-positioned to address. Landing a relationship here could open a sector-wide conversation about construction project controls in clean energy.</p>
+                        <div class="connection__opener">
+                            <span class="connection__opener-label">Conversation opener</span>
+                            "Kelly, with the volume of capital projects your members are running right now — transmission, generation, storage — how are COOs in clean energy managing the gap between project commitments and what's actually visible on the ground in real time?"
+                        </div>
+                    </div></div>
+            </div>
+        </section>
+        <section class="section section--navy">
+            <div class="container">
+                <p class="section__label reveal">Sponsorship value</p>
+                <h2 class="section__heading reveal reveal-d1">What <em>InEight</em> gets from the room</h2>
+                <div class="benefits">
+                    <div class="benefit reveal reveal-d1"><span class="benefit__badge">Access</span><h3 class="benefit__title">Direct COO Conversations</h3><p class="benefit__desc">Two days of curated roundtables, a formal dinner reception, and AI-matched 1:1 sessions with ops leaders actively evaluating your category. No badge scanners — real conversations.</p></div>
+                    <div class="benefit reveal reveal-d2"><span class="benefit__badge">Visibility</span><h3 class="benefit__title">Brand on the Main Stage</h3><p class="benefit__desc">Logo placement across all event materials, email campaigns, and the summit website. Speaking and panel slots available — position InEight as the authority in the room before the agenda starts.</p></div>
+                    <div class="benefit reveal reveal-d3"><span class="benefit__badge">Pipeline</span><h3 class="benefit__title">Qualified Leads Post-Event</h3><p class="benefit__desc">Opt-in attendee contact data and a post-summit recap distributed to the full audience. COOs who met your team at a peer-curated event are far more likely to take a follow-up call.</p></div>
+                    <div class="benefit reveal reveal-d4"><span class="benefit__badge">Credibility</span><h3 class="benefit__title">Trusted Peer Association</h3><p class="benefit__desc">Chatham House Rules create a trust environment C-suite leaders rarely experience at trade shows. Association with speakers like the COO of Microsoft Americas positions InEight as a peer — not a vendor.</p></div>
+                </div>
+            </div>
+        </section>
+        <div class="proof">
+            <div class="container">
+                <p class="proof__label reveal">COOs in the room from companies including</p>
+                <div class="proof__logos reveal reveal-d1">
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/maersk.com" alt="Maersk" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Maersk</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/easyjet.com" alt="easyJet" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>easyJet</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/kinetic.com" alt="Kinetic" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Kinetic</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/nasa.gov" alt="NASA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>NASA</span>
+                    </div>
+                    <div class="proof__company">
+                        <img src="https://logo.clearbit.com/awac.com" alt="Allied World" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <span>Allied World</span>
+                    </div></div>
+            </div>
+        </div>
+        <section class="cta" id="book">
+            <div class="container">
+                <div class="cta__inner reveal">
+                    <span class="cta__badge">Next step</span>
+                    <h2 class="cta__heading">Let's talk about <em>InEight</em> and Denver</h2>
+                    <p class="cta__desc">15 minutes. No commitment. We'll walk you through who's in the room, what the agenda covers, and whether this is the right fit for InEight's goals in 2026.</p>
+                    <a href="https://calendly.com/daniel-theglobalseries/30min" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                    <p class="cta__note">No commitment required — just a conversation</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <p class="footer__prepared">Prepared for <strong>Melissa Esbenshade</strong>, Senior Vice President Marketing at InEight</p>
+                <span class="footer__brand">The Global Series</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const els=document.querySelectorAll('.reveal');
+            const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+            els.forEach(el=>io.observe(el));
+        });
+    </script>
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</body>
+</html>
