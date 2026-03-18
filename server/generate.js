@@ -42,37 +42,64 @@ function parseArgs(argv) {
 }
 
 // ── CSV parser (no deps) ─────────────────────────────────────────────────────
+function parseFields(line) {
+  const values = [];
+  let cur = '';
+  let inQuotes = false;
+  for (const ch of line) {
+    if (ch === '"') { inQuotes = !inQuotes; continue; }
+    if (ch === ',' && !inQuotes) { values.push(cur.trim()); cur = ''; continue; }
+    cur += ch;
+  }
+  values.push(cur.trim());
+  return values;
+}
+
+// Normalize a header to lowercase_underscore for flexible column matching
+function normalizeKey(h) {
+  return h.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+}
+
 function parseCsv(filepath) {
   const raw = fs.readFileSync(filepath, 'utf8');
   const lines = raw.trim().split(/\r?\n/);
-  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+  const rawHeaders = parseFields(lines[0]);
+  // Store both original and normalized keys so row[normalizedKey] works
+  const headers = rawHeaders.map(h => h.replace(/^"|"$/g, '').trim());
+  const normHeaders = headers.map(normalizeKey);
   return lines.slice(1).map(line => {
-    // Handle quoted fields with commas inside
-    const values = [];
-    let cur = '';
-    let inQuotes = false;
-    for (const ch of line) {
-      if (ch === '"') { inQuotes = !inQuotes; continue; }
-      if (ch === ',' && !inQuotes) { values.push(cur.trim()); cur = ''; continue; }
-      cur += ch;
-    }
-    values.push(cur.trim());
-    return Object.fromEntries(headers.map((h, i) => [h, values[i] ?? '']));
+    const values = parseFields(line);
+    const row = {};
+    headers.forEach((h, i) => {
+      row[h] = values[i] ?? '';           // original key
+      row[normHeaders[i]] = values[i] ?? ''; // normalized key
+    });
+    return row;
   });
 }
 
 // ── Map CSV row → prospect object expected by buildHtml ──────────────────────
+// Supports both old format (first_name, title, company) and
+// new Clay export format (First Name, Job Title, Company Table Data etc.)
 function rowToProspect(row) {
   return {
-    first_name:              row.first_name,
-    last_name:               row.last_name,
-    title:                   row.title,
-    company:                 row.company,
+    first_name:              row.first_name || '',
+    last_name:               row.last_name || '',
+    title:                   row.job_title || row.title || '',
+    company:                 row.company_table_data || row.company || '',
     domain:                  row.company_domain || row.domain || '',
+    email:                   row.email || row.work_email || '',
+    // Enrichment fields — used in Claude prompt when present
     solution_focus:          row.solution_focus || '',
     solution_focus_reworded: row.solution_focus_reworded || '',
     event_theme:             row.event_theme || '',
-    competitor:              row.competitor || '',
+    competitor:              row.na_competitor_competitor_company_name || row.competitor || '',
+    short_description:       row.short_description || '',
+    keywords:                row.keywords || '',
+    reason_1:                row.reason_1 || '',
+    reason_2:                row.reason_2 || '',
+    tier:                    row.tier || '',
+    status:                  row.status || '',
   };
 }
 
@@ -90,8 +117,15 @@ async function main() {
     const csvPath = path.resolve(args.csv);
     console.log(`Reading prospects from ${csvPath}…`);
     const rows = parseCsv(csvPath);
-    prospects = rows.map(rowToProspect).filter(p => p.first_name && p.company);
-    console.log(`Found ${prospects.length} prospects.\n`);
+    const all = rows.map(rowToProspect);
+    // If the CSV has a status column, only include rows with valid emails
+    const hasStatusCol = all.some(p => p.status);
+    prospects = all.filter(p => {
+      if (!p.first_name || !p.company || !p.domain) return false;
+      if (hasStatusCol && p.status && p.status !== 'valid') return false;
+      return true;
+    });
+    console.log(`Found ${prospects.length} valid prospects (from ${all.length} rows).\n`);
   } else {
     // Single prospect from flags
     const required = ['first_name', 'last_name', 'company', 'domain'];
@@ -105,35 +139,47 @@ async function main() {
   }
 
   const results = [];
+  const CONCURRENCY = args.concurrency ? parseInt(args.concurrency) : 1;
+  let completed = 0;
 
-  for (const prospect of prospects) {
+  async function processProspect(prospect) {
     const label = `${prospect.first_name} ${prospect.last_name} (${prospect.company})`;
-    process.stdout.write(`Generating page for ${label}… `);
+    // Skip if already generated (allows resuming interrupted runs)
+    const expectedFilename = `${prospect.first_name.toLowerCase()}-${prospect.last_name.toLowerCase().replace(/\s+/g, '-')}-${prospect.company.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html`;
+    const localPath = path.join(outDir, expectedFilename);
+    if (fs.existsSync(localPath) && !args.force) {
+      completed++;
+      console.log(`Skipping ${label} (already exists) [${completed}/${prospects.length}]`);
+      results.push({ filename: expectedFilename, ok: true, skipped: true });
+      return;
+    }
 
     try {
       const { html, filename } = await buildHtml(prospect);
-
-      // Always save locally
-      const localPath = path.join(outDir, filename);
-      fs.writeFileSync(localPath, html, 'utf8');
-      process.stdout.write(`saved → ${filename}`);
+      fs.writeFileSync(path.join(outDir, filename), html, 'utf8');
 
       let url = null;
       if (deploy) {
-        process.stdout.write(' | deploying…');
         url = await deployToGitHub(html, filename);
-        process.stdout.write(` → ${url}`);
       }
 
-      console.log('  ✓');
+      completed++;
+      console.log(`✓ ${label} → ${filename}${url ? ' → ' + url : ''} [${completed}/${prospects.length}]`);
       results.push({ filename, url, ok: true });
     } catch (err) {
-      console.log(`  ✗  ${err.message}`);
+      completed++;
+      console.log(`✗ ${label}: ${err.message} [${completed}/${prospects.length}]`);
       results.push({ label, ok: false, error: err.message });
     }
   }
 
-  console.log(`\nDone. ${results.filter(r => r.ok).length}/${prospects.length} succeeded.`);
+  // Run with concurrency pool
+  for (let i = 0; i < prospects.length; i += CONCURRENCY) {
+    const batch = prospects.slice(i, i + CONCURRENCY);
+    await Promise.all(batch.map(processProspect));
+  }
+
+  console.log(`\nDone. ${results.filter(r => r.ok).length}/${prospects.length} succeeded (${results.filter(r => r.skipped).length} skipped).`);
 
   if (!deploy) {
     console.log(`\nFiles saved to: ${outDir}`);

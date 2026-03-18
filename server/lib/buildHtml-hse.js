@@ -1,17 +1,18 @@
 require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 const Anthropic = require('@anthropic-ai/sdk');
-const { DELEGATES } = require('./delegates');
+const DELEGATES = require('./delegates-hse');
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const SPEAKERS = [
-  { name: "Tracy Galloway", role: "CVP & COO, Microsoft Americas", photo: "2025/09/Tracy-Galloway--300x300.jpg", initials: "TG", topics: "tech-enabled operations, digital transformation, AI in enterprise ops" },
-  { name: "Amir Deylami", role: "COO, NASA Ames Research Center", photo: "2025/10/amir-214x300.jpg", initials: "AD", topics: "mission-critical operations, operational excellence, infrastructure" },
-  { name: "Peter Gibbons", role: "Board Director, Solstice Adv. Materials / Former 3M Group President", photo: "2025/09/Peter-Gibbons-1-199x300.jpg", initials: "PG", topics: "industrial operations, supply chain, operational transformation at scale" },
-  { name: "Harry Moser", role: "Founder & President, Reshoring Initiative", photo: "2025/09/Harry-Moser-200x300.jpg", initials: "HM", topics: "reshoring, manufacturing, supply chain resilience, North American industrial growth" },
-  { name: "Janet Moylan", role: "SVP & COO, Allied World Assurance", photo: "2025/09/Janet-Moylan-200x300.jpg", initials: "JM", topics: "risk management, compliance, operational resilience, financial services" },
-  { name: "Timo Koster", role: "Strategic Advisor & Board Member, NATO", photo: "2025/09/Timo-Koster-300x200.jpg", initials: "TK", topics: "cybersecurity, operational risk, governance, defence, national security" },
-  { name: "Michael McLellan", role: "COO, DHL", photo: "2025/09/Michael-McLellan-300x300.jpg", initials: "MM", topics: "global logistics, supply chain, warehouse operations, last-mile delivery" },
+  { name: "Ian Leslie",        role: "Author, Curious",                                     photo: null, initials: "IL", topics: "human curiosity, behavioural psychology, how people learn and change" },
+  { name: "Rory Sutherland",   role: "Vice Chair, Ogilvy UK",                               photo: null, initials: "RS", topics: "behavioural science, reframing workplace problems, psychology of decision-making" },
+  { name: "Sercan Esen",       role: "CEO, Intenseye",                                      photo: null, initials: "SE", topics: "computer vision AI, serious injury and fatality prevention, AI in safety operations" },
+  { name: "Fawaz Bitar",       role: "SVP HSE & Carbon, BP",                                photo: null, initials: "FB", topics: "global safety strategy, ESG-HSE alignment, safety leadership at scale" },
+  { name: "Dr. Manuel Seidel", role: "CEO, ecoPortal",                                      photo: null, initials: "MS", topics: "AI-driven safety culture, EHS engagement platforms, digital safety transformation" },
+  { name: "Maeve O'Loughlin",  role: "HSE Transformation & Culture Consultant",             photo: null, initials: "MO", topics: "HSE leadership culture, organisational transformation, safety mindset change" },
+  { name: "Crystal Danbury",   role: "Director of Safety, Insurance & Occupational Wellbeing, Sainsbury's", photo: null, initials: "CD", topics: "cultural change, harm reduction, team performance, safety at retail scale" },
+  { name: "Zoe Hayes",         role: "Head of SSR, BBC",                                    photo: null, initials: "ZH", topics: "safety culture in large media organisations, production safety, creative industry HSE" },
 ];
 
 const CSS = `
@@ -167,27 +168,16 @@ const CSS = `
 async function buildHtml(prospect) {
   const {
     first_name, last_name, title, company, domain,
-    solution_focus, solution_focus_reworded, event_theme, competitor,
-    short_description, keywords, reason_1, reason_2
+    solution_focus, solution_focus_reworded, event_theme, competitor
   } = prospect;
 
   const delegateList = DELEGATES.map(d =>
-    `- ${d.name} | ${d.title} | ${d.company} | Industries: ${d.industry}`
+    `- ${d.name} | ${d.title} | ${d.company} | Industry: ${d.industry}`
   ).join('\n');
 
   const speakerList = SPEAKERS.map(s =>
     `- ${s.name} | ${s.role} | Topics: ${s.topics}`
   ).join('\n');
-
-  // Build optional enrichment block — only include fields that exist
-  const enrichmentLines = [];
-  if (short_description) enrichmentLines.push(`- Company Overview: ${short_description.slice(0, 600)}`);
-  if (reason_1) enrichmentLines.push(`- Why they should sponsor (1): ${reason_1}`);
-  if (reason_2) enrichmentLines.push(`- Why they should sponsor (2): ${reason_2}`);
-  if (keywords) enrichmentLines.push(`- Keywords/tags: ${keywords.slice(0, 300)}`);
-  const enrichmentBlock = enrichmentLines.length
-    ? `\nADDITIONAL CONTEXT (use to make copy more specific and relevant):\n${enrichmentLines.join('\n')}`
-    : '';
 
   const prompt = `You are generating a personalised HTML landing page for a sales prospect at ${company}.
 
@@ -199,9 +189,13 @@ PROSPECT:
 - Solution Focus: ${solution_focus}
 - Solution Description: ${solution_focus_reworded}
 - Event Theme: ${event_theme}
-- Competitor already sponsoring: ${competitor || 'unknown'}${enrichmentBlock}
+- Competitor already sponsoring: ${competitor || 'unknown'}
 
-EVENT: COO Leaders' Summit – North America | May 5–6, 2026 | Denver, CO | 30+ COOs attending
+EVENT: HSE Learning Summit – UK | 7–8 July 2026 | Hilton Birmingham Metropole, Birmingham | 50+ senior HSE leaders attending
+
+AGENDA THEMES: Data-driven zero harm, human factors system design, storytelling for board influence, ESG-HSE alignment, AI in safety operations, safety culture as business differentiator, digital transformation of safety mindset
+
+BOOKING LINK: https://calendly.com/markos-theglobalseries
 
 AVAILABLE SPEAKERS (pick the 3 most relevant to ${company}'s solution):
 ${speakerList}
@@ -211,80 +205,52 @@ ${delegateList}
 
 Generate a complete JSON object with these exact fields:
 {
-  "filename": "${first_name.toLowerCase()}-${last_name.toLowerCase().replace(/\\s+/g, '-')}-${company.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html",
-  "heroTitle": "30+ COOs evaluating <em>[KEY PHRASE from solution]</em> — in one room, for two days",
-  "heroDesc": "[2-3 sentences. Why this room matters for ${company}. Reference their solution angle. Mention no cold email required.]",
-  "speakersHeading": "Keynotes that make <em>${company}</em> relevant to every COO in the room",
+  "filename": "hse-${first_name.toLowerCase()}-${last_name.toLowerCase().replace(/\s+/g, '-')}-${company.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.html",
+  "heroTitle": "50+ HSE leaders evaluating <em>[KEY PHRASE from solution]</em> — in one room, for two days",
+  "heroDesc": "[2-3 sentences. Why this room matters for ${company}. Reference their solution angle. Mention no cold outreach required.]",
+  "speakersHeading": "Keynotes that make <em>${company}</em> relevant to every HSE leader in the room",
   "speakers": [
     {
       "name": "...",
       "role": "...",
-      "photo": "...",
       "initials": "...",
       "relevance": "[2 sentences specific to ${company}'s solution and why this speaker creates context for their pitch]"
     }
   ],
-  "connectionsHeading": "Three delegates worth the trip to Denver for ${company}",
+  "connectionsHeading": "Three delegates worth the trip to Birmingham for ${company}",
   "connections": [
     {
       "name": "...",
       "role": "...",
       "company": "...",
-      "why": "[3-4 sentences. Why this person matters specifically to ${company}'s sales motion. Be specific about their company's needs.]",
-      "opener": "[A specific, natural conversation starter ${company}'s team could use with this person]"
+      "why": "[3-4 sentences. Why this person matters specifically to ${company}'s sales motion. Be specific about their organisation's safety challenges.]",
+      "opener": "[A specific, natural conversation starter ${company}'s team could use with this person at the event]"
     }
   ],
   "ctaDesc": "15 minutes. No commitment. We'll walk you through who's in the room, what the agenda covers, and whether this is the right fit for ${company}'s goals in 2026."
 }
 
-COPY RULES — apply to every field:
-- No em dashes (— or –). Use commas, colons, or full stops instead.
-- No exclamation marks.
-- No words: leverage, unlock, seamless, game-changer, cutting-edge, revolutionise, transformative, empower.
-
 Return ONLY valid JSON, no markdown, no explanation.`;
 
-  // Retry with exponential backoff on rate limit errors
-  let message;
-  for (let attempt = 1; attempt <= 5; attempt++) {
-    try {
-      message = await client.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2000,
-        messages: [{ role: 'user', content: prompt }],
-      });
-      break;
-    } catch (err) {
-      const isRateLimit = err.status === 429 || (err.message && err.message.includes('rate_limit'));
-      if (isRateLimit && attempt < 5) {
-        const wait = attempt * 15000; // 15s, 30s, 45s, 60s
-        await new Promise(r => setTimeout(r, wait));
-      } else {
-        throw err;
-      }
-    }
-  }
+  const message = await client.messages.create({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 2000,
+    messages: [{ role: 'user', content: prompt }],
+  });
 
-  // Strip markdown code fences if Claude wrapped the JSON
   let rawText = message.content[0].text.trim();
-  rawText = rawText.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+  rawText = rawText.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
   const json = JSON.parse(rawText);
 
   const logoToken = process.env.LOGO_DEV_TOKEN;
-  const logoBase = logoToken
-    ? `https://img.logo.dev`
-    : `https://logo.clearbit.com`;
+  const logoBase = logoToken ? `https://img.logo.dev` : `https://logo.clearbit.com`;
   const logoSuffix = logoToken ? `?token=${logoToken}` : '';
-
-  const logoUrl = (d) => logoToken
-    ? `${logoBase}/${d}${logoSuffix}`
-    : `${logoBase}/${d}`;
+  const logoUrl = (d) => logoToken ? `${logoBase}/${d}${logoSuffix}` : `${logoBase}/${d}`;
 
   const speakerHtml = json.speakers.map((s, i) => `
                     <div class="speaker reveal reveal-d${i + 1}">
                         <div class="speaker__photo-wrap">
-                            <img class="speaker__photo" src="https://theglobalseries.com/wp-content/uploads/${s.photo}" alt="${s.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-                            <div class="speaker__initials" style="display:none;">${s.initials}</div>
+                            <div class="speaker__initials">${s.initials}</div>
                         </div>
                         <div class="speaker__name">${s.name}</div>
                         <div class="speaker__role">${s.role}</div>
@@ -309,13 +275,16 @@ Return ONLY valid JSON, no markdown, no explanation.`;
                     </div>`).join('');
 
   const proofLogos = [
-    { name: 'Amazon', domain: 'amazon.com' },
-    { name: 'Maersk', domain: 'maersk.com' },
-    { name: 'easyJet', domain: 'easyjet.com' },
-    { name: 'Kinetic', domain: 'kinetic.com' },
-    { name: 'Microsoft', domain: 'microsoft.com' },
-    { name: 'NASA', domain: 'nasa.gov' },
-    { name: 'Allied World', domain: 'awac.com' },
+    { name: 'BBC',             domain: 'bbc.co.uk' },
+    { name: 'Netflix',         domain: 'netflix.com' },
+    { name: 'BP',              domain: 'bp.com' },
+    { name: "Sainsbury's",     domain: 'sainsburys.co.uk' },
+    { name: 'Arup',            domain: 'arup.com' },
+    { name: 'Hitachi Rail',    domain: 'hitachirail.com' },
+    { name: 'Veolia',          domain: 'veolia.com' },
+    { name: 'Kingfisher',      domain: 'kingfisher.com' },
+    { name: 'DP World',        domain: 'dpworld.com' },
+    { name: 'Leonardo',        domain: 'leonardo.com' },
   ].map(({ name, domain: d }) => `
                     <div class="proof__company">
                         <img src="${logoUrl(d)}" alt="${name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
@@ -327,7 +296,7 @@ Return ONLY valid JSON, no markdown, no explanation.`;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COO Leaders' Summit × ${company} | ${first_name}, your buyers are in this room</title>
+    <title>HSE Learning Summit × ${company} | ${first_name}, your buyers are in this room</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
@@ -368,10 +337,10 @@ Return ONLY valid JSON, no markdown, no explanation.`;
                     <div class="event-panel__inner">
                         <div class="event-panel__glow"></div>
                         <div class="event-details">
-                            <div class="event-detail"><div class="event-detail__value">30+</div><div class="event-detail__label">COOs &amp; senior ops leaders</div></div>
-                            <div class="event-detail"><div class="event-detail__value">May 5–6</div><div class="event-detail__label">2026 · Denver, Colorado</div></div>
-                            <div class="event-detail"><div class="event-detail__value">2 Days</div><div class="event-detail__label">Intimate, peer-led format</div></div>
-                            <div class="event-detail"><div class="event-detail__value">5+</div><div class="event-detail__label">Fortune 500 COO keynotes</div></div>
+                            <div class="event-detail"><div class="event-detail__value">50+</div><div class="event-detail__label">Senior HSE leaders</div></div>
+                            <div class="event-detail"><div class="event-detail__value">7–8 Jul</div><div class="event-detail__label">2026 · Birmingham, UK</div></div>
+                            <div class="event-detail"><div class="event-detail__value">2 Days</div><div class="event-detail__label">Closed-door, peer-led format</div></div>
+                            <div class="event-detail"><div class="event-detail__value">8</div><div class="event-detail__label">Expert keynote speakers</div></div>
                         </div>
                     </div>
                 </div>
@@ -382,15 +351,15 @@ Return ONLY valid JSON, no markdown, no explanation.`;
                 <p class="section__label reveal">The challenge</p>
                 <h2 class="section__heading reveal reveal-d1">Sound familiar, ${first_name}?</h2>
                 <div class="pains">
-                    <div class="pain reveal reveal-d1"><span class="pain__index">01</span><h3 class="pain__title">COOs Don't Take Cold Calls</h3><p class="pain__quote">"We know COOs are our best buyers — but getting a response from outreach is near-impossible. The inbox noise is too high."</p></div>
-                    <div class="pain reveal reveal-d2"><span class="pain__index">02</span><h3 class="pain__title">Brand Credibility Takes Time</h3><p class="pain__quote">"Enterprise ops leaders buy from vendors they trust. Breaking in at the C-suite level means years of relationship-building — or one great event."</p></div>
-                    <div class="pain reveal reveal-d3"><span class="pain__index">03</span><h3 class="pain__title">Competitors Show Up First</h3><p class="pain__quote">"We're losing deals to competitors already in the room with our buyers. Visibility at the right moments determines who gets shortlisted."</p></div>
+                    <div class="pain reveal reveal-d1"><span class="pain__index">01</span><h3 class="pain__title">HSE Leaders Screen Out Vendor Outreach</h3><p class="pain__quote">"Senior HSE professionals are among the hardest buyers to reach. Cold emails go unread. LinkedIn messages get ignored. Traditional outreach doesn't work at this level."</p></div>
+                    <div class="pain reveal reveal-d2"><span class="pain__index">02</span><h3 class="pain__title">Trust in Safety Takes Years to Build</h3><p class="pain__quote">"HSE decision makers don't buy from strangers. They buy from brands they've seen, heard, and trusted — often over years. Sponsoring puts you in the room before the conversation starts."</p></div>
+                    <div class="pain reveal reveal-d3"><span class="pain__index">03</span><h3 class="pain__title">Your Competitors Are Already in the Room</h3><p class="pain__quote">"The HSE technology market is moving fast. The vendors that show up at the right events build the category relationships that convert. The ones that don't, watch from the sidelines."</p></div>
                 </div>
             </div>
         </section>
         <section class="section">
             <div class="container">
-                <p class="section__label reveal">On stage in Denver</p>
+                <p class="section__label reveal">On stage in Birmingham</p>
                 <h2 class="section__heading reveal reveal-d1">${json.speakersHeading}</h2>
                 <div class="speakers">${speakerHtml}</div>
             </div>
@@ -407,16 +376,16 @@ Return ONLY valid JSON, no markdown, no explanation.`;
                 <p class="section__label reveal">Sponsorship value</p>
                 <h2 class="section__heading reveal reveal-d1">What <em>${company}</em> gets from the room</h2>
                 <div class="benefits">
-                    <div class="benefit reveal reveal-d1"><span class="benefit__badge">Access</span><h3 class="benefit__title">Direct COO Conversations</h3><p class="benefit__desc">Two days of curated roundtables, a formal dinner reception, and AI-matched 1:1 sessions with ops leaders actively evaluating your category. No badge scanners — real conversations.</p></div>
+                    <div class="benefit reveal reveal-d1"><span class="benefit__badge">Access</span><h3 class="benefit__title">Direct HSE Leader Conversations</h3><p class="benefit__desc">Two days of curated roundtables, a formal dinner reception, and structured networking with senior HSE professionals actively evaluating your category. No badge scanners — real conversations with real decision makers.</p></div>
                     <div class="benefit reveal reveal-d2"><span class="benefit__badge">Visibility</span><h3 class="benefit__title">Brand on the Main Stage</h3><p class="benefit__desc">Logo placement across all event materials, email campaigns, and the summit website. Speaking and panel slots available — position ${company} as the authority in the room before the agenda starts.</p></div>
-                    <div class="benefit reveal reveal-d3"><span class="benefit__badge">Pipeline</span><h3 class="benefit__title">Qualified Leads Post-Event</h3><p class="benefit__desc">Opt-in attendee contact data and a post-summit recap distributed to the full audience. COOs who met your team at a peer-curated event are far more likely to take a follow-up call.</p></div>
-                    <div class="benefit reveal reveal-d4"><span class="benefit__badge">Credibility</span><h3 class="benefit__title">Trusted Peer Association</h3><p class="benefit__desc">Chatham House Rules create a trust environment C-suite leaders rarely experience at trade shows. Association with speakers like the COO of Microsoft Americas positions ${company} as a peer — not a vendor.</p></div>
+                    <div class="benefit reveal reveal-d3"><span class="benefit__badge">Pipeline</span><h3 class="benefit__title">Qualified Leads Post-Event</h3><p class="benefit__desc">Opt-in attendee contact data and a post-summit recap distributed to the full audience. HSE leaders who met your team at a peer-curated event are far more likely to take a follow-up call.</p></div>
+                    <div class="benefit reveal reveal-d4"><span class="benefit__badge">Credibility</span><h3 class="benefit__title">Trusted Peer Association</h3><p class="benefit__desc">Chatham House Rules create a trust environment senior safety professionals rarely experience at trade shows. Association with speakers from BP, Sainsbury's, and the BBC positions ${company} as a peer — not a vendor.</p></div>
                 </div>
             </div>
         </section>
         <div class="proof">
             <div class="container">
-                <p class="proof__label reveal">COOs in the room from companies including</p>
+                <p class="proof__label reveal">HSE leaders attending from companies including</p>
                 <div class="proof__logos reveal reveal-d1">${proofLogos}</div>
             </div>
         </div>
@@ -424,9 +393,9 @@ Return ONLY valid JSON, no markdown, no explanation.`;
             <div class="container">
                 <div class="cta__inner reveal">
                     <span class="cta__badge">Next step</span>
-                    <h2 class="cta__heading">Let's talk about <em>${company}</em> and Denver</h2>
+                    <h2 class="cta__heading">Let's talk about <em>${company}</em> and Birmingham</h2>
                     <p class="cta__desc">${json.ctaDesc}</p>
-                    <a href="https://calendly.com/daniel-theglobalseries/30min" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+                    <a href="https://calendly.com/markos-theglobalseries" class="btn btn--primary">Book a 15-Minute Call <svg class="btn__arrow" width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
                     <p class="cta__note">No commitment required — just a conversation</p>
                 </div>
             </div>
@@ -445,7 +414,6 @@ Return ONLY valid JSON, no markdown, no explanation.`;
             els.forEach(el=>io.observe(el));
         });
     </script>
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </body>
 </html>`;
 

@@ -1,0 +1,16 @@
+# Generated output — deployed to GitHub/Vercel via API, not tracked locally
+tgs-landing-pages/
+
+# Secrets
+.env
+*.pem
+*.key
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+
+.vercel
